@@ -1,0 +1,27 @@
+         ------nexus ------
+	 create a nexus user 
+	 useradd nexus
+	 cd /opt
+1.wget http://download.sonatype.com/nexus/oss/nexus-2.11.2-06-bundle.tar.gz	
+2.sudo tar -xvf nexus-2.11.2-06-bundle.tar.gz
+3.cp nexus-2.11.2-06 /etc/init.d/nexus
+4.sudo chown root /etc/init.d/nexus
+5.sudo chmod 755 /etc/init.d/nexus
+6.vi /etc/init.d/nexus
+   NEXUS_HOME=/opt/nexus-2.11.2-06
+   RUN_AS_USER=nexus
+7.chown -R nexus:nexus nexus-2.11.2-06
+8.chown -R nexus:nexus Sonatype-work
+9.cd /etc/init.d
+10.chkconfig --add nexus 
+11.chkconfig --levels 345 nexus on
+12.service nexus start
+13. netstat -tnlp
+     
+tcp 0   0 0.0.0.0:8081  0.0.0.0:*    LISTEN      13120/java
+
+14.then hit on browser like
+     ipaddress:8081/nexus
+15. finally login nexus user    : admin
+                        password: admin123
+
