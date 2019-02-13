@@ -1,0 +1,1991 @@
+bash: docke: command not found
+[root@ip-10-17-0-4 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NA
+[root@ip-10-17-0-4 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<none>              <none>              1127fd19ff5b        23 hours ago        791MB
+ubuntu              16.04               4a689991aa24        4 weeks ago         116MB
+centos              latest              75835a67d134        5 weeks ago         200MB
+jenkins             latest              cd14cecfdb3a        4 months ago        696MB
+[root@ip-10-17-0-4 ~]# docker attach 75835a67d134
+Error: No such container: 75835a67d134
+[root@ip-10-17-0-4 ~]# docker build -t krishinst^C
+[root@ip-10-17-0-4 ~]#
+[root@ip-10-17-0-4 ~]#
+[root@ip-10-17-0-4 ~]#
+[root@ip-10-17-0-4 ~]#
+[root@ip-10-17-0-4 ~]# vi Dockerfile
+[root@ip-10-17-0-4 ~]# mkdir sai
+[root@ip-10-17-0-4 ~]# cd sai/
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/6 : FROM docker.io/centos
+ ---> 75835a67d134
+Step 2/6 : MAINTAINER devops
+ ---> Running in 4100f420389f
+Removing intermediate container 4100f420389f
+ ---> 620aa7523bbe
+Step 3/6 : RUN yum update && yum -y install httpd
+ ---> Running in 47b6d2ef01a3
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: mirror.ash.fastserv.com
+ * extras: mirror.ash.fastserv.com
+ * updates: mirror.ash.fastserv.com
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release.x86_64 0:7-5.1804.4.el7.centos will be updated
+---> Package centos-release.x86_64 0:7-5.1804.5.el7.centos will be an update
+---> Package tzdata.noarch 0:2018e-3.el7 will be updated
+---> Package tzdata.noarch 0:2018f-2.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Updating:
+ centos-release      x86_64      7-5.1804.5.el7.centos       updates       25 k
+ tzdata              noarch      2018f-2.el7                 updates      484 k
+
+Transaction Summary
+================================================================================
+Upgrade  2 Packages
+
+Total download size: 509 k
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2018-11-16.04-02.4gPeGg.yumtx
+The command '/bin/sh -c yum update && yum -y install httpd' returned a non-zero code: 1
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/6 : FROM centos:latest
+ ---> 75835a67d134
+Step 2/6 : MAINTAINER devops
+ ---> Using cache
+ ---> 620aa7523bbe
+Step 3/6 : RUN yum update && yum -y install httpd
+ ---> Running in 501f1f665115
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repo1.ash.innoscale.net
+ * extras: repo1.ash.innoscale.net
+ * updates: repo1.ash.innoscale.net
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release.x86_64 0:7-5.1804.4.el7.centos will be updated
+---> Package centos-release.x86_64 0:7-5.1804.5.el7.centos will be an update
+---> Package tzdata.noarch 0:2018e-3.el7 will be updated
+---> Package tzdata.noarch 0:2018f-2.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Updating:
+ centos-release      x86_64      7-5.1804.5.el7.centos       updates       25 k
+ tzdata              noarch      2018f-2.el7                 updates      484 k
+
+Transaction Summary
+================================================================================
+Upgrade  2 Packages
+
+Total download size: 509 k
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2018-11-16.04-03.kccYkj.yumtx
+The command '/bin/sh -c yum update && yum -y install httpd' returned a non-zero code: 1
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/7 : FROM centos:latest
+ ---> 75835a67d134
+Step 2/7 : MAINTAINER devops
+ ---> Using cache
+ ---> 620aa7523bbe
+Step 3/7 : RUN yum update && yum -y install httpd
+ ---> Running in aab6b90f9401
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repo1.ash.innoscale.net
+ * extras: repo1.ash.innoscale.net
+ * updates: repo1.ash.innoscale.net
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release.x86_64 0:7-5.1804.4.el7.centos will be updated
+---> Package centos-release.x86_64 0:7-5.1804.5.el7.centos will be an update
+---> Package tzdata.noarch 0:2018e-3.el7 will be updated
+---> Package tzdata.noarch 0:2018f-2.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Updating:
+ centos-release      x86_64      7-5.1804.5.el7.centos       updates       25 k
+ tzdata              noarch      2018f-2.el7                 updates      484 k
+
+Transaction Summary
+================================================================================
+Upgrade  2 Packages
+
+Total download size: 509 k
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2018-11-16.04-05.ZRjiJa.yumtx
+The command '/bin/sh -c yum update && yum -y install httpd' returned a non-zero code: 1
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/7 : FROM centos:latest
+ ---> 75835a67d134
+Step 2/7 : MAINTAINER devops
+ ---> Using cache
+ ---> 620aa7523bbe
+Step 3/7 : RUN yum -y install epel-release && RUN yum update && yum -y install httpd
+ ---> Running in 3e74d5b7b257
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repos-va.psychz.net
+ * extras: repos-va.psychz.net
+ * updates: repos-va.psychz.net
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-11 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch             Version         Repository        Size
+================================================================================
+Installing:
+ epel-release           noarch           7-11            extras            15 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 15 k
+Installed size: 24 k
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/extras/packages/epel-release-7-11.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a8
+Public key for epel-release-7-11.noarch.rpm is not installed
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-5.1804.4.el7.centos.x86_64 (@Updates)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-11.noarch                                     1/1
+  Verifying  : epel-release-7-11.noarch                                     1/1
+
+Installed:
+  epel-release.noarch 0:7-11
+
+Complete!
+/bin/sh: RUN: command not found
+The command '/bin/sh -c yum -y install epel-release && RUN yum update && yum -y install httpd' returned a non-zero code: 1
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/7 : FROM centos:latest
+ ---> 75835a67d134
+Step 2/7 : MAINTAINER devops
+ ---> Using cache
+ ---> 620aa7523bbe
+Step 3/7 : RUN yum update && RUN yum -y install epel-release && RUN  yum -y install httpd
+ ---> Running in eee4d4263c30
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: mirrors.advancedhosters.com
+ * extras: mirrors.advancedhosters.com
+ * updates: mirrors.advancedhosters.com
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release.x86_64 0:7-5.1804.4.el7.centos will be updated
+---> Package centos-release.x86_64 0:7-5.1804.5.el7.centos will be an update
+---> Package tzdata.noarch 0:2018e-3.el7 will be updated
+---> Package tzdata.noarch 0:2018f-2.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch        Version                     Repository    Size
+================================================================================
+Updating:
+ centos-release      x86_64      7-5.1804.5.el7.centos       updates       25 k
+ tzdata              noarch      2018f-2.el7                 updates      484 k
+
+Transaction Summary
+================================================================================
+Upgrade  2 Packages
+
+Total download size: 509 k
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2018-11-16.04-08.gp_L6V.yumtx
+The command '/bin/sh -c yum update && RUN yum -y install epel-release && RUN  yum -y install httpd' returned a non-zero co
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# cp Dockerfile Dockerfile_bkps
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker build -t krish .^C
+[root@ip-10-17-0-4 sai]# ^C
+[root@ip-10-17-0-4 sai]# docker rmi $(docker images -a -q)
+Error response from daemon: conflict: unable to delete 620aa7523bbe (must be forced) - image is being used by stopped cont
+Error response from daemon: conflict: unable to delete 1127fd19ff5b (must be forced) - image is being used by stopped cont
+Error response from daemon: conflict: unable to delete 9177fbc2ffd6 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 102ad00e42b1 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 061f874d720d (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 25a06b684f27 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete d9615e73ad2b (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 6db960c2722b (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 24aae9d79505 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete f61691203fb8 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete a3a7ce3fbdab (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 9ce5b5173af6 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete f8a022fc86c1 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 905dd43b9f42 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete ab00248b58a2 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete cc6e78c0ea4d (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 91c4c5bedba3 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 37f1861f3ce5 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete aa00e5351eb3 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete c403eb2bbc14 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 50fd304235b4 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete c928be5704e9 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete caea79d50418 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 90d60d614298 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 378556b9d2c3 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete b997e1f2c662 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 7aa93a5399af (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete f8c8408d46d3 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 3acada7c60cf (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 4a689991aa24 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 75835a67d134 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete cd14cecfdb3a (must be forced) - image is being used by stopped cont
+[root@ip-10-17-0-4 sai]# docker rmi -f $(docker images -a -q)
+Deleted: sha256:620aa7523bbecd667b55b9cbd49d04aa731030d6fbfc84c16abcc650090f1573
+Deleted: sha256:1127fd19ff5b6dfd4953ce841e684ab295285032970b4682935b6a97f3491aa8
+Deleted: sha256:102ad00e42b1a6460c853b153692f89ff36746170c586c9546bf6b76c60e14fa
+Deleted: sha256:9177fbc2ffd6f0f40cf3077092a716cfa354c8a2e621d38ef475f0ca5ec95f1d
+Deleted: sha256:061f874d720d37f2d668914fae579ac51e7ff62dcd29015c96a8a07c323726b9
+Deleted: sha256:25a06b684f2709586705f6fb7860e5ddd9f2d02eb3b738c8ed1bc6f73c907730
+Deleted: sha256:d9615e73ad2b79a688730789d682ace9532a5911af0c366bc89eb0901cdbb486
+Deleted: sha256:6db960c2722b4f1c3e61ffb93bf4d3c907c337c014a33df50e6c5da1816aac29
+Deleted: sha256:24aae9d79505269b6034a15abe54de4ac2dae954265c2351925fd249765f7dac
+Deleted: sha256:ab00248b58a242063afe95b25df0ad53d6c320e6f9549ee36de07f793ab9f20b
+Deleted: sha256:50fd304235b4a727e33d2bb37677a8e309ccab1ad948e2d1e595e1e97c9f7421
+Deleted: sha256:9ce5b5173af61c2b4e707dc98bb0c077284feeb120518be35795da40d99bf971
+Deleted: sha256:91c4c5bedba3f675f850072b83e90f6591ff612300b211814cd8dd308825b60f
+Deleted: sha256:905dd43b9f42d6d4d5371f5c7531ad0aa760974acdb3189242c231d791581dd3
+Deleted: sha256:37f1861f3ce577e4e62ed04826fb50f6098fc66f25900f29ad97641e82121715
+Deleted: sha256:f8a022fc86c15bce0a06ec22f73dda59c6a3357a30f8d1e5d1255b47a39b8225
+Deleted: sha256:a3a7ce3fbdab7016b53c8a10780bebe5556e4f3f23090ff83830541e7135a481
+Deleted: sha256:f61691203fb884ca04bcc491bbe9d1f012a344f4588cd7998f510980e64a3d71
+Deleted: sha256:aa00e5351eb30bed6b5bc5f8649d298e2e53edf5e6464b9bc45c2697cfc5369d
+Deleted: sha256:cc6e78c0ea4d30696eb68d664dba65fc63f3c73a9e5600cf154c4c9659eb97f5
+Deleted: sha256:c403eb2bbc148195a5946986107d84889ca6fa39bf0e878f0258a5550fe4e956
+Deleted: sha256:c928be5704e97026acde12853371fa4dcc01082a9a734c3421da953cf3800bc8
+Deleted: sha256:caea79d50418d163885957786e28d2eb3d30062192cdf237eb7ff134b40c0e6b
+Deleted: sha256:7aa93a5399af028d3b26038c985f5991c875a9c123c4bb0797f56d71b035a105
+Deleted: sha256:f8c8408d46d3b95b4e15b5a7e4b1562b913e8e2ec820eb4f7c3ec358be9afe7f
+Deleted: sha256:90d60d6142988baaf3a044dba3d501ff66ce5ce68d9c92d059e4c63f8dc9726e
+Deleted: sha256:3acada7c60cf209ee2d18635742227bde9a90bb7e13009f329fc12b965a142a4
+Deleted: sha256:378556b9d2c37d8e529683a7c7d592681f18949a8641c02f8b89a91c769b7ac9
+Deleted: sha256:b997e1f2c662bc8584909c5bd3dec0320bf4b06bd2f87417967e7aeb2bb4ee3c
+Untagged: ubuntu:16.04
+Untagged: ubuntu@sha256:76702ec53c5e7771ba3f2c4f6152c3796c142af2b3cb1a02fce66c697db24f12
+Deleted: sha256:4a689991aa24aeb0339a27a1b5f42d040f28b0411d37d4812816e79f7049516c
+Untagged: centos:latest
+Untagged: centos@sha256:67dad89757a55bfdfabec8abd0e22f8c7c12a1856514726470228063ed86593b
+Deleted: sha256:75835a67d1341bdc7f4cc4ed9fa1631a7d7b6998e9327272afea342d90c4ab6d
+Untagged: jenkins:latest
+Untagged: jenkins@sha256:eeb4850eb65f2d92500e421b430ed1ec58a7ac909e91f518926e02473904f668
+Deleted: sha256:cd14cecfdb3a657ba7d05bea026e7ac8b9abafc6e5c66253ab327c7211fa6281
+Error: No such image: 9177fbc2ffd6
+Error: No such image: 102ad00e42b1
+Error: No such image: 061f874d720d
+Error: No such image: 25a06b684f27
+Error: No such image: d9615e73ad2b
+Error: No such image: 6db960c2722b
+Error: No such image: 24aae9d79505
+Error: No such image: f61691203fb8
+Error: No such image: 37f1861f3ce5
+Error: No such image: f8a022fc86c1
+Error: No such image: a3a7ce3fbdab
+Error: No such image: cc6e78c0ea4d
+Error: No such image: 9ce5b5173af6
+Error: No such image: aa00e5351eb3
+Error: No such image: 905dd43b9f42
+Error: No such image: ab00248b58a2
+Error: No such image: 91c4c5bedba3
+Error: No such image: c403eb2bbc14
+Error: No such image: 50fd304235b4
+Error: No such image: c928be5704e9
+Error: No such image: f8c8408d46d3
+Error: No such image: caea79d50418
+Error: No such image: b997e1f2c662
+Error: No such image: 378556b9d2c3
+Error: No such image: 7aa93a5399af
+Error: No such image: 90d60d614298
+Error: No such image: 3acada7c60cf
+[root@ip-10-17-0-4 sai]# cp Dockerfile Dockerfile_bkps^C
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  3.072kB
+Step 1/13 : FROM komljen/php-apache
+latest: Pulling from komljen/php-apache
+862a3e9af0ae: Pull complete
+6498e51874bf: Pull complete
+159ebdd1959b: Pull complete
+0fdbedd3771a: Pull complete
+7a1f7116d1e3: Pull complete
+da193f0aca48: Pull complete
+6a5dab4b7ac8: Pull complete
+858927500417: Pull complete
+96097a551f38: Pull complete
+467942a8f294: Pull complete
+6b3a9be7f8f4: Pull complete
+a63619d48e5b: Pull complete
+e2e297d56127: Pull complete
+66674b30b1dc: Pull complete
+362cbfa88da5: Pull complete
+Digest: sha256:f2a91ba7d086a9efbfdd30a6ebdf35e95fd0a014f37adbe23f27c28d43ba7de8
+Status: Downloaded newer image for komljen/php-apache:latest
+ ---> e7ee42104a31
+Step 2/13 : MAINTAINER Alen Komljen <alen.komljen@live.com>
+ ---> Running in 2ee179dc1cd1
+Removing intermediate container 2ee179dc1cd1
+ ---> af51587c7697
+Step 3/13 : ENV WP_PASS aeshiethooghahtu4Riebooquae6Ithe
+ ---> Running in 92d71beb8bc4
+Removing intermediate container 92d71beb8bc4
+ ---> 1f795722411b
+Step 4/13 : ENV WP_USER wordpress
+ ---> Running in fe653c8c0202
+Removing intermediate container fe653c8c0202
+ ---> e5d8372eb019
+Step 5/13 : ENV WP_DB wordpress
+ ---> Running in a69749362805
+Removing intermediate container a69749362805
+ ---> d0f0bc755589
+Step 6/13 : ENV APP_ROOT /var/www/html
+ ---> Running in 7ee42211b56b
+Removing intermediate container 7ee42211b56b
+ ---> c539b282d7b2
+Step 7/13 : ADD http://wordpress.org/latest.tar.gz wordpress.tar.gz
+Downloading [==================================================>]  8.744MB/8.744MB
+
+ ---> f1bcefce297a
+Step 8/13 : RUN   tar xzf wordpress.tar.gz -C ${APP_ROOT} --strip-components 1 &&   rm wordpress.tar.gz
+ ---> Running in 38c4a0c588cc
+Removing intermediate container 38c4a0c588cc
+ ---> 91dbea0c54c4
+Step 9/13 : COPY start.sh start.sh
+COPY failed: stat /var/lib/docker/tmp/docker-builder461412887/start.sh: no such file or directory
+[root@ip-10-17-0-4 sai]# vi start.sh
+[root@ip-10-17-0-4 sai]# chmod 777 start.sh
+[root@ip-10-17-0-4 sai]# docker rmi -f $(docker images -a -q)
+Deleted: sha256:91dbea0c54c44eceb4f0731ed5cd1805c046c4780d042c6d91183c8ed4b4af1f
+Deleted: sha256:7d8839e0a145ec387fa05f217fc736a57bf3a4cf77c47a5b0fade4dc2948aad7
+Deleted: sha256:f1bcefce297aa7c590daa0cfcc6a3682af0f72ab54da1419221b6f61377db6cc
+Deleted: sha256:4c50d6d204d55683381184e9aeeb06d36a3e61cce76c9838ee13e46bf56f0720
+Deleted: sha256:c539b282d7b2577fe93aa4ff6c4e4e1cc63dbd021e8f0f6f39c822cc842107d5
+Deleted: sha256:d0f0bc755589f1a0413a0c2ccdaf2eb4191857bbb116af2bef38859faf0d5983
+Deleted: sha256:e5d8372eb0194b3f83d97ea04f5bfff0bc79b863fdff2ca7a0c1bcf099619748
+Deleted: sha256:1f795722411bf0416908027ebbf56b1dbc1f345d5eecc0d74d9fcfe89ba4d328
+Deleted: sha256:af51587c7697afade85d78ba73a506e393d37edc0b394e48776ceb6bc99e7d22
+Untagged: komljen/php-apache:latest
+Untagged: komljen/php-apache@sha256:f2a91ba7d086a9efbfdd30a6ebdf35e95fd0a014f37adbe23f27c28d43ba7de8
+Deleted: sha256:e7ee42104a31c0567739602ce3c44f3a055e23b37dce36ce04ff96e956d3d087
+Deleted: sha256:fbd4c391a56cac2afd2dd691445d88bc5555982680ef00dda625bcbbaef218cd
+Deleted: sha256:6d3f48a2aaeef4be2386d34fcd29f6137fd5ee1ebd131df67fac9df8cdaa298d
+Deleted: sha256:0184f3536183a1812c7de2077ce9c1907dfc03f96590589c397cdfe851f2522f
+Deleted: sha256:66649f17ed1ee62b53839eee19736e107b1f69a1fdf8dc4776e4d3adca7f6b66
+Deleted: sha256:0cd1bb431d4319f030d9f237a5413f519dcb388fb7eff1d32dcd0d7b9446c588
+Deleted: sha256:6643f3f82752c6403b1b1ac15711d97bf436a418709815d3d22345afdb8e34ef
+Deleted: sha256:bf4551f1f271853f7054024596b64704356e7b45654c9712fb6563ea0803789b
+Deleted: sha256:e8e5c2c0a0fd5d0e08d262f0506c2ecd3368a4ea5ce674763985dd85861eeaf8
+Deleted: sha256:fdd0f333227f141f77bea07941f5a85aa466bad87402ceec5f6a1922d9ce5e99
+Deleted: sha256:f4344303de1ccbe178ec77e93755ff929e97a48fb7e40f31afb4bb128a739148
+Deleted: sha256:2151650c1433199cd4eae94fa9e8f7d50d9d4d4dd46a975aca1d07ac6c07faab
+Deleted: sha256:06b29b5f4814ca2c4d2a78fe18be8c8cf3c0780519d30dd0cdd4e09b593b75f5
+Deleted: sha256:5c2a2362cd9731a47a8a939662a8df09df235450fcdea38614dabac442ee3eec
+Deleted: sha256:e99c712c3ad349848a94bb8c00d97b0acaa800b568dc4e0f58bdaea80190b2e4
+Deleted: sha256:102fca64f92471ff7fca48e55807ae2471502822ba620292b0a06ebcab907cf4
+Error: No such image: c539b282d7b2
+Error: No such image: f1bcefce297a
+Error: No such image: 1f795722411b
+Error: No such image: af51587c7697
+Error: No such image: e5d8372eb019
+Error: No such image: d0f0bc755589
+[root@ip-10-17-0-4 sai]# docker build -t krish .
+Sending build context to Docker daemon  5.632kB
+Step 1/13 : FROM komljen/php-apache
+latest: Pulling from komljen/php-apache
+862a3e9af0ae: Pull complete
+6498e51874bf: Pull complete
+159ebdd1959b: Pull complete
+0fdbedd3771a: Pull complete
+7a1f7116d1e3: Pull complete
+da193f0aca48: Pull complete
+6a5dab4b7ac8: Pull complete
+858927500417: Pull complete
+96097a551f38: Pull complete
+467942a8f294: Pull complete
+6b3a9be7f8f4: Pull complete
+a63619d48e5b: Pull complete
+e2e297d56127: Pull complete
+66674b30b1dc: Pull complete
+362cbfa88da5: Pull complete
+Digest: sha256:f2a91ba7d086a9efbfdd30a6ebdf35e95fd0a014f37adbe23f27c28d43ba7de8
+Status: Downloaded newer image for komljen/php-apache:latest
+ ---> e7ee42104a31
+Step 2/13 : MAINTAINER Alen Komljen <alen.komljen@live.com>
+ ---> Running in 29c706f4ef02
+Removing intermediate container 29c706f4ef02
+ ---> 75eb3757845c
+Step 3/13 : ENV WP_PASS aeshiethooghahtu4Riebooquae6Ithe
+ ---> Running in 44606ff36694
+Removing intermediate container 44606ff36694
+ ---> 544e699250cb
+Step 4/13 : ENV WP_USER wordpress
+ ---> Running in 1da1a3b55244
+Removing intermediate container 1da1a3b55244
+ ---> df49bb1cc36f
+Step 5/13 : ENV WP_DB wordpress
+ ---> Running in de3a1c611ec9
+Removing intermediate container de3a1c611ec9
+ ---> d3ea7254c30c
+Step 6/13 : ENV APP_ROOT /var/www/html
+ ---> Running in 3691edb13fc6
+Removing intermediate container 3691edb13fc6
+ ---> f0e14da2bec3
+Step 7/13 : ADD http://wordpress.org/latest.tar.gz wordpress.tar.gz
+Downloading [==================================================>]  8.744MB/8.744MB
+
+ ---> 002ba71f1dbd
+Step 8/13 : RUN   tar xzf wordpress.tar.gz -C ${APP_ROOT} --strip-components 1 &&   rm wordpress.tar.gz
+ ---> Running in 63691ed092f1
+Removing intermediate container 63691ed092f1
+ ---> 3f727118ed0e
+Step 9/13 : COPY start.sh start.sh
+ ---> 2ac73698122e
+Step 10/13 : VOLUME ["$APP_ROOT"]
+ ---> Running in c094f74da86b
+Removing intermediate container c094f74da86b
+ ---> 5de16dee6e5a
+Step 11/13 : RUN rm /usr/sbin/policy-rc.d
+ ---> Running in 5212c5a943b8
+Removing intermediate container 5212c5a943b8
+ ---> 147f33e0cc01
+Step 12/13 : CMD ["/start.sh"]
+ ---> Running in 2c97c6b01c55
+Removing intermediate container 2c97c6b01c55
+ ---> a482ad1dae5e
+Step 13/13 : EXPOSE 80
+ ---> Running in 0d9102831e47
+Removing intermediate container 0d9102831e47
+ ---> 2c5b5a60c6c6
+Successfully built 2c5b5a60c6c6
+Successfully tagged krish:latest
+[root@ip-10-17-0-4 sai]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+krish                latest              2c5b5a60c6c6        46 seconds ago      413MB
+komljen/php-apache   latest              e7ee42104a31        2 years ago         377MB
+[root@ip-10-17-0-4 sai]# docker run -it -d --name saikumar -p 8090:80 krish
+bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+[root@ip-10-17-0-4 sai]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS
+bfc18e5d9646        krish               "/start.sh"         About a minute ago   Up About a minute   0.0.0.0:8090->80/tcp
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# docker rm bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+Error response from daemon: You cannot remove a running container bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1 removal or force remove
+[root@ip-10-17-0-4 sai]# docker stop bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+^[[A^[[A^[[Abfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+[root@ip-10-17-0-4 sai]# docker rm bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+bfc18e5d9646c4137aff604de259ee96a931a4c4381ee175c77465e1c8cb2213
+[root@ip-10-17-0-4 sai]# docker run -it -d --name saikumar -p 80:80 krish
+a4b67d8b096d305238478811a7d81cdfe0a198af2819e3daef1c06fc5cd5b418
+[root@ip-10-17-0-4 sai]# curl http://10.17.0.4
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# curl http://10.17.0.4
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# curl http://10.17.0.4
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# curl http://10.17.0.4
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# curl http://10.17.0.4
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# curl -v http://10.17.0.4
+* Rebuilt URL to: http://10.17.0.4/
+*   Trying 10.17.0.4...
+* TCP_NODELAY set
+* connect to 10.17.0.4 port 80 failed: Connection refused
+* Failed to connect to 10.17.0.4 port 80: Connection refused
+* Closing connection 0
+curl: (7) Failed to connect to 10.17.0.4 port 80: Connection refused
+[root@ip-10-17-0-4 sai]# docker stop saikumar
+saikumar
+[root@ip-10-17-0-4 sai]# docker rm saikumar
+saikumar
+[root@ip-10-17-0-4 sai]# docker-compose
+bash: docker-compose: command not found
+[root@ip-10-17-0-4 sai]# yum install epel-release
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core
+No package epel-release available.
+Error: Nothing to do
+
+
+epel-release is available in Amazon Linux Extra topic "epel"
+
+To use, run
+# sudo amazon-linux-extras install epel
+
+Learn more at
+https://aws.amazon.com/amazon-linux-2/faqs/#Amazon_Linux_Extras
+
+
+[root@ip-10-17-0-4 sai]# yum install -y python-pip
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package python2-pip.noarch 0:9.0.3-1.amzn2.0.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================
+ Package                                 Arch                               Version
+==========================================================================================================================
+Installing:
+ python2-pip                             noarch                             9.0.3-1.amzn2.0.1
+
+Transaction Summary
+==========================================================================================================================
+Install  1 Package
+
+Total download size: 1.9 M
+Installed size: 8.3 M
+Downloading packages:
+python2-pip-9.0.3-1.amzn2.0.1.noarch.rpm
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python2-pip-9.0.3-1.amzn2.0.1.noarch
+  Verifying  : python2-pip-9.0.3-1.amzn2.0.1.noarch
+
+Installed:
+  python2-pip.noarch 0:9.0.3-1.amzn2.0.1
+
+Complete!
+[root@ip-10-17-0-4 sai]# pip install docker-compose
+WARNING: Running pip install with root privileges is generally not a good idea. Try `pip install --user` instead.
+Collecting docker-compose
+  Downloading https://files.pythonhosted.org/packages/2e/57/4f02ad084b637e00d7f430562b1cba24321e5d6eb59aecad2a6b760ebc18/dkB)
+    100% |████████████████████████████████| 133kB 6.2MB/s
+Collecting docopt<0.7,>=0.6.1 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/d
+Requirement already satisfied: jsonschema<3,>=2.5.1 in /usr/lib/python2.7/site-packages (from docker-compose)
+Collecting cached-property<2,>=1.2.0 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/3b/86/85c1be2e8db9e13ef9a350aecd6dea292bd612fa288c2f40d035bb750ded/c
+Requirement already satisfied: six<2,>=1.3.0 in /usr/lib/python2.7/site-packages (from docker-compose)
+Requirement already satisfied: backports.ssl-match-hostname>=3.5; python_version < "3.5" in /usr/lib/python2.7/site-packag
+Requirement already satisfied: ipaddress>=1.0.16; python_version < "3.3" in /usr/lib/python2.7/site-packages (from docker-
+Collecting requests!=2.11.0,!=2.12.2,!=2.18.0,<2.21,>=2.6.1 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/ff/17/5cbb026005115301a8fb2f9b0e3e8d32313142fe8b617070e7baad20554f/r
+    100% |████████████████████████████████| 61kB 9.0MB/s
+Collecting texttable<0.10,>=0.9.0 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/02/e1/2565e6b842de7945af0555167d33acfc8a615584ef7abd30d1eae00a4d80/t
+Collecting dockerpty<0.5,>=0.4.1 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/8d/ee/e9ecce4c32204a6738e0a5d5883d3413794d7498fe8b06f44becc028d3ba/d
+Requirement already satisfied: enum34<2,>=1.0.4; python_version < "3.4" in /usr/lib/python2.7/site-packages (from docker-c
+Collecting websocket-client<1.0,>=0.32.0 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/26/2d/f749a5c82f6192d77ed061a38e02001afcba55fe8477336d26a950ab17ce/w00kB)
+    100% |████████████████████████████████| 204kB 4.7MB/s
+Requirement already satisfied: PyYAML<4,>=3.10 in /usr/lib64/python2.7/site-packages (from docker-compose)
+Collecting docker<4.0,>=3.5.0 (from docker-compose)
+  Downloading https://files.pythonhosted.org/packages/c2/76/b8091dc6d9db038af62ae88f228da656a84632cf5d7a84dcf54c613d3fd0/d
+    100% |████████████████████████████████| 133kB 7.1MB/s
+Requirement already satisfied: repoze.lru in /usr/lib/python2.7/site-packages (from jsonschema<3,>=2.5.1->docker-compose)
+Collecting chardet<3.1.0,>=3.0.2 (from requests!=2.11.0,!=2.12.2,!=2.18.0,<2.21,>=2.6.1->docker-compose)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/c
+    100% |████████████████████████████████| 143kB 6.4MB/s
+Collecting certifi>=2017.4.17 (from requests!=2.11.0,!=2.12.2,!=2.18.0,<2.21,>=2.6.1->docker-compose)
+  Downloading https://files.pythonhosted.org/packages/56/9d/1d02dd80bc4cd955f98980f28c5ee2200e1209292d5f9e9cc8d030d18655/c
+    100% |████████████████████████████████| 153kB 6.1MB/s
+Collecting urllib3<1.25,>=1.21.1 (from requests!=2.11.0,!=2.12.2,!=2.18.0,<2.21,>=2.6.1->docker-compose)
+  Downloading https://files.pythonhosted.org/packages/62/00/ee1d7de624db8ba7090d1226aebefab96a2c71cd5cfa7629d6ad3f61b79e/u
+    100% |████████████████████████████████| 122kB 7.6MB/s
+Collecting idna<2.8,>=2.5 (from requests!=2.11.0,!=2.12.2,!=2.18.0,<2.21,>=2.6.1->docker-compose)
+  Downloading https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/i
+    100% |████████████████████████████████| 61kB 8.7MB/s
+Collecting docker-pycreds>=0.3.0 (from docker<4.0,>=3.5.0->docker-compose)
+  Downloading https://files.pythonhosted.org/packages/ea/bf/7e70aeebc40407fbdb96fa9f79fc8e4722ea889a99378303e3bcc73f4ab5/d
+Installing collected packages: docopt, cached-property, chardet, certifi, urllib3, idna, requests, texttable, dockerpty, wr-compose
+  Running setup.py install for docopt ... done
+  Found existing installation: chardet 2.2.1
+    Uninstalling chardet-2.2.1:
+      Successfully uninstalled chardet-2.2.1
+  Found existing installation: urllib3 1.10.2
+    Uninstalling urllib3-1.10.2:
+      Successfully uninstalled urllib3-1.10.2
+  Found existing installation: idna 2.4
+    Uninstalling idna-2.4:
+      Successfully uninstalled idna-2.4
+  Found existing installation: requests 2.6.0
+    DEPRECATION: Uninstalling a distutils installed project (requests) has been deprecated and will be removed in a futurelling a distutils project will only partially uninstall the project.
+    Uninstalling requests-2.6.0:
+      Successfully uninstalled requests-2.6.0
+  Running setup.py install for texttable ... done
+  Running setup.py install for dockerpty ... done
+Successfully installed cached-property-1.5.1 certifi-2018.10.15 chardet-3.0.4 docker-3.5.1 docker-compose-1.23.1 docker-py2.7 requests-2.20.1 texttable-0.9.1 urllib3-1.24.1 websocket-client-0.54.0
+[root@ip-10-17-0-4 sai]# yum upgrade python*
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No packages marked for update
+[root@ip-10-17-0-4 sai]# docker-compose -v
+docker-compose version 1.23.1, build b02f130
+[root@ip-10-17-0-4 sai]# vi docker-compose.yml
+[root@ip-10-17-0-4 sai]# docker-compose up -d
+Creating network "sai_default" with the default driver
+Creating volume "sai_db_data" with default driver
+Pulling db (mysql:5.7)...
+5.7: Pulling from library/mysql
+a5a6f2f73cd8: Pull complete
+936836019e67: Pull complete
+283fa4c95fb4: Pull complete
+1f212fb371f9: Pull complete
+e2ae0d063e89: Pull complete
+5ed0ae805b65: Pull complete
+0283dc49ef4e: Pull complete
+a7905d9fbbea: Pull complete
+cd2a65837235: Pull complete
+5f906b8da5fe: Pull complete
+e81e51815567: Pull complete
+Pulling wordpress (wordpress:latest)...
+latest: Pulling from library/wordpress
+f17d81b4b692: Pull complete
+376d99d019dc: Pull complete
+80b3573727f0: Pull complete
+2c492579cd1f: Pull complete
+9127acfc108e: Pull complete
+475593d953b6: Pull complete
+52442c108349: Pull complete
+34b7a8ed8171: Pull complete
+57b93ed05069: Pull complete
+c03bc06afbf1: Pull complete
+4be3d516ef4a: Pull complete
+25253f4c7678: Pull complete
+a31f6d47aa8d: Pull complete
+2f5be4abfef2: Pull complete
+5c06492fa2ec: Pull complete
+742fba5dd491: Pull complete
+b1e916c6c627: Pull complete
+ac9166b0278f: Pull complete
+f9589005c8bb: Pull complete
+9d91c94172a1: Pull complete
+Creating sai_db_1_f4587fea7dc7 ... done
+Creating sai_wordpress_1_b7ddf292afa6 ... done
+[root@ip-10-17-0-4 sai]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS
+44d940a87c7e        wordpress:latest    "docker-entrypoint.s…"   59 seconds ago      Up 58 seconds       0.0.0.0:8000->80/
+f4a3d3efda2d        mysql:5.7           "docker-entrypoint.s…"   59 seconds ago      Up 58 seconds       3306/tcp, 33060/t
+(reverse-i-search)`docker im': ^Ccker images
+[root@ip-10-17-0-4 sai]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS
+44d940a87c7e        wordpress:latest    "docker-entrypoint.s…"   13 minutes ago      Up 13 minutes       0.0.0.0:8000->80/
+f4a3d3efda2d        mysql:5.7           "docker-entrypoint.s…"   13 minutes ago      Up 13 minutes       3306/tcp, 33060/t
+[root@ip-10-17-0-4 sai]# docker stop 44d9 f4a3
+44d9
+f4a3
+[root@ip-10-17-0-4 sai]# docker rm  44d9 f4a3
+44d9
+f4a3
+[root@ip-10-17-0-4 sai]# docker rmi -f $(docker images -a -q)
+Untagged: krish:latest
+Deleted: sha256:2c5b5a60c6c68efd089870a4bbbf9b78d8f48fcbcd478efabb8c43cc72e5044b
+Deleted: sha256:a482ad1dae5e7320cd74834533e2421ad0ea2f049b9b0513dc56d8adc2c5930a
+Deleted: sha256:147f33e0cc01b49e571e342088b2ac741c602287f387a20b5697550559baec65
+Deleted: sha256:50b8c18424d52db750926ee036bfe02600e48504be02ef2b6caa8401d8a83d54
+Deleted: sha256:5de16dee6e5a1445ac6159d2e2a607192386b51fb3542e7faecb06cc70ea6d6f
+Deleted: sha256:2ac73698122e116f1afc1850a1c426f44efcef8868530d50715acd1e5590a245
+Deleted: sha256:cb49151e588e6c8da9022e457b6cc283f6f8a25dc11900a4c1f3269ebfdf6aed
+Deleted: sha256:3f727118ed0e23b0613e4782671131388d6fcf6193128759d2ee5b8c19f44bf0
+Deleted: sha256:b01fcf0c8702b1b996e5b79866ccfff43611d7cd728aff2ab5c0bf78f264f2c2
+Deleted: sha256:002ba71f1dbd539a2948591cf10438ec4fc176c8be73f6b5af215a71ec90ef37
+Deleted: sha256:4c50d6d204d55683381184e9aeeb06d36a3e61cce76c9838ee13e46bf56f0720
+Deleted: sha256:f0e14da2bec39dc008e54cbb29e539f9e32611b96d07427e6c32c89c5dbcdc83
+Deleted: sha256:d3ea7254c30c2e935cfcce7b8d55e04f4645956c401a5887dd4aaa3b8e80fa9a
+Deleted: sha256:df49bb1cc36f626113e96616e19cad745ecdcf01304c54891cce7a8c82b70f31
+Deleted: sha256:544e699250cb3f8827de09c3e50e6d55d92f8a28c66e5819770f7032b6638f1d
+Deleted: sha256:75eb3757845c34921e8b6dca8c4332907be2dd4a523a23459626027ed42cad66
+Untagged: mysql:5.7
+Untagged: mysql@sha256:c23e9bfe66eeffc990cf6bce4bb0e9c5c85eb908170f3b3dde3e9a12c5a91689
+Deleted: sha256:ae6b78bedf88330a5e5392164f40d28ed8a38120b142905d30b652ebffece10e
+Deleted: sha256:f024299d5797abfbd2ad27e6fe59c9c10e573b0bd4a21edc6a3da1778ab8af8c
+Deleted: sha256:a0b13fe66eceb35d675bfc84f90819999bc5c8e0850e857ab8a491ae53f1228e
+Deleted: sha256:3dc077da5db9cc2a0ea304c5fd97411d0b18de822cb25a8d6c25506efa8db824
+Deleted: sha256:3ed2fc046a67f02b57447b4f77f37d592f976c1b222aaf970fcc739c2bce9410
+Deleted: sha256:7967f8fc83e2010bad53fd2fb21ab41a08ccfc9831c837fc24535467136187a2
+Deleted: sha256:593b105a77d4ff549d46eb65601b952fc5951ceff0bf03ea797ad877a4e7e16e
+Deleted: sha256:a89b4c6ee379b1a79f8948dc8009c9ed6e2729ed1fa3bad58bf01080bb538f3d
+Deleted: sha256:a783dca9de7de1093eebeab09f60e05f9c6372290d340816b17debd701a4f159
+Deleted: sha256:3579b240241d86e588a22d415ace8a2ed036817a73ab55942f662b32f9e6fb44
+Deleted: sha256:e6cf98c0c3aa81bcab324f8dac0317e2448d92e83c20a2c7bf763fc71f0831c5
+Deleted: sha256:ef68f6734aa485edf13a8509fe60e4272428deaf63f446a441b79d47fc5d17d3
+Untagged: wordpress:latest
+Untagged: wordpress@sha256:3e466c3f09ce657d848538188ea2e3240de6f104ada6e616f171da15cd903ce9
+Deleted: sha256:a35e6bd3c497c8769e453e52dd1c42267f264e0e445a230b36bd3e919dc859ec
+Deleted: sha256:90b4ac337584f9302536a5d9cf5f89b517bf76256fcc6cd5d024146e846d6f30
+Deleted: sha256:501e5620a78d6feaaf8261e283c5f269c2c5b9ac1c8f63ce6790c872ed4d5fd0
+Deleted: sha256:afc3c57e09022ff0f81ee1ec1b72874006fa47dcb8832bf3209b7d1628786c42
+Deleted: sha256:8587570edb8b16b4ac38f52c8f76f9c661e099090c4e2016aebd0dbdc6539687
+Deleted: sha256:4c90d426c702ebccd70cf62994f390923ace8092c8787d9d186108f032b9e981
+Deleted: sha256:34d5be0505721f88ab21dce4215e41074611a634bdc85ccf09d37bc79d48b98f
+Deleted: sha256:03cc92700a0abc6db2246029a2b6c8aa7fdd3f8918a7701196ce06e1a489061a
+Deleted: sha256:3878b6ddbe0f94a7d4eb854c7e6713825ce7db9c85ed851991f7b05c53c91c60
+Deleted: sha256:df77b7230f00d274d4abaa956fac8f755eeaa5aaf846443aa3761bcff7eb1d3f
+Deleted: sha256:76479355bd6eae8ec22d0d4704049921bfa58abf82004273b17f85270b9ca383
+Deleted: sha256:4ce0d3753bfe9513b1606979a1902a766e3de283b5f70007cd5ed666a2d654aa
+Deleted: sha256:34f1511fe594aff77da5e285faed4c1b3acb2141b39dc14a47820398e279313c
+Deleted: sha256:d57cb0aa401de0223755f83017cf49d81d976507acf668b42d7076363f16c5cc
+Deleted: sha256:8281c43d8ae2a967c939fa081ed7a1d445c079a2fffd5b078cf1c4a3f2ad9d22
+Deleted: sha256:1ac1a4514a5acccfd0a2096a424e7ac72392d5ca75e1d10394873a4508a46e98
+Deleted: sha256:acc6dcfac227b1e7dd2293a7c7ddc6ab2f30d75142d00d2e651e32dd5fff2020
+Deleted: sha256:0a0a7f17c60993baa61bc0a96b798b30a01d51ccdb06d354552acdc6c0cf33ff
+Deleted: sha256:59b0f7b81f39c56c3654e4e45e8bc5017ffdc69f30aeaa17d4293bcdb6f4e199
+Deleted: sha256:e6098b01b24d9bf96cfd2620fc1e76a09738738ade1c121d420ef6b6fd50dc3e
+Deleted: sha256:237472299760d6726d376385edd9e79c310fe91d794bc9870d038417d448c2d5
+Untagged: komljen/php-apache:latest
+Untagged: komljen/php-apache@sha256:f2a91ba7d086a9efbfdd30a6ebdf35e95fd0a014f37adbe23f27c28d43ba7de8
+Deleted: sha256:e7ee42104a31c0567739602ce3c44f3a055e23b37dce36ce04ff96e956d3d087
+Deleted: sha256:fbd4c391a56cac2afd2dd691445d88bc5555982680ef00dda625bcbbaef218cd
+Deleted: sha256:6d3f48a2aaeef4be2386d34fcd29f6137fd5ee1ebd131df67fac9df8cdaa298d
+Deleted: sha256:0184f3536183a1812c7de2077ce9c1907dfc03f96590589c397cdfe851f2522f
+Deleted: sha256:66649f17ed1ee62b53839eee19736e107b1f69a1fdf8dc4776e4d3adca7f6b66
+Deleted: sha256:0cd1bb431d4319f030d9f237a5413f519dcb388fb7eff1d32dcd0d7b9446c588
+Deleted: sha256:6643f3f82752c6403b1b1ac15711d97bf436a418709815d3d22345afdb8e34ef
+Deleted: sha256:bf4551f1f271853f7054024596b64704356e7b45654c9712fb6563ea0803789b
+Deleted: sha256:e8e5c2c0a0fd5d0e08d262f0506c2ecd3368a4ea5ce674763985dd85861eeaf8
+Deleted: sha256:fdd0f333227f141f77bea07941f5a85aa466bad87402ceec5f6a1922d9ce5e99
+Deleted: sha256:f4344303de1ccbe178ec77e93755ff929e97a48fb7e40f31afb4bb128a739148
+Deleted: sha256:2151650c1433199cd4eae94fa9e8f7d50d9d4d4dd46a975aca1d07ac6c07faab
+Deleted: sha256:06b29b5f4814ca2c4d2a78fe18be8c8cf3c0780519d30dd0cdd4e09b593b75f5
+Deleted: sha256:5c2a2362cd9731a47a8a939662a8df09df235450fcdea38614dabac442ee3eec
+Deleted: sha256:e99c712c3ad349848a94bb8c00d97b0acaa800b568dc4e0f58bdaea80190b2e4
+Deleted: sha256:102fca64f92471ff7fca48e55807ae2471502822ba620292b0a06ebcab907cf4
+Error: No such image: 147f33e0cc01
+Error: No such image: a482ad1dae5e
+Error: No such image: 5de16dee6e5a
+Error: No such image: 2ac73698122e
+Error: No such image: 3f727118ed0e
+Error: No such image: 002ba71f1dbd
+Error: No such image: f0e14da2bec3
+Error: No such image: 544e699250cb
+Error: No such image: d3ea7254c30c
+Error: No such image: 75eb3757845c
+Error: No such image: df49bb1cc36f
+[root@ip-10-17-0-4 sai]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.14.5-1.amzn2 will be installed
+--> Processing Dependency: perl-Git = 2.14.5-1.amzn2 for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: git-core-doc = 2.14.5-1.amzn2 for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: git-core = 2.14.5-1.amzn2 for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: emacs-filesystem >= 25.3 for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: perl(Error) for package: git-2.14.5-1.amzn2.x86_64
+--> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.14.5-1.amzn2.x86_64
+--> Running transaction check
+---> Package emacs-filesystem.noarch 1:25.3-3.amzn2.0.1 will be installed
+---> Package git-core.x86_64 0:2.14.5-1.amzn2 will be installed
+---> Package git-core-doc.x86_64 0:2.14.5-1.amzn2 will be installed
+---> Package libsecret.x86_64 0:0.18.5-2.amzn2.0.2 will be installed
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+---> Package perl-Git.noarch 0:2.14.5-1.amzn2 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================
+ Package                                    Arch                             Version
+==========================================================================================================================
+Installing:
+ git                                        x86_64                           2.14.5-1.amzn2
+Installing for dependencies:
+ emacs-filesystem                           noarch                           1:25.3-3.amzn2.0.1
+ git-core                                   x86_64                           2.14.5-1.amzn2
+ git-core-doc                               x86_64                           2.14.5-1.amzn2
+ libsecret                                  x86_64                           0.18.5-2.amzn2.0.2
+ perl-Error                                 noarch                           1:0.17020-2.amzn2
+ perl-Git                                   noarch                           2.14.5-1.amzn2
+ perl-TermReadKey                           x86_64                           2.30-20.amzn2.0.2
+
+Transaction Summary
+==========================================================================================================================
+Install  1 Package (+7 Dependent packages)
+
+Total download size: 7.7 M
+Installed size: 36 M
+Downloading packages:
+(1/8): emacs-filesystem-25.3-3.amzn2.0.1.noarch.rpm
+(2/8): git-2.14.5-1.amzn2.x86_64.rpm
+(3/8): git-core-2.14.5-1.amzn2.x86_64.rpm
+(4/8): git-core-doc-2.14.5-1.amzn2.x86_64.rpm
+(5/8): libsecret-0.18.5-2.amzn2.0.2.x86_64.rpm
+(6/8): perl-Error-0.17020-2.amzn2.noarch.rpm
+(7/8): perl-Git-2.14.5-1.amzn2.noarch.rpm
+(8/8): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm
+--------------------------------------------------------------------------------------------------------------------------
+Total
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch
+  Installing : git-core-2.14.5-1.amzn2.x86_64 [###########################################################################  Installing : git-core-2.14.5-1.amzn2.x86_64
+  Installing : git-core-doc-2.14.5-1.amzn2.x86_64
+  Installing : libsecret-0.18.5-2.amzn2.0.2.x86_64
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64
+  Installing : 1:emacs-filesystem-25.3-3.amzn2.0.1.noarch
+  Installing : perl-Git-2.14.5-1.amzn2.noarch
+  Installing : git-2.14.5-1.amzn2.x86_64
+  Verifying  : 1:emacs-filesystem-25.3-3.amzn2.0.1.noarch
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64
+  Verifying  : git-core-2.14.5-1.amzn2.x86_64
+  Verifying  : libsecret-0.18.5-2.amzn2.0.2.x86_64
+  Verifying  : perl-Git-2.14.5-1.amzn2.noarch
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch
+  Verifying  : git-2.14.5-1.amzn2.x86_64
+  Verifying  : git-core-doc-2.14.5-1.amzn2.x86_64
+
+Installed:
+  git.x86_64 0:2.14.5-1.amzn2
+
+Dependency Installed:
+  emacs-filesystem.noarch 1:25.3-3.amzn2.0.1   git-core.x86_64 0:2.14.5-1.amzn2   git-core-doc.x86_64 0:2.14.5-1.amzn2
+  perl-Error.noarch 1:0.17020-2.amzn2          perl-Git.noarch 0:2.14.5-1.amzn2   perl-TermReadKey.x86_64 0:2.30-20.amzn2.
+
+Complete!
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]# cd ..
+[root@ip-10-17-0-4 ~]# mkdir test
+[root@ip-10-17-0-4 ~]# cd test/
+[root@ip-10-17-0-4 test]# git clone version: '3.3'
+Cloning into '3.3'...
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:ssh: Could not resolve hostname version: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]# services:
+bash: services:: command not found
+[root@ip-10-17-0-4 test]#    db:
+bash: db:: command not found
+[root@ip-10-17-0-4 test]#      image: mysql:5.7
+bash: image:: command not found
+[root@ip-10-17-0-4 test]#      volumes:
+bash: volumes:: command not found
+[root@ip-10-17-0-4 test]#        - db_data:/var/lib/mysql
+bash: -: command not found
+[root@ip-10-17-0-4 test]#      restart: always
+bash: restart:: command not found
+[root@ip-10-17-0-4 test]#      environment:
+bash: environment:: command not found
+[root@ip-10-17-0-4 test]#        MYSQL_ROOT_PASSWORD: somewordpress
+bash: MYSQL_ROOT_PASSWORD:: command not found
+[root@ip-10-17-0-4 test]#        MYSQL_DATABASE: wordpress
+bash: MYSQL_DATABASE:: command not found
+[root@ip-10-17-0-4 test]#        MYSQL_USER: wordpress
+bash: MYSQL_USER:: command not found
+[root@ip-10-17-0-4 test]#        MYSQL_PASSWORD: wordpress
+bash: MYSQL_PASSWORD:: command not found
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]#    wordpress:
+bash: wordpress:: command not found
+[root@ip-10-17-0-4 test]#      depends_on:
+bash: depends_on:: command not found
+[root@ip-10-17-0-4 test]#        - db
+bash: -: command not found
+[root@ip-10-17-0-4 test]#      image: wordpress:latest
+bash: image:: command not found
+[root@ip-10-17-0-4 test]#      ports:
+bash: ports:: command not found
+[root@ip-10-17-0-4 test]#        - "8000:80"
+bash: -: command not found
+[root@ip-10-17-0-4 test]#      restart: always
+bash: restart:: command not found
+[root@ip-10-17-0-4 test]#      environment:
+bash: environment:: command not found
+[root@ip-10-17-0-4 test]#        WORDPRESS_DB_HOST: db:3306
+bash: WORDPRESS_DB_HOST:: command not found
+[root@ip-10-17-0-4 test]#        WORDPRESS_DB_USER: wordpress
+bash: WORDPRESS_DB_USER:: command not found
+[root@ip-10-17-0-4 test]#        WORDPRESS_DB_PASSWORD: wordpress
+bash: WORDPRESS_DB_PASSWORD:: command not found
+[root@ip-10-17-0-4 test]# volumes:
+bash: volumes:: command not found
+[root@ip-10-17-0-4 test]#     db_data:^C
+[root@ip-10-17-0-4 test]# ^C
+[root@ip-10-17-0-4 test]# ^C
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]# ls
+[root@ip-10-17-0-4 test]# git clone https://github.com/zembutsu/docker-sample-nginx.git
+Cloning into 'docker-sample-nginx'...
+remote: Enumerating objects: 22, done.
+remote: Total 22 (delta 0), reused 0 (delta 0), pack-reused 22
+Unpacking objects: 100% (22/22), done.
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]# cd docker-sample-nginx/
+[root@ip-10-17-0-4 docker-sample-nginx]# ls
+default.conf  Dockerfile  index.html  LICENSE  README.md
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]# ls -ltr
+total 20
+-rw-r--r-- 1 root root   73 Nov 16 04:38 README.md
+-rw-r--r-- 1 root root 1084 Nov 16 04:38 LICENSE
+-rw-r--r-- 1 root root  103 Nov 16 04:38 index.html
+-rw-r--r-- 1 root root   95 Nov 16 04:38 Dockerfile
+-rw-r--r-- 1 root root  286 Nov 16 04:38 default.conf
+[root@ip-10-17-0-4 docker-sample-nginx]# c
+[root@ip-10-17-0-4 docker-sample-nginx]# ls
+default.conf  Dockerfile  index.html  LICENSE  README.md
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]# https://github.com/zembutsu/docker-sample-nginx.git^C
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]#
+[root@ip-10-17-0-4 docker-sample-nginx]# vi README.md
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# cd
+[root@ip-10-17-0-4 ~]# mkdir sat
+[root@ip-10-17-0-4 ~]# vi Dockerfile
+[root@ip-10-17-0-4 ~]# cd sat
+[root@ip-10-17-0-4 sat]# vi Dockerfile
+[root@ip-10-17-0-4 sat]# vi Dockerfile
+[root@ip-10-17-0-4 sat]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM centos:centos7
+centos7: Pulling from library/centos
+aeb7866da422: Already exists
+Digest: sha256:67dad89757a55bfdfabec8abd0e22f8c7c12a1856514726470228063ed86593b
+Status: Downloaded newer image for centos:centos7
+ ---> 75835a67d134
+Step 2/5 : LABEL maintainer="Vicente Zepeda <chente.z.m@gmail.com>"
+ ---> Running in cf5cb3bc08d4
+Removing intermediate container cf5cb3bc08d4
+ ---> 871c40227808
+Step 3/5 : ENV nginxversion="1.14.0-1"     os="centos"     osversion="7"     elversion="7_4"
+ ---> Running in ae8b037f1336
+Removing intermediate container ae8b037f1336
+ ---> 62a2a317c07d
+Step 4/5 : RUN yum install -y wget openssl sed &&    yum -y autoremove &&    yum clean all &&    wget http://nginx.org/packages/$os/$osversion/x86_64/RPMS/nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    rpm -iv nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    sed -i '1i    daemon off;    ' /etc/nginx/nginx.conf
+ ---> Running in c67fde4c1bba
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: mirrors.advancedhosters.com
+ * extras: mirrors.advancedhosters.com
+ * updates: mirrors.advancedhosters.com
+Package sed-4.2.2-5.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package openssl.x86_64 1:1.0.2k-12.el7 will be installed
+--> Processing Dependency: make for package: 1:openssl-1.0.2k-12.el7.x86_64
+---> Package wget.x86_64 0:1.14-15.el7_4.1 will be installed
+--> Running transaction check
+---> Package make.x86_64 1:3.82-23.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package          Arch            Version                   Repository     Size
+================================================================================
+Installing:
+ openssl          x86_64          1:1.0.2k-12.el7           base          492 k
+ wget             x86_64          1.14-15.el7_4.1           base          547 k
+Installing for dependencies:
+ make             x86_64          1:3.82-23.el7             base          420 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages (+1 Dependent package)
+
+Total download size: 1.4 M
+Installed size: 3.9 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/base/packages/make-3.82-23.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for make-3.82-23.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              8.1 MB/s | 1.4 MB  00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-5.1804.4.el7.centos.x86_64 (@Updates)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:make-3.82-23.el7.x86_64                                    1/3
+  Installing : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Installing : wget-1.14-15.el7_4.1.x86_64                                  3/3
+install-info: No such file or directory for /usr/share/info/wget.info.gz
+  Verifying  : wget-1.14-15.el7_4.1.x86_64                                  1/3
+  Verifying  : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Verifying  : 1:make-3.82-23.el7.x86_64                                    3/3
+
+Installed:
+  openssl.x86_64 1:1.0.2k-12.el7          wget.x86_64 0:1.14-15.el7_4.1
+
+Dependency Installed:
+  make.x86_64 1:3.82-23.el7
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-license.noarch 32:9.9.4-61.el7_5.1 will be erased
+---> Package dbus-python.x86_64 0:1.1.1-9.el7 will be erased
+---> Package hostname.x86_64 0:3.13-3.el7 will be erased
+---> Package python-gobject-base.x86_64 0:3.22.0-1.el7_4.1 will be erased
+--> Finished Dependency Resolution
+--> Finding unneeded leftover dependencies
+---> Marking gobject-introspection to be removed - no longer needed by python-gobject-base
+---> Marking dbus-glib to be removed - no longer needed by dbus-python
+Found and removing 2 unneeded dependencies
+--> Running transaction check
+---> Package dbus-glib.x86_64 0:0.100-7.el7 will be erased
+---> Package gobject-introspection.x86_64 0:1.50.0-1.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch      Version                   Repository   Size
+================================================================================
+Removing:
+ bind-license             noarch    32:9.9.4-61.el7_5.1       @Updates     26 k
+ dbus-python              x86_64    1.1.1-9.el7               @CentOS     828 k
+ hostname                 x86_64    3.13-3.el7                @CentOS      19 k
+ python-gobject-base      x86_64    3.22.0-1.el7_4.1          @CentOS     1.1 M
+Removing for dependencies:
+ dbus-glib                x86_64    0.100-7.el7               @CentOS     294 k
+ gobject-introspection    x86_64    1.50.0-1.el7              @CentOS     815 k
+
+Transaction Summary
+================================================================================
+Remove  4 Packages (+2 Dependent packages)
+
+Installed size: 3.0 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Erasing    : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  2/6
+  Erasing    : dbus-python-1.1.1-9.el7.x86_64                               3/6
+  Erasing    : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Erasing    : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Erasing    : hostname-3.13-3.el7.x86_64                                   6/6
+  Verifying  : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Verifying  : dbus-python-1.1.1-9.el7.x86_64                               2/6
+  Verifying  : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  3/6
+  Verifying  : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Verifying  : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Verifying  : hostname-3.13-3.el7.x86_64                                   6/6
+
+Removed:
+  bind-license.noarch 32:9.9.4-61.el7_5.1
+  dbus-python.x86_64 0:1.1.1-9.el7
+  hostname.x86_64 0:3.13-3.el7
+  python-gobject-base.x86_64 0:3.22.0-1.el7_4.1
+
+Dependency Removed:
+  dbus-glib.x86_64 0:0.100-7.el7   gobject-introspection.x86_64 0:1.50.0-1.el7
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Cleaning repos: base extras updates
+Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+Cleaning up list of fastest mirrors
+--2018-11-16 04:47:27--  http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.14.0-1.el7_4.ngx.x86_64.rpm
+Resolving nginx.org (nginx.org)... 206.251.255.63, 95.211.80.227, 2001:1af8:4060:a004:21::e3, ...
+Connecting to nginx.org (nginx.org)|206.251.255.63|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 767540 (750K) [application/x-redhat-package-manager]
+Saving to: 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm'
+
+     0K .......... .......... .......... .......... ..........  6%  372K 2s
+    50K .......... .......... .......... .......... .......... 13%  638K 1s
+   100K .......... .......... .......... .......... .......... 20%  880K 1s
+   150K .......... .......... .......... .......... .......... 26% 4.43M 1s
+   200K .......... .......... .......... .......... .......... 33%  884K 1s
+   250K .......... .......... .......... .......... .......... 40% 25.4M 1s
+   300K .......... .......... .......... .......... .......... 46% 5.09M 0s
+   350K .......... .......... .......... .......... .......... 53%  895K 0s
+   400K .......... .......... .......... .......... .......... 60% 3.10M 0s
+   450K .......... .......... .......... .......... .......... 66% 50.7M 0s
+   500K .......... .......... .......... .......... .......... 73% 43.2M 0s
+   550K .......... .......... .......... .......... .......... 80%  748K 0s
+   600K .......... .......... .......... .......... .......... 86% 35.3M 0s
+   650K .......... .......... .......... .......... .......... 93%  760K 0s
+   700K .......... .......... .......... .......... ......... 100% 45.1M=0.6s
+
+2018-11-16 04:47:28 (1.31 MB/s) - 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm' saved [767540/767540]
+
+warning: nginx-1.14.0-1.el7_4.ngx.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID 7bd9bf62: NOKEY
+Preparing packages...
+nginx-1:1.14.0-1.el7_4.ngx.x86_64
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* http://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* http://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* http://nginx.com/products/
+
+----------------------------------------------------------------------
+Removing intermediate container c67fde4c1bba
+ ---> 05989f25d28b
+Step 5/5 : CMD ["nginx"]
+ ---> Running in 2070f54d0d52
+Removing intermediate container 2070f54d0d52
+ ---> 0c9cff81ace6
+Successfully built 0c9cff81ace6
+Successfully tagged krish:latest
+[root@ip-10-17-0-4 sat]# docker imags
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+[root@ip-10-17-0-4 sat]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+krish               latest              0c9cff81ace6        9 seconds ago       228MB
+centos              centos7             75835a67d134        5 weeks ago         200MB
+[root@ip-10-17-0-4 sat]#
+[root@ip-10-17-0-4 sat]# docker rmi krish
+Untagged: krish:latest
+Deleted: sha256:0c9cff81ace61b61abbd631ef7c87cd2280065462ea5de2044e3b1a2431c2425
+Deleted: sha256:05989f25d28bddd00bfef0e01b9da6c2c3d5c525706693ff7643f89c54f71140
+Deleted: sha256:75c148974fe5e18f998d1915eca0f378aacccbd6c879d44c15283b544aa63973
+Deleted: sha256:62a2a317c07deab3544e7c4fb05faf64d69336171db096b9a2464f10bcca54c5
+Deleted: sha256:871c40227808732e8b8e9e8e9c464f35a77ca15b82342850587da7e1b7c4b244
+[root@ip-10-17-0-4 sat]# vi Dockerfile
+[root@ip-10-17-0-4 sat]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/6 : FROM centos:centos7
+ ---> 75835a67d134
+Step 2/6 : LABEL maintainer="Vicente Zepeda <chente.z.m@gmail.com>"
+ ---> Running in c226711db0bb
+Removing intermediate container c226711db0bb
+ ---> 2befad67014d
+Step 3/6 : ENV nginxversion="1.14.0-1"     os="centos"     osversion="7"     elversion="7_4"
+ ---> Running in 6216d153379e
+Removing intermediate container 6216d153379e
+ ---> 7e5368a60310
+Step 4/6 : RUN yum install -y wget openssl sed
+ ---> Running in 40ee58ec3cf4
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repo1.ash.innoscale.net
+ * extras: repo1.ash.innoscale.net
+ * updates: repo1.ash.innoscale.net
+Package sed-4.2.2-5.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package openssl.x86_64 1:1.0.2k-12.el7 will be installed
+--> Processing Dependency: make for package: 1:openssl-1.0.2k-12.el7.x86_64
+---> Package wget.x86_64 0:1.14-15.el7_4.1 will be installed
+--> Running transaction check
+---> Package make.x86_64 1:3.82-23.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package          Arch            Version                   Repository     Size
+================================================================================
+Installing:
+ openssl          x86_64          1:1.0.2k-12.el7           base          492 k
+ wget             x86_64          1.14-15.el7_4.1           base          547 k
+Installing for dependencies:
+ make             x86_64          1:3.82-23.el7             base          420 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages (+1 Dependent package)
+
+Total download size: 1.4 M
+Installed size: 3.9 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/base/packages/make-3.82-23.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for make-3.82-23.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              7.9 MB/s | 1.4 MB  00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-5.1804.4.el7.centos.x86_64 (@Updates)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:make-3.82-23.el7.x86_64                                    1/3
+  Installing : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Installing : wget-1.14-15.el7_4.1.x86_64                                  3/3
+install-info: No such file or directory for /usr/share/info/wget.info.gz
+  Verifying  : wget-1.14-15.el7_4.1.x86_64                                  1/3
+  Verifying  : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Verifying  : 1:make-3.82-23.el7.x86_64                                    3/3
+
+Installed:
+  openssl.x86_64 1:1.0.2k-12.el7          wget.x86_64 0:1.14-15.el7_4.1
+
+Dependency Installed:
+  make.x86_64 1:3.82-23.el7
+
+Complete!
+Removing intermediate container 40ee58ec3cf4
+ ---> ae89a8a6b1f0
+Step 5/6 : RUN yum -y autoremove &&    yum clean all &&    wget http://nginx.org/packages/$os/$osversion/x86_64/RPMS/nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    rpm -iv nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    sed -i '1i    daemon off;    ' /etc/nginx/nginx.conf
+ ---> Running in ef366fce9d78
+Loaded plugins: fastestmirror, ovl
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-license.noarch 32:9.9.4-61.el7_5.1 will be erased
+---> Package dbus-python.x86_64 0:1.1.1-9.el7 will be erased
+---> Package hostname.x86_64 0:3.13-3.el7 will be erased
+---> Package python-gobject-base.x86_64 0:3.22.0-1.el7_4.1 will be erased
+--> Finished Dependency Resolution
+--> Finding unneeded leftover dependencies
+---> Marking gobject-introspection to be removed - no longer needed by python-gobject-base
+---> Marking dbus-glib to be removed - no longer needed by dbus-python
+Found and removing 2 unneeded dependencies
+--> Running transaction check
+---> Package dbus-glib.x86_64 0:0.100-7.el7 will be erased
+---> Package gobject-introspection.x86_64 0:1.50.0-1.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch      Version                   Repository   Size
+================================================================================
+Removing:
+ bind-license             noarch    32:9.9.4-61.el7_5.1       @Updates     26 k
+ dbus-python              x86_64    1.1.1-9.el7               @CentOS     828 k
+ hostname                 x86_64    3.13-3.el7                @CentOS      19 k
+ python-gobject-base      x86_64    3.22.0-1.el7_4.1          @CentOS     1.1 M
+Removing for dependencies:
+ dbus-glib                x86_64    0.100-7.el7               @CentOS     294 k
+ gobject-introspection    x86_64    1.50.0-1.el7              @CentOS     815 k
+
+Transaction Summary
+================================================================================
+Remove  4 Packages (+2 Dependent packages)
+
+Installed size: 3.0 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Erasing    : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  2/6
+  Erasing    : dbus-python-1.1.1-9.el7.x86_64                               3/6
+  Erasing    : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Erasing    : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Erasing    : hostname-3.13-3.el7.x86_64                                   6/6
+  Verifying  : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Verifying  : dbus-python-1.1.1-9.el7.x86_64                               2/6
+  Verifying  : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  3/6
+  Verifying  : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Verifying  : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Verifying  : hostname-3.13-3.el7.x86_64                                   6/6
+
+Removed:
+  bind-license.noarch 32:9.9.4-61.el7_5.1
+  dbus-python.x86_64 0:1.1.1-9.el7
+  hostname.x86_64 0:3.13-3.el7
+  python-gobject-base.x86_64 0:3.22.0-1.el7_4.1
+
+Dependency Removed:
+  dbus-glib.x86_64 0:0.100-7.el7   gobject-introspection.x86_64 0:1.50.0-1.el7
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Cleaning repos: base extras updates
+Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+Cleaning up list of fastest mirrors
+--2018-11-16 04:48:31--  http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.14.0-1.el7_4.ngx.x86_64.rpm
+Resolving nginx.org (nginx.org)... 95.211.80.227, 206.251.255.63, 2606:7100:1:69::3f, ...
+Connecting to nginx.org (nginx.org)|95.211.80.227|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 767540 (750K) [application/x-redhat-package-manager]
+Saving to: 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm'
+
+     0K .......... .......... .......... .......... ..........  6%  315K 2s
+    50K .......... .......... .......... .......... .......... 13%  625K 2s
+   100K .......... .......... .......... .......... .......... 20% 38.9M 1s
+   150K .......... .......... .......... .......... .......... 26%  192M 1s
+   200K .......... .......... .......... .......... .......... 33%  627K 1s
+   250K .......... .......... .......... .......... .......... 40%  113M 0s
+   300K .......... .......... .......... .......... .......... 46%  134M 0s
+   350K .......... .......... .......... .......... .......... 53%  639K 0s
+   400K .......... .......... .......... .......... .......... 60% 33.0M 0s
+   450K .......... .......... .......... .......... .......... 66% 40.1M 0s
+   500K .......... .......... .......... .......... .......... 73% 39.3M 0s
+   550K .......... .......... .......... .......... .......... 80% 85.1M 0s
+   600K .......... .......... .......... .......... .......... 86%  398M 0s
+   650K .......... .......... .......... .......... .......... 93%  486M 0s
+   700K .......... .......... .......... .......... ......... 100%  653K=0.5s
+
+2018-11-16 04:48:32 (1.53 MB/s) - 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm' saved [767540/767540]
+
+warning: nginx-1.14.0-1.el7_4.ngx.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID 7bd9bf62: NOKEY
+Preparing packages...
+nginx-1:1.14.0-1.el7_4.ngx.x86_64
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* http://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* http://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* http://nginx.com/products/
+
+----------------------------------------------------------------------
+Removing intermediate container ef366fce9d78
+ ---> 711d56896b99
+Step 6/6 : CMD ["nginx"]
+ ---> Running in cd3276f03833
+Removing intermediate container cd3276f03833
+ ---> 67511d840ac7
+Successfully built 67511d840ac7
+Successfully tagged krish:latest
+[root@ip-10-17-0-4 sat]#
+[root@ip-10-17-0-4 sat]# ^C
+[root@ip-10-17-0-4 sat]# docker rmi krish
+Untagged: krish:latest
+Deleted: sha256:67511d840ac79ffb83f6a2ace876d0591bc119bad7f8df5bb3be3e6edd438744
+Deleted: sha256:711d56896b99c77f0a2f75bbcfdef136b77747093e0c024798e973529686b927
+Deleted: sha256:bfdaf71c142e554a2eec157c33c010d44196b113257f0f842ff31c172d9139e0
+Deleted: sha256:ae89a8a6b1f00a9c497a891a29aae75cc0e383e685337dc4013bb8578f6ee06b
+Deleted: sha256:2e4abe0a841c760d1672670d59fe66ca53cbcfd583cab7b97784207fbb6110a3
+Deleted: sha256:7e5368a60310a5fd57ed71ec3d62d49124164f66ba0c6c779f37666995eeb68e
+Deleted: sha256:2befad67014dd9474dc352bcff555aa756f576a6ebfbf25e772aa5b622fbeca1
+[root@ip-10-17-0-4 sat]# docker build -t krish .
+Sending build context to Docker daemon  2.048kB
+Step 1/6 : FROM centos:centos7
+ ---> 75835a67d134
+Step 2/6 : LABEL maintainer="Vicente Zepeda <chente.z.m@gmail.com>"
+ ---> Running in 7f754c09075a
+Removing intermediate container 7f754c09075a
+ ---> 9a549ab176f0
+Step 3/6 : ENV nginxversion="1.14.0-1"     os="centos"     osversion="7"     elversion="7_4"
+ ---> Running in 251588c1d4bb
+Removing intermediate container 251588c1d4bb
+ ---> 52d159b07298
+Step 4/6 : RUN yum install -y wget openssl sed
+ ---> Running in 2a15dce324d7
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repo1.ash.innoscale.net
+ * extras: repo1.ash.innoscale.net
+ * updates: repo1.ash.innoscale.net
+Package sed-4.2.2-5.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package openssl.x86_64 1:1.0.2k-12.el7 will be installed
+--> Processing Dependency: make for package: 1:openssl-1.0.2k-12.el7.x86_64
+---> Package wget.x86_64 0:1.14-15.el7_4.1 will be installed
+--> Running transaction check
+---> Package make.x86_64 1:3.82-23.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package          Arch            Version                   Repository     Size
+================================================================================
+Installing:
+ openssl          x86_64          1:1.0.2k-12.el7           base          492 k
+ wget             x86_64          1.14-15.el7_4.1           base          547 k
+Installing for dependencies:
+ make             x86_64          1:3.82-23.el7             base          420 k
+
+Transaction Summary
+================================================================================
+Install  2 Packages (+1 Dependent package)
+
+Total download size: 1.4 M
+Installed size: 3.9 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/base/packages/make-3.82-23.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for make-3.82-23.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              6.7 MB/s | 1.4 MB  00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-5.1804.4.el7.centos.x86_64 (@Updates)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:make-3.82-23.el7.x86_64                                    1/3
+  Installing : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Installing : wget-1.14-15.el7_4.1.x86_64                                  3/3
+install-info: No such file or directory for /usr/share/info/wget.info.gz
+  Verifying  : wget-1.14-15.el7_4.1.x86_64                                  1/3
+  Verifying  : 1:openssl-1.0.2k-12.el7.x86_64                               2/3
+  Verifying  : 1:make-3.82-23.el7.x86_64                                    3/3
+
+Installed:
+  openssl.x86_64 1:1.0.2k-12.el7          wget.x86_64 0:1.14-15.el7_4.1
+
+Dependency Installed:
+  make.x86_64 1:3.82-23.el7
+
+Complete!
+Removing intermediate container 2a15dce324d7
+ ---> 76b42a6a8eee
+Step 5/6 : RUN yum -y autoremove &&    yum clean all &&    wget http://nginx.org/packages/$os/$osversion/x86_64/RPMS/nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    rpm -iv nginx-$nginxversion.el$elversion.ngx.x86_64.rpm &&    sed -i '1i    daemon off;    ' /etc/nginx/nginx.conf
+ ---> Running in 0739a95ad766
+Loaded plugins: fastestmirror, ovl
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-license.noarch 32:9.9.4-61.el7_5.1 will be erased
+---> Package dbus-python.x86_64 0:1.1.1-9.el7 will be erased
+---> Package hostname.x86_64 0:3.13-3.el7 will be erased
+---> Package python-gobject-base.x86_64 0:3.22.0-1.el7_4.1 will be erased
+--> Finished Dependency Resolution
+--> Finding unneeded leftover dependencies
+---> Marking gobject-introspection to be removed - no longer needed by python-gobject-base
+---> Marking dbus-glib to be removed - no longer needed by dbus-python
+Found and removing 2 unneeded dependencies
+--> Running transaction check
+---> Package dbus-glib.x86_64 0:0.100-7.el7 will be erased
+---> Package gobject-introspection.x86_64 0:1.50.0-1.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch      Version                   Repository   Size
+================================================================================
+Removing:
+ bind-license             noarch    32:9.9.4-61.el7_5.1       @Updates     26 k
+ dbus-python              x86_64    1.1.1-9.el7               @CentOS     828 k
+ hostname                 x86_64    3.13-3.el7                @CentOS      19 k
+ python-gobject-base      x86_64    3.22.0-1.el7_4.1          @CentOS     1.1 M
+Removing for dependencies:
+ dbus-glib                x86_64    0.100-7.el7               @CentOS     294 k
+ gobject-introspection    x86_64    1.50.0-1.el7              @CentOS     815 k
+
+Transaction Summary
+================================================================================
+Remove  4 Packages (+2 Dependent packages)
+
+Installed size: 3.0 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Erasing    : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  2/6
+  Erasing    : dbus-python-1.1.1-9.el7.x86_64                               3/6
+  Erasing    : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Erasing    : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Erasing    : hostname-3.13-3.el7.x86_64                                   6/6
+  Verifying  : 32:bind-license-9.9.4-61.el7_5.1.noarch                      1/6
+  Verifying  : dbus-python-1.1.1-9.el7.x86_64                               2/6
+  Verifying  : python-gobject-base-3.22.0-1.el7_4.1.x86_64                  3/6
+  Verifying  : dbus-glib-0.100-7.el7.x86_64                                 4/6
+  Verifying  : gobject-introspection-1.50.0-1.el7.x86_64                    5/6
+  Verifying  : hostname-3.13-3.el7.x86_64                                   6/6
+
+Removed:
+  bind-license.noarch 32:9.9.4-61.el7_5.1
+  dbus-python.x86_64 0:1.1.1-9.el7
+  hostname.x86_64 0:3.13-3.el7
+  python-gobject-base.x86_64 0:3.22.0-1.el7_4.1
+
+Dependency Removed:
+  dbus-glib.x86_64 0:0.100-7.el7   gobject-introspection.x86_64 0:1.50.0-1.el7
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Cleaning repos: base extras updates
+Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+Cleaning up list of fastest mirrors
+--2018-11-16 04:50:05--  http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.14.0-1.el7_4.ngx.x86_64.rpm
+Resolving nginx.org (nginx.org)... 206.251.255.63, 95.211.80.227, 2001:1af8:4060:a004:21::e3, ...
+Connecting to nginx.org (nginx.org)|206.251.255.63|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 767540 (750K) [application/x-redhat-package-manager]
+Saving to: 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm'
+
+     0K .......... .......... .......... .......... ..........  6%  379K 2s
+    50K .......... .......... .......... .......... .......... 13%  749K 1s
+   100K .......... .......... .......... .......... .......... 20% 54.1M 1s
+   150K .......... .......... .......... .......... .......... 26%  752K 1s
+   200K .......... .......... .......... .......... .......... 33%  164M 1s
+   250K .......... .......... .......... .......... .......... 40%  762K 0s
+   300K .......... .......... .......... .......... .......... 46% 37.1M 0s
+   350K .......... .......... .......... .......... .......... 53% 45.8M 0s
+   400K .......... .......... .......... .......... .......... 60%  781K 0s
+   450K .......... .......... .......... .......... .......... 66% 24.3M 0s
+   500K .......... .......... .......... .......... .......... 73% 52.5M 0s
+   550K .......... .......... .......... .......... .......... 80% 48.4M 0s
+   600K .......... .......... .......... .......... .......... 86%  768K 0s
+   650K .......... .......... .......... .......... .......... 93% 32.2M 0s
+   700K .......... .......... .......... .......... ......... 100% 63.7M=0.5s
+
+2018-11-16 04:50:05 (1.56 MB/s) - 'nginx-1.14.0-1.el7_4.ngx.x86_64.rpm' saved [767540/767540]
+
+warning: nginx-1.14.0-1.el7_4.ngx.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID 7bd9bf62: NOKEY
+Preparing packages...
+nginx-1:1.14.0-1.el7_4.ngx.x86_64
+----------------------------------------------------------------------
+
+Thanks for using nginx!
+
+Please find the official documentation for nginx here:
+* http://nginx.org/en/docs/
+
+Please subscribe to nginx-announce mailing list to get
+the most important news about nginx:
+* http://nginx.org/en/support.html
+
+Commercial subscriptions for nginx are available on:
+* http://nginx.com/products/
+
+----------------------------------------------------------------------
+Removing intermediate container 0739a95ad766
+ ---> 512160a3d7b5
+Step 6/6 : CMD ["nginx"]
+ ---> Running in 2c4d0d640d58
+Removing intermediate container 2c4d0d640d58
+ ---> 696eca673886
+Successfully built 696eca673886
+Successfully tagged krish:latest
+[root@ip-10-17-0-4 sat]# docker rmi krish
+Untagged: krish:latest
+Deleted: sha256:696eca6738867108bc364bfb68ab94c1ad0dbda68558bb63a5aac363774c74ea
+Deleted: sha256:512160a3d7b58fb57cf84d000f6d42581569aab50ec6dd7e1d6233b0c64b84b0
+Deleted: sha256:bad8afbed4549f612130347331c8f7944ef813ec5f1ff65858e1f37803794235
+Deleted: sha256:76b42a6a8eee626d23b1901cc44a81a892f90e34f2cc9f2c7002d7909785e80d
+Deleted: sha256:08c073bdfb04a36168c8abfe16b9f236c4a24c5b2f9479278912ac5d99589dd4
+Deleted: sha256:52d159b0729849f497d44edcda5f640550de5807dc33330d82170c6d23ff4a95
+Deleted: sha256:9a549ab176f0721ce1bb8f78ba5e647e4a80c3cd14d6bd66e37f794d31a80ca3
+[root@ip-10-17-0-4 sat]# docker build -t krish . >/tmp/test
+[root@ip-10-17-0-4 sat]# vi /tmp/tes
+[root@ip-10-17-0-4 sat]# vi /tmp/test Dockerfile
+2 files to edit
+[root@ip-10-17-0-4 sat]# vi /tmp/test
+[root@ip-10-17-0-4 sat]# cd^C
+[root@ip-10-17-0-4 sat]# ls
+Dockerfile
+[root@ip-10-17-0-4 sat]#
+[root@ip-10-17-0-4 sat]#
+[root@ip-10-17-0-4 sat]#
+[root@ip-10-17-0-4 sat]# vi Dockerfile
+[root@ip-10-17-0-4 sat]# cd ^C
+[root@ip-10-17-0-4 sat]# cd ..
+[root@ip-10-17-0-4 ~]# ls
+Dockerfile  sai  sample  sat  test
+[root@ip-10-17-0-4 ~]# cd test/
+[root@ip-10-17-0-4 test]# ls
+docker-sample-nginx
+[root@ip-10-17-0-4 test]# vi docker-sample-nginx/
+[root@ip-10-17-0-4 test]#
+[root@ip-10-17-0-4 test]# cd docker-sample-nginx/
+[root@ip-10-17-0-4 docker-sample-nginx]# ls
+default.conf  Dockerfile  index.html  LICENSE  README.md
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# docker build -t sample .
+Sending build context to Docker daemon  83.46kB
+Step 1/3 : FROM nginx:alpine
+alpine: Pulling from library/nginx
+4fe2ade4980c: Pull complete
+e11b023b07a0: Pull complete
+aaf7d5908de5: Pull complete
+8ae3a5ca453f: Pull complete
+Digest: sha256:41dbd69d560c20712f90011689596f20a5db6d7f85436edda7f177a2e53d4da2
+Status: Downloaded newer image for nginx:alpine
+ ---> d3dcc25e0dc4
+Step 2/3 : COPY default.conf /etc/nginx/conf.d/
+ ---> b485847f3217
+Step 3/3 : COPY index.html /usr/share/nginx/html/
+ ---> da9f491fc30d
+Successfully built da9f491fc30d
+Successfully tagged sample:latest
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sample              latest              da9f491fc30d        12 seconds ago      17.8MB
+krish               latest              0f6a2c2862ae        17 minutes ago      327MB
+nginx               alpine              d3dcc25e0dc4        9 days ago          17.8MB
+centos              centos7             75835a67d134        5 weeks ago         200MB
+[root@ip-10-17-0-4 docker-sample-nginx]# docker run -it -d sample
+e4da06e6a015a1f3d570d6baa60291110ad730f593d0380714caccd8a10fd745
+[root@ip-10-17-0-4 docker-sample-nginx]# docke rps
+bash: docke: command not found
+[root@ip-10-17-0-4 docker-sample-nginx]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+e4da06e6a015        sample              "nginx -g 'daemon of…"   7 seconds ago       Up 6 seconds        80/tcp              practical_leakey
+[root@ip-10-17-0-4 docker-sample-nginx]# docker stop e4da06e6a015
+e4da06e6a015
+[root@ip-10-17-0-4 docker-sample-nginx]# docker rm e4da06e6a015
+e4da06e6a015
+[root@ip-10-17-0-4 docker-sample-nginx]# docker run -it -d -p 80:80 sample
+407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858
+[root@ip-10-17-0-4 docker-sample-nginx]# docker rm 407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858\
+> ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# docker stop 407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858
+407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858
+[root@ip-10-17-0-4 docker-sample-nginx]# docker rm 407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858
+407b70cb2da998f237845ac5f8ba384ee7d9bed8d8a3ea30351cdd5608b6b858
+[root@ip-10-17-0-4 docker-sample-nginx]# docker run -it -d -p 8080:80 sample
+284ee63f13ad1cf797c4e3b18f19ef4840a0445787d33fe507800f88a606aaf6
+[root@ip-10-17-0-4 docker-sample-nginx]# v==docker ps ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee63f13ad1cf797c4e3b18f19ef4840a0445787d33fe507800f88a606aaf6 bash
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"bash\": executable file not found in $PATH": unknown
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee bash
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"bash\": executable file not found in $PATH": unknown
+[root@ip-10-17-0-4 docker-sample-nginx]# dpcler [s
+bash: dpcler: command not found
+[root@ip-10-17-0-4 docker-sample-nginx]# ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                  NAMES
+284ee63f13ad        sample              "nginx -g 'daemon of…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp   objective_aryabhata
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee63f13ad bash
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"bash\": executable file not found in $PATH": unknown
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee63f13ad /bin/sjh
+OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"/bin/sjh\": stat /bin/sjh: no such file or directory": unknown
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee63f13ad /bin/sh
+/ # ls
+bin    dev    etc    home   lib    media  mnt    proc   root   run    sbin   srv    sys    tmp    usr    var
+/ # cd ^C
+/ # [root@ip-10-17-0-4 docker-sample-nginx]# docker ps^C
+[root@ip-10-17-0-4 docker-sample-nginx]# vi D^C
+[root@ip-10-17-0-4 docker-sample-nginx]# ls
+default.conf  Dockerfile  index.html  LICENSE  README.md
+[root@ip-10-17-0-4 docker-sample-nginx]# vi Dockerfile
+[root@ip-10-17-0-4 docker-sample-nginx]# docker exec -it 284ee63f13ad /bin/sh
+/ # cd /usr/share/nginx/html/
+/usr/share/nginx/html # ls
+50x.html    index.html
+/usr/share/nginx/html # vi index.html
+/usr/share/nginx/html # vi index.html
+/usr/share/nginx/html # exit
+[root@ip-10-17-0-4 docker-sample-nginx]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+284ee63f13ad        sample              "nginx -g 'daemon of…"   2 minutes ago       Up 2 minutes        0.0.0.0:8080->80/tcp   objective_aryabhata
+[root@ip-10-17-0-4 docker-sample-nginx]# dcoekr ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# ^C
+[root@ip-10-17-0-4 docker-sample-nginx]# docker stop 284ee63f13ad
+284ee63f13ad
+[root@ip-10-17-0-4 docker-sample-nginx]# docker start 284ee63f13ad
+284ee63f13ad
+[root@ip-10-17-0-4 docker-sample-nginx]# docker stop 284ee63f13ad
+284ee63f13ad
+[root@ip-10-17-0-4 docker-sample-nginx]# docker rm 284ee63f13ad
+284ee63f13ad
+[root@ip-10-17-0-4 docker-sample-nginx]# docker rmi -f $(docker images -a -q)
+Untagged: sample:latest
+Deleted: sha256:da9f491fc30da447c5179a0774e596c3157a7e5fe7134d04afa5e4333dc31cae
+Deleted: sha256:b44303cd6293122438e7ce80c31df8adb9023a5c2825613f92d44993c8f2cbda
+Deleted: sha256:b485847f32177380415689654d8b8aec84016e72b876a959ae2b5fb0a99ac53b
+Deleted: sha256:21ce18092e29988d912cf2ecefa779003ac0768e51885e55aeb6986c1da5e8ce
+Untagged: krish:latest
+Deleted: sha256:0f6a2c2862aee3fc6d54deb9efc6422dcaea1046d606e70c70f312d3354b6803
+Deleted: sha256:3a51a4fbe9695893ce507e227f9c1a25b4037aaaca9074b02e597185a6fd454d
+Deleted: sha256:b4c1ceb8aaf6ffbd3ece1c9ad57090d8f7c538807a78a43049dabccc6989f8e9
+Deleted: sha256:d8d2c8f21f0ef2179b1dcd5b3c46c095588bfc64301bbd3d0c5be54b8b13d40a
+Deleted: sha256:603822b1e06103269b75190f6f2dff3517625cb0dd2ecfc9eea50514044518bc
+Deleted: sha256:e78eab30dd967e617200dc35219a049f1ae16c4fe5f46b884a7c3298c800bc1f
+Deleted: sha256:822b9d2073133bdf9435a16da7e03fe1680187b4762fad969a73820206c7bbc5
+Untagged: nginx:alpine
+Untagged: nginx@sha256:41dbd69d560c20712f90011689596f20a5db6d7f85436edda7f177a2e53d4da2
+Deleted: sha256:d3dcc25e0dc4d14198cd4e4d82a1de9dfc8c647549d0683a5dd171b7c741fa00
+Deleted: sha256:004ec54929e6c72c55e14e071438551643faac6abe536ad12cb2da51b6e5b6a0
+Deleted: sha256:cd1c7a4fc1d1752fc1ed9c5b05f233241d61120b9ec5d7857f49ff87443d6468
+Deleted: sha256:84c4be17aaa1838a123b6b05126ee2210188835f01ad03d70b0fc9b25369e7ce
+Deleted: sha256:df64d3292fd6194b7865d7326af5255db6d81e9df29f48adde61a918fbd8c332
+Untagged: centos:centos7
+Untagged: centos@sha256:67dad89757a55bfdfabec8abd0e22f8c7c12a1856514726470228063ed86593b
+Deleted: sha256:75835a67d1341bdc7f4cc4ed9fa1631a7d7b6998e9327272afea342d90c4ab6d
+Error: No such image: b485847f3217
+Error: No such image: 3a51a4fbe969
+Error: No such image: d8d2c8f21f0e
+Error: No such image: e78eab30dd96
+Error: No such image: 822b9d207313
+[root@ip-10-17-0-4 docker-sample-nginx]# ls
+default.conf  Dockerfile  index.html  LICENSE  README.md
+[root@ip-10-17-0-4 docker-sample-nginx]# cd ..
+[root@ip-10-17-0-4 test]# ls
+docker-sample-nginx
+[root@ip-10-17-0-4 test]# cd ..
+[root@ip-10-17-0-4 ~]# ls
+Dockerfile  sai  sample  sat  test
+[root@ip-10-17-0-4 ~]# cd
+[root@ip-10-17-0-4 ~]# vi Dockerfile
+[root@ip-10-17-0-4 ~]# ls
+Dockerfile  sai  sample  sat  test
+[root@ip-10-17-0-4 ~]# cd sai
+[root@ip-10-17-0-4 sai]# ls
+docker-compose.yml  Dockerfile  Dockerfile_bkps  start.sh
+[root@ip-10-17-0-4 sai]#
+[root@ip-10-17-0-4 sai]# ls
+docker-compose.yml  Dockerfile  Dockerfile_bkps  start.sh
+[root@ip-10-17-0-4 sai]# vi Dockerfile
+[root@ip-10-17-0-4 sai]# vi docker-compose.yml
+[root@ip-10-17-0-4 sai]# docker-compose up -d
+Pulling db (mysql:5.7)...
+5.7: Pulling from library/mysql
+a5a6f2f73cd8: Pull complete
+936836019e67: Pull complete
+283fa4c95fb4: Pull complete
+1f212fb371f9: Pull complete
+e2ae0d063e89: Pull complete
+5ed0ae805b65: Pull complete
+0283dc49ef4e: Pull complete
+a7905d9fbbea: Pull complete
+cd2a65837235: Pull complete
+5f906b8da5fe: Pull complete
+e81e51815567: Pull complete
+Pulling wordpress (wordpress:latest)...
+latest: Pulling from library/wordpress
+f17d81b4b692: Pull complete
+376d99d019dc: Pull complete
+80b3573727f0: Pull complete
+2c492579cd1f: Pull complete
+9127acfc108e: Pull complete
+475593d953b6: Pull complete
+52442c108349: Pull complete
+34b7a8ed8171: Pull complete
+57b93ed05069: Pull complete
+c03bc06afbf1: Pull complete
+4be3d516ef4a: Pull complete
+25253f4c7678: Pull complete
+a31f6d47aa8d: Pull complete
+2f5be4abfef2: Pull complete
+5c06492fa2ec: Pull complete
+742fba5dd491: Pull complete
+b1e916c6c627: Pull complete
+ac9166b0278f: Pull complete
+f9589005c8bb: Pull complete
+9d91c94172a1: Pull complete
+Creating sai_db_1_e83b11f5272e ... done
+Creating sai_wordpress_1_955dfdbdb804 ... done
+[root@ip-10-17-0-4 sai]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+a19dce98a984        wordpress:latest    "docker-entrypoint.s…"   3 seconds ago       Up 2 seconds        0.0.0.0:8000->80/tcp   sai_wordpress_1_5948c09ee732
+87f08381938c        mysql:5.7           "docker-entrypoint.s…"   4 seconds ago       Up 3 seconds        3306/tcp, 33060/tcp    sai_db_1_1f437d523d4a
+[root@ip-10-17-0-4 sai]# vi docker-compose.yml
+[root@ip-10-17-0-4 sai]# docker network
+
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+[root@ip-10-17-0-4 sai]# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+40b5a0ed1b60        bridge              bridge              local
+82d4a38086c9        host                host                local
+b259d610cb8c        none                null                local
+424a249ac7ce        sai_default         bridge              local
+[root@ip-10-17-0-4 sai]# docker top 40b5a0ed1b60
+Error response from daemon: No such container: 40b5a0ed1b60
+[root@ip-10-17-0-4 sai]# docker top
+"docker top" requires at least 1 argument.
+See 'docker top --help'.
+
+Usage:  docker top CONTAINER [ps OPTIONS]
+
+Display the running processes of a container
+[root@ip-10-17-0-4 sai]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+a19dce98a984        wordpress:latest    "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        0.0.0.0:8000->80/tcp   sai_wordpress_1_5948c09ee732
+87f08381938c        mysql:5.7           "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        3306/tcp, 33060/tcp    sai_db_1_1f437d523d4a
+[root@ip-10-17-0-4 sai]# docker top a19dce98a984
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                6065                6026                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6367                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6368                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6369                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6370                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6371                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6378                6065                0                   05:23               ?                   00:00:00            apache2 -DFOREGROUND
+33                  6384                6065                0                   05:24               ?                   00:00:00            apache2 -DFOREGROUND
+[root@ip-10-17-0-4 sai]#

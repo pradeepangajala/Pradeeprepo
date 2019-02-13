@@ -1,0 +1,2007 @@
+INFO: Dependent install of workflow-support for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-multibranch for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of docker-workflow for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-api for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-stage-tags-metadata for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-declarative-agent for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-stage-view for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-build-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-definition for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps-global-lib for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-multibranch for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps-global-lib for plugin pipeline-github-lib already added, skipping
+Feb 11, 2019 3:05:21 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Supporting APIs
+Feb 11, 2019 3:05:22 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-support.jpi
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Supporting APIs
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-support plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Supporting APIs v2.20 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Nodes and Processes on behalf of admin
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Nodes and Processes
+Feb 11, 2019 3:05:22 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-durable-task-step.jpi
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Nodes and Processes
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-durable-task-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Nodes and Processes v2.22 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Workspace Cleanup on behalf of admin
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Workspace Cleanup
+Feb 11, 2019 3:05:22 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/ws-cleanup.jpi
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Workspace Cleanup
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install ws-cleanup plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins Workspace Cleanup Plugin v0.37 failed to load.
+ - Pipeline: Nodes and Processes v2.22 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Groovy on behalf of admin
+Feb 11, 2019 3:05:22 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Groovy
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-cps.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Groovy
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-cps plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Groovy v2.57.1 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Input Step on behalf of admin
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Input Step
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-input-step.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Input Step
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-input-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Input Step v2.9 failed to load.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Job on behalf of admin
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Job
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-job.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Job
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-job plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Job v2.25 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline Graph Analysis on behalf of admin
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline Graph Analysis
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-graph-analysis.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline Graph Analysis
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-graph-analysis plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline Graph Analysis Plugin v1.9 failed to load.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: REST API on behalf of admin
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: REST API
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-rest-api.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: REST API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-rest-api plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: REST API Plugin v2.10 failed to load.
+ - Pipeline: Job v2.25 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Stage View on behalf of admin
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Stage View
+Feb 11, 2019 3:05:23 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-stage-view.jpi
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Stage View
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-stage-view plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Stage View Plugin v2.10 failed to load.
+ - Pipeline: REST API Plugin v2.10 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:23 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Build Step on behalf of admin
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Build Step
+Feb 11, 2019 3:05:24 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-build-step.jpi
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Build Step
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-build-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Build Step v2.7 failed to load.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Model API on behalf of admin
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Model API
+Feb 11, 2019 3:05:24 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-api.jpi
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Model API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-api plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Model API v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative Extension Points API on behalf of admin
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative Extension Points API
+Feb 11, 2019 3:05:24 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-extensions.jpi
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative Extension Points API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-extensions plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative Extension Points API v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Shared Groovy Libraries on behalf of admin
+Feb 11, 2019 3:05:24 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Shared Groovy Libraries
+Feb 11, 2019 3:05:25 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-cps-global-lib.jpi
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Shared Groovy Libraries
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-cps-global-lib plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Shared Groovy Libraries v2.12 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Multibranch on behalf of admin
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Multibranch
+Feb 11, 2019 3:05:25 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-multibranch.jpi
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Multibranch
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-multibranch plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Multibranch v2.20 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Docker Pipeline on behalf of admin
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Docker Pipeline
+Feb 11, 2019 3:05:25 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/docker-workflow.jpi
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Docker Pipeline
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install docker-workflow plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Docker Pipeline v1.17 failed to load.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Stage Tags Metadata on behalf of admin
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Stage Tags Metadata
+Feb 11, 2019 3:05:25 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-stage-tags-metadata.jpi
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Stage Tags Metadata
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-stage-tags-metadata plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Stage Tags Metadata v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative Agent API on behalf of admin
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative Agent API
+Feb 11, 2019 3:05:25 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-declarative-agent.jpi
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative Agent API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-declarative-agent plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative Agent API v1.1.1 failed to load.
+ - Pipeline: Declarative Extension Points API v1.3.2 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative on behalf of admin
+Feb 11, 2019 3:05:25 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative
+Feb 11, 2019 3:05:26 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-definition.jpi
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-definition plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Shared Groovy Libraries v2.12 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline on behalf of admin
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline
+Feb 11, 2019 3:05:26 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-aggregator.jpi
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-aggregator plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline v2.5 failed to load.
+ - Pipeline: Input Step v2.9 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: GitHub Groovy Libraries on behalf of admin
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: GitHub Groovy Libraries
+Feb 11, 2019 3:05:26 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-github-lib.jpi
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: GitHub Groovy Libraries
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-github-lib plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: GitHub Groovy Libraries v1.0 failed to load.
+ - Pipeline: Shared Groovy Libraries v2.12 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Subversion on behalf of admin
+Feb 11, 2019 3:05:26 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Subversion
+Feb 11, 2019 3:05:27 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/subversion.jpi
+Feb 11, 2019 3:05:27 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Subversion
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install subversion plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins Subversion Plug-in v2.12.1 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:27 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of SSH Slaves on behalf of admin
+Feb 11, 2019 3:05:27 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading SSH Slaves
+Feb 11, 2019 3:05:27 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/ssh-slaves.jpi
+Feb 11, 2019 3:05:27 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install SSH Slaves
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install ssh-slaves plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins SSH Slaves plugin v1.29.4 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.89.4 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-durable-task-step already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin ws-cleanup already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-cps already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin pipeline-input-step already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-job already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin pipeline-graph-analysis already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin pipeline-graph-analysis already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin pipeline-graph-analysis already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin pipeline-graph-analysis already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Supporting APIs on behalf of admin
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-graph-analysis for plugin pipeline-rest-api already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin pipeline-rest-api already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin pipeline-rest-api already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin pipeline-rest-api already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-rest-api for plugin pipeline-stage-view already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin pipeline-stage-view already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin pipeline-build-step already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-api for plugin pipeline-model-extensions already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin pipeline-model-extensions already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin pipeline-model-extensions already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin workflow-cps-global-lib already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin workflow-multibranch already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-multibranch already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin workflow-multibranch already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin docker-workflow already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin docker-workflow already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin docker-workflow already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-extensions for plugin pipeline-model-declarative-agent already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-extensions for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps-global-lib for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-multibranch for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of docker-workflow for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-api for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-stage-tags-metadata for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-declarative-agent for plugin pipeline-model-definition already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-stage-view for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-build-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-model-definition for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps-global-lib for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-support for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-multibranch for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-durable-task-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of pipeline-input-step for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-job for plugin workflow-aggregator already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateSite$Plugin deploy
+INFO: Dependent install of workflow-cps-global-lib for plugin pipeline-github-lib already added, skipping
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Supporting APIs
+Feb 11, 2019 3:05:36 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-support.jpi
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Supporting APIs
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-support plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Supporting APIs v2.20 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:36 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Nodes and Processes on behalf of admin
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Nodes and Processes
+Feb 11, 2019 3:05:37 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-durable-task-step.jpi
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Nodes and Processes
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-durable-task-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Nodes and Processes v2.22 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Workspace Cleanup on behalf of admin
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Workspace Cleanup
+Feb 11, 2019 3:05:37 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/ws-cleanup.jpi
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Workspace Cleanup
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install ws-cleanup plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins Workspace Cleanup Plugin v0.37 failed to load.
+ - Pipeline: Nodes and Processes v2.22 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Groovy on behalf of admin
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Groovy
+Feb 11, 2019 3:05:37 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-cps.jpi
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Groovy
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-cps plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Groovy v2.57.1 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Input Step on behalf of admin
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Input Step
+Feb 11, 2019 3:05:37 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-input-step.jpi
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Input Step
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-input-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Input Step v2.9 failed to load.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Job on behalf of admin
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Job
+Feb 11, 2019 3:05:37 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-job.jpi
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Job
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-job plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Job v2.25 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:37 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline Graph Analysis on behalf of admin
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline Graph Analysis
+Feb 11, 2019 3:05:38 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-graph-analysis.jpi
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline Graph Analysis
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-graph-analysis plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline Graph Analysis Plugin v1.9 failed to load.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: REST API on behalf of admin
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: REST API
+Feb 11, 2019 3:05:38 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-rest-api.jpi
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: REST API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-rest-api plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: REST API Plugin v2.10 failed to load.
+ - Pipeline: Job v2.25 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Stage View on behalf of admin
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Stage View
+Feb 11, 2019 3:05:38 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-stage-view.jpi
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Stage View
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-stage-view plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Stage View Plugin v2.10 failed to load.
+ - Pipeline: REST API Plugin v2.10 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Build Step on behalf of admin
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Build Step
+Feb 11, 2019 3:05:38 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-build-step.jpi
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Build Step
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-build-step plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Build Step v2.7 failed to load.
+ - Pipeline: Supporting APIs v2.20 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Model API on behalf of admin
+Feb 11, 2019 3:05:38 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Model API
+Feb 11, 2019 3:05:39 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-api.jpi
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Model API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-api plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Model API v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative Extension Points API on behalf of admin
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative Extension Points API
+Feb 11, 2019 3:05:39 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-extensions.jpi
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative Extension Points API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-extensions plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative Extension Points API v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Shared Groovy Libraries on behalf of admin
+Feb 11, 2019 3:05:39 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Shared Groovy Libraries
+Feb 11, 2019 3:05:40 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-cps-global-lib.jpi
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Shared Groovy Libraries
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-cps-global-lib plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Shared Groovy Libraries v2.12 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Multibranch on behalf of admin
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Multibranch
+Feb 11, 2019 3:05:40 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-multibranch.jpi
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Multibranch
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-multibranch plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Multibranch v2.20 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.62 or later to run this plugin.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Docker Pipeline on behalf of admin
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Docker Pipeline
+Feb 11, 2019 3:05:40 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/docker-workflow.jpi
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Docker Pipeline
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install docker-workflow plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Docker Pipeline v1.17 failed to load.
+ - Pipeline: Groovy v2.57.1 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Stage Tags Metadata on behalf of admin
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Stage Tags Metadata
+Feb 11, 2019 3:05:40 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-stage-tags-metadata.jpi
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Stage Tags Metadata
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-stage-tags-metadata plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Stage Tags Metadata v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:40 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative Agent API on behalf of admin
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative Agent API
+Feb 11, 2019 3:05:41 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-declarative-agent.jpi
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative Agent API
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-declarative-agent plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative Agent API v1.1.1 failed to load.
+ - Pipeline: Declarative Extension Points API v1.3.2 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: Declarative on behalf of admin
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: Declarative
+Feb 11, 2019 3:05:41 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-model-definition.jpi
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: Declarative
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-model-definition plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: Declarative v1.3.2 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+ - Pipeline: Shared Groovy Libraries v2.12 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline on behalf of admin
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline
+Feb 11, 2019 3:05:41 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/workflow-aggregator.jpi
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install workflow-aggregator plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline v2.5 failed to load.
+ - Pipeline: Input Step v2.9 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Pipeline: GitHub Groovy Libraries on behalf of admin
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Pipeline: GitHub Groovy Libraries
+Feb 11, 2019 3:05:41 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/pipeline-github-lib.jpi
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Pipeline: GitHub Groovy Libraries
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install pipeline-github-lib plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Pipeline: GitHub Groovy Libraries v1.0 failed to load.
+ - Pipeline: Shared Groovy Libraries v2.12 failed to load. Fix this plugin first.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of Subversion on behalf of admin
+Feb 11, 2019 3:05:41 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading Subversion
+Feb 11, 2019 3:05:42 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/subversion.jpi
+Feb 11, 2019 3:05:42 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install Subversion
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install subversion plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins Subversion Plug-in v2.12.1 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.73.3 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+Feb 11, 2019 3:05:42 PM hudson.model.UpdateCenter$DownloadJob run
+INFO: Starting the installation of SSH Slaves on behalf of admin
+Feb 11, 2019 3:05:42 PM hudson.model.UpdateCenter$UpdateCenterConfiguration download
+INFO: Downloading SSH Slaves
+Feb 11, 2019 3:05:42 PM hudson.PluginManager dynamicLoad
+INFO: Attempting to dynamic load /var/jenkins_home/plugins/ssh-slaves.jpi
+Feb 11, 2019 3:05:42 PM hudson.model.UpdateCenter$DownloadJob run
+SEVERE: Failed to install SSH Slaves
+java.io.IOException: Failed to dynamically deploy this plugin
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1893)
+        at hudson.model.UpdateCenter$DownloadJob.run(UpdateCenter.java:1651)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+        at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to install ssh-slaves plugin
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:874)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:813)
+        at hudson.model.UpdateCenter$InstallationJob._run(UpdateCenter.java:1889)
+        ... 5 more
+Caused by: java.io.IOException: Jenkins SSH Slaves plugin v1.29.4 failed to load.
+ - You must update Jenkins from v2.60.3 to v2.89.4 or later to run this plugin.
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:626)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:864)
+        ... 7 more
+
+^CFeb 11, 2019 3:05:43 PM winstone.Logger logInternal
+INFO: JVM is terminating. Shutting down Winstone
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# cd /opt
+[root@ip-172-31-19-188 opt]# ls
+aws  rh
+[root@ip-172-31-19-188 opt]# cd
+[root@ip-172-31-19-188 ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+d2d22d75881a72c54212b3359421730f8c9c738b933cf2ea5bbb62d46691eee6
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ru^C-d -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+[root@ip-172-31-19-188 ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS               NAMES
+d2d22d75881a        jenkins             "/bin/tini -- /usr/l…"   About a minute ago   Exited (1) About a minute ago                       gallant_visvesvaraya
+e12aa19528b3        jenkins             "/bin/tini -- /usr/l…"   9 minutes ago        Exited (130) 7 minutes ago                          competent_ptolemy
+[root@ip-172-31-19-188 ~]# docker run -it -d -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+f7cb438c6b7e17257666aec926855b48a6de2786599bf15e628653d93e668093
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker rm -f $(docker ps -aq)
+f7cb438c6b7e
+d2d22d75881a
+e12aa19528b3
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+deepu               latest              786dd5fe5782        8 hours ago         223MB
+ubuntu              latest              47b19964fb50        5 days ago          88.1MB
+bash                latest              d97778c0b68a        5 days ago          15.1MB
+jenkins             latest              cd14cecfdb3a        6 months ago        696MB
+[root@ip-172-31-19-188 ~]# docker run -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+touch: cannot touch '/var/jenkins_home/copy_reference_file.log': Permission denied
+Can not write to /var/jenkins_home/copy_reference_file.log. Wrong volume permissions?
+[root@ip-172-31-19-188 ~]# chmod 777 /opt
+[root@ip-172-31-19-188 ~]# docker run -d -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+5baa39dc6deb        jenkins             "/bin/tini -- /usr/l…"   4 seconds ago       Up 4 seconds        0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 ~]# docker log 5baa39dc6deb
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+[root@ip-172-31-19-188 ~]# docker logs 5baa39dc6deb
+Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Feb 11, 2019 3:17:19 PM Main deleteWinstoneTempContents
+WARNING: Failed to delete the temporary Winstone file /tmp/winstone/jenkins.war
+Feb 11, 2019 3:17:19 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Logging initialized @767ms
+Feb 11, 2019 3:17:19 PM winstone.Logger logInternal
+INFO: Beginning extraction from war file
+Feb 11, 2019 3:17:20 PM org.eclipse.jetty.util.log.JavaUtilLog warn
+WARNING: Empty contextPath
+Feb 11, 2019 3:17:20 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: jetty-9.2.z-SNAPSHOT
+Feb 11, 2019 3:17:21 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+Feb 11, 2019 3:17:22 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started w.@47404bea{/,file:/var/jenkins_home/war/,AVAILABLE}{/var/jenkins_home/war}
+Feb 11, 2019 3:17:22 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started ServerConnector@1c80e49b{HTTP/1.1}{0.0.0.0:8080}
+Feb 11, 2019 3:17:22 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started @4359ms
+Feb 11, 2019 3:17:22 PM winstone.Logger logInternal
+INFO: Winstone Servlet Engine v2.0 running: controlPort=disabled
+Feb 11, 2019 3:17:23 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Feb 11, 2019 3:17:23 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Feb 11, 2019 3:17:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Feb 11, 2019 3:17:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Feb 11, 2019 3:17:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Feb 11, 2019 3:17:25 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Feb 11, 2019 3:17:28 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Download metadata
+Feb 11, 2019 3:17:28 PM jenkins.util.groovy.GroovyHookScript execute
+INFO: Executing /var/jenkins_home/init.groovy.d/tcp-slave-agent-port.groovy
+Feb 11, 2019 3:17:29 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Feb 11, 2019 3:17:30 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@2980dfd2: display name [Root WebApplicationContext]; startup date [Mon Feb 11 15:17:30 UTC 2019]; root of context hierarchy
+Feb 11, 2019 3:17:30 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@2980dfd2]: org.springframework.beans.factory.support.DefaultListableBeanFactory@2ef9876b
+Feb 11, 2019 3:17:30 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2ef9876b: defining beans [authenticationManager]; root of factory hierarchy
+Feb 11, 2019 3:17:31 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@6a4bc16c: display name [Root WebApplicationContext]; startup date [Mon Feb 11 15:17:31 UTC 2019]; root of context hierarchy
+Feb 11, 2019 3:17:31 PM org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+INFO: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@6a4bc16c]: org.springframework.beans.factory.support.DefaultListableBeanFactory@28b966a5
+Feb 11, 2019 3:17:31 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@28b966a5: defining beans [filter,legacy]; root of factory hierarchy
+Feb 11, 2019 3:17:31 PM jenkins.install.SetupWizard init
+INFO:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+6a918dc68f544ba6bae99d1ca76f1b67
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Feb 11, 2019 3:17:37 PM hudson.model.UpdateSite updateData
+INFO: Obtained the latest update center data file for UpdateSource default
+Feb 11, 2019 3:17:37 PM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+Feb 11, 2019 3:17:39 PM hudson.model.DownloadService$Downloadable load
+INFO: Obtained the updated data file for hudson.tools.JDKInstaller
+Feb 11, 2019 3:17:39 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Download metadata. 10,877 ms
+--> setting agent port for jnlp
+--> setting agent port for jnlp... done
+Feb 11, 2019 3:17:40 PM hudson.model.UpdateSite updateData
+INFO: Obtained the latest update center data file for UpdateSource default
+Feb 11, 2019 3:17:40 PM hudson.WebAppMain$3 run
+INFO: Jenkins is fully up and running
+[root@ip-172-31-19-188 ~]# cd /opt
+[root@ip-172-31-19-188 opt]# ls
+aws                      hudson.model.UpdateCenter.xml  jenkins.CLI.xml                      logs              plugins     secret.key.not-so-secret  userContent
+config.xml               identity.key.enc               jenkins.install.UpgradeWizard.state  nodeMonitors.xml  rh          secrets                   users
+copy_reference_file.log  init.groovy.d                  jobs                                 nodes             secret.key  updates                   war
+[root@ip-172-31-19-188 opt]# docker volume ls
+DRIVER              VOLUME NAME
+local               e8c442ed14ceaa3371783ef7a715d426e5fec6f845e90ce0bc2ce642c5ba7ad4
+[root@ip-172-31-19-188 opt]# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+72c845eb441e        bridge              bridge              local
+f3270f166233        host                host                local
+ba255ed84abb        none                null                local
+[root@ip-172-31-19-188 opt]# docker inspect 72c845eb441e
+[
+    {
+        "Name": "bridge",
+        "Id": "72c845eb441eeac345e24daea572ecf66bb5b25ae78c8df128107f980525fc83",
+        "Created": "2019-02-08T14:18:25.971001089Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a": {
+                "Name": "frosty_liskov",
+                "EndpointID": "68696f340522e749b800a393b6aff632b0858e48eced2e2eac2e0283fc2c396e",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+[root@ip-172-31-19-188 opt]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+5baa39dc6deb        jenkins             "/bin/tini -- /usr/l…"   3 minutes ago       Up 3 minutes        0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 opt]# docker inspect 5baa39dc6deb
+[
+    {
+        "Id": "5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a",
+        "Created": "2019-02-11T15:17:18.140535514Z",
+        "Path": "/bin/tini",
+        "Args": [
+            "--",
+            "/usr/local/bin/jenkins.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 15750,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2019-02-11T15:17:18.416335769Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:cd14cecfdb3a657ba7d05bea026e7ac8b9abafc6e5c66253ab327c7211fa6281",
+        "ResolvConfPath": "/var/lib/docker/containers/5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a/hostname",
+        "HostsPath": "/var/lib/docker/containers/5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a/hosts",
+        "LogPath": "/var/lib/docker/containers/5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a/5baa39dc6deb2d9f46bc2c308e0a0d63f3e75b16af8dd333ebbbcc2790dbf17a-json.log",
+        "Name": "/frosty_liskov",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/opt:/var/jenkins_home"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "50000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "50000"
+                    }
+                ],
+                "8080/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": [
+                {
+                    "Name": "nofile",
+                    "Hard": 4096,
+                    "Soft": 1024
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/asound",
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/f11bc419f626950ff0ac716991406be6ca056aa588fdf0ad165a91464b7c2a5d-init/diff:/var/lib/docker/overlay2/d799eeeed18d2a9c257fdd2489502006fd238d312f57db5a8f5457dfa2524301/diff:/var/lib/docker/overlay2/05cb2a10277bc10344bc09f374eec5ab27b2896660b97106cfdbb45111ff447b/diff:/var/lib/docker/overlay2/f3efbb14b239a84ed46277ae0532e29369e7434e044b56c97f8ea2b6962128eb/diff:/var/lib/docker/overlay2/eaae258af8e4d039ce8e14e1e410b59c7bee3c4fb3175f74767009951928236a/diff:/var/lib/docker/overlay2/cc00357e126952f56484f44fcd9c4f04d69637d6bb75b0b34a094baa2555ea5c/diff:/var/lib/docker/overlay2/635fd0009ecf6a7fa5dac8a1c033abed42d737b1ca9c23976f954890ec7602e2/diff:/var/lib/docker/overlay2/f3af7efddd4c41b1e471919bdcd00e3590e2a19a97abf6d8bc1a4c827422c7b0/diff:/var/lib/docker/overlay2/46a39e21282e269f2c80d2ba39de4abbdfb3bf40d3a9177ebb5ebef25307af10/diff:/var/lib/docker/overlay2/402ff5858f8838a1d0b8929f23df3d23eb34cdcee24c964c8d786464c7466b8c/diff:/var/lib/docker/overlay2/03c82e71a27d59966c07db4962b2815113e39e2a73cbb08d0f7ab52d812450bf/diff:/var/lib/docker/overlay2/9268d286fad4bcafbd565cfea13df4285541d821e331eec58d61fbf031e14964/diff:/var/lib/docker/overlay2/8b38e8f7d3f307213ef1db42eaada6e7faf652090a0ffbef0ca434054cab9c10/diff:/var/lib/docker/overlay2/f0e9b464972838063887de98de55c2296d07c36f4417bf57125bce875e30a23e/diff:/var/lib/docker/overlay2/91e44068b1de67a840ffe77692c55ac40f0b93d85abd9faac1d583e2233f0a4b/diff:/var/lib/docker/overlay2/b51dcf17031f69fd1867d6d6f846ace4c07573a2f462a07c991d53d86be94a20/diff:/var/lib/docker/overlay2/3c30cd4c3713836b35a252c1925cd4b217cfb42c6c7cbba5ec0167c1dc7ae31d/diff:/var/lib/docker/overlay2/a7d2e22a301224104e981ef5dd1c8063a61b58582ff0f8e88190cf9e1c3ff074/diff:/var/lib/docker/overlay2/0c1b9622df11b5e59afc29f2fff5eef6e8ff627950bbb6574e0676483815538e/diff:/var/lib/docker/overlay2/6926b80ea260807c763871ab75793cd0e66643871e1dab47179fbbb3a3185225/diff:/var/lib/docker/overlay2/f3eba923346a3defea2b1cf3ee30a0815a6e2901c3de9068dbfadbe3486d5734/diff",
+                "MergedDir": "/var/lib/docker/overlay2/f11bc419f626950ff0ac716991406be6ca056aa588fdf0ad165a91464b7c2a5d/merged",
+                "UpperDir": "/var/lib/docker/overlay2/f11bc419f626950ff0ac716991406be6ca056aa588fdf0ad165a91464b7c2a5d/diff",
+                "WorkDir": "/var/lib/docker/overlay2/f11bc419f626950ff0ac716991406be6ca056aa588fdf0ad165a91464b7c2a5d/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/opt",
+                "Destination": "/var/jenkins_home",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "5baa39dc6deb",
+            "Domainname": "",
+            "User": "jenkins",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "50000/tcp": {},
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "JAVA_HOME=/docker-java-home",
+                "JAVA_VERSION=8u171",
+                "JAVA_DEBIAN_VERSION=8u171-b11-1~deb9u1",
+                "CA_CERTIFICATES_JAVA_VERSION=20170531+nmu1",
+                "JENKINS_HOME=/var/jenkins_home",
+                "JENKINS_SLAVE_AGENT_PORT=50000",
+                "TINI_VERSION=0.14.0",
+                "TINI_SHA=6c41ec7d33e857d4779f14d9c74924cab0c7973485d2972419a3b7c7620ff5fd",
+                "JENKINS_VERSION=2.60.3",
+                "JENKINS_UC=https://updates.jenkins.io",
+                "JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental",
+                "COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log"
+            ],
+            "Cmd": null,
+            "ArgsEscaped": true,
+            "Image": "jenkins",
+            "Volumes": {
+                "/var/jenkins_home": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/tini",
+                "--",
+                "/usr/local/bin/jenkins.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "45e827572b0fd554961988d534d3577d843bddf3a1b36ba2745b09238e241791",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "50000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "50000"
+                    }
+                ],
+                "8080/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/45e827572b0f",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "68696f340522e749b800a393b6aff632b0858e48eced2e2eac2e0283fc2c396e",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "72c845eb441eeac345e24daea572ecf66bb5b25ae78c8df128107f980525fc83",
+                    "EndpointID": "68696f340522e749b800a393b6aff632b0858e48eced2e2eac2e0283fc2c396e",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+[root@ip-172-31-19-188 opt]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+5baa39dc6deb        jenkins             "/bin/tini -- /usr/l…"   8 minutes ago       Up 8 minutes        0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 opt]# touch monday
+[root@ip-172-31-19-188 opt]# ls
+aws                      hudson.model.UpdateCenter.xml  jenkins.CLI.xml                      logs              nodes    secret.key                updates      war
+config.xml               identity.key.enc               jenkins.install.UpgradeWizard.state  monday            plugins  secret.key.not-so-secret  userContent
+copy_reference_file.log  init.groovy.d                  jobs                                 nodeMonitors.xml  rh       secrets                   users
+[root@ip-172-31-19-188 opt]# cd
+[root@ip-172-31-19-188 ~]# touch monday
+[root@ip-172-31-19-188 ~]# ls
+Dockerfile  monday
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+5baa39dc6deb        jenkins             "/bin/tini -- /usr/l…"   10 minutes ago      Up 10 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 ~]# docker cp monday 5baa39dc6deb:/tmp
+[root@ip-172-31-19-188 ~]# docker exec -it 5baa39dc6deb bash
+jenkins@5baa39dc6deb:/$ cd /tmp
+jenkins@5baa39dc6deb:/tmp$ ls
+hsperfdata_jenkins  jetty-0.0.0.0-8080-war-_-any-664029902949942173.dir  jna--1712433994  winstone6092094296849172793.jar
+hsperfdata_root     jffi3333841131798562619.tmp                          monday
+jenkins@5baa39dc6deb:/tmp$ touch sample
+jenkins@5baa39dc6deb:/tmp$ exit
+[root@ip-172-31-19-188 ~]# ls
+Dockerfile  monday
+[root@ip-172-31-19-188 ~]# docker cp 5baa39dc6deb:/tmp .
+[root@ip-172-31-19-188 ~]# ls
+Dockerfile  monday  tmp
+[root@ip-172-31-19-188 ~]# docker cp 5baa39dc6deb:/tmp/sample .
+[root@ip-172-31-19-188 ~]# ls
+Dockerfile  monday  sample  tmp
+[root@ip-172-31-19-188 ~]# docker run -d --name nagios4 -p 0.0.0.0:8080:80 jasonrivers/nagios:latest
+Unable to find image 'jasonrivers/nagios:latest' locally
+latest: Pulling from jasonrivers/nagios
+7b722c1070cd: Pull complete
+5fbf74db61f1: Pull complete
+ed41cb72e5c9: Pull complete
+7ea47a67709e: Pull complete
+e0bb0ac8ddea: Pull complete
+7808af68cc9d: Pull complete
+40bfc7a2e2c5: Pull complete
+dfb5a29092f0: Pull complete
+71e07c8317a2: Pull complete
+a1d78fb90f91: Pull complete
+b10fe911afa0: Pull complete
+d5d8c8503160: Pull complete
+1eee4ba72233: Pull complete
+a193dc50bea2: Pull complete
+20637c5d5b34: Pull complete
+2120c75ea816: Pull complete
+0a25f9da5d5b: Pull complete
+2dd7427f0bda: Pull complete
+9b7be4ea7884: Pull complete
+409fa1164634: Pull complete
+f21e9afc7b45: Pull complete
+fbaea3533371: Pull complete
+0c8ee7e139e5: Pull complete
+83ae4693d168: Pull complete
+12cc3f36a9a1: Pull complete
+f0ac9267154c: Pull complete
+683a75b3b201: Pull complete
+dcf09918034b: Pull complete
+0c942e378961: Pull complete
+2f9cceaec725: Pull complete
+Digest: sha256:2114285b82e672568e7c87903c104e6408b32fa6a431f65eecee824268cf8c67
+Status: Downloaded newer image for jasonrivers/nagios:latest
+7ea08509a1bf96397c1d69cfd0d8d3dacfa96d3ba43f39b6b7ec0514056bb352
+docker: Error response from daemon: driver failed programming external connectivity on endpoint nagios4 (90cc9442642bfca12038b7b64593af982a6d1719472e35b70233d66ed42a8297): Bind for 0.0.0.0:8080 failed: port is already allocated.
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+5baa39dc6deb        jenkins             "/bin/tini -- /usr/l…"   26 minutes ago      Up 26 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 ~]# docker run -d --name nagios4 -p 0.0.0.0:80:80 jasonrivers/nagios:latest
+docker: Error response from daemon: Conflict. The container name "/nagios4" is already in use by container "7ea08509a1bf96397c1d69cfd0d8d3dacfa96d3ba43f39b6b7ec0514056bb352". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+[root@ip-172-31-19-188 ~]# docker run -d --name nagios42 -p 0.0.0.0:80:80 jasonrivers/nagios:latest
+d5d6ef009eed0cc240d30975f8b93f411eed01c38d80b72ccafc7453a8ba72bb
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+d5d6ef009eed        jasonrivers/nagios:latest   "/usr/local/bin/star…"   4 seconds ago       Up 3 seconds        0.0.0.0:80->80/tcp                                 nagios42
+5baa39dc6deb        jenkins                     "/bin/tini -- /usr/l…"   27 minutes ago      Up 27 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 ~]# vi Dockerfile
+[root@ip-172-31-19-188 ~]# cd
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# mkdir monday
+mkdir: cannot create directory ‘monday’: File exists
+[root@ip-172-31-19-188 ~]# mkdir monday1
+[root@ip-172-31-19-188 ~]# cd monday1/
+[root@ip-172-31-19-188 monday1]# ls
+[root@ip-172-31-19-188 monday1]# vi Dockerfile
+[root@ip-172-31-19-188 monday1]# docker build -t mon .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM centos:latest
+latest: Pulling from library/centos
+a02a4930cb5d: Pull complete
+Digest: sha256:184e5f35598e333bfa7de10d8fb1cebb5ee4df5bc0f970bf2b1e7c7345136426
+Status: Downloaded newer image for centos:latest
+ ---> 1e1148e4cc2c
+Step 2/2 : CMD ("Hi Devops")
+ ---> Running in 64faa62e145d
+Removing intermediate container 64faa62e145d
+ ---> 4611fbd65d73
+Successfully built 4611fbd65d73
+Successfully tagged mon:latest
+[root@ip-172-31-19-188 monday1]# docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+d5d6ef009eed        jasonrivers/nagios:latest   "/usr/local/bin/star…"   13 minutes ago      Up 13 minutes       0.0.0.0:80->80/tcp                                 nagios42
+5baa39dc6deb        jenkins                     "/bin/tini -- /usr/l…"   40 minutes ago      Up 40 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 monday1]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+mon                  latest              4611fbd65d73        14 seconds ago      202MB
+deepu                latest              786dd5fe5782        9 hours ago         223MB
+ubuntu               latest              47b19964fb50        5 days ago          88.1MB
+bash                 latest              d97778c0b68a        5 days ago          15.1MB
+jasonrivers/nagios   latest              8cbfaa87a840        2 weeks ago         737MB
+centos               latest              1e1148e4cc2c        2 months ago        202MB
+jenkins              latest              cd14cecfdb3a        6 months ago        696MB
+[root@ip-172-31-19-188 monday1]# docker run -it -d 4611fbd65d73 bash
+e90d98e06bcfb555ea8c10fb52b2e05a7c8267e71fbb77e4f5d9b36e3b4c0a7f
+[root@ip-172-31-19-188 monday1]# docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+e90d98e06bcf        4611fbd65d73                "bash"                   4 seconds ago       Up 4 seconds                                                           frosty_roentgen
+d5d6ef009eed        jasonrivers/nagios:latest   "/usr/local/bin/star…"   14 minutes ago      Up 14 minutes       0.0.0.0:80->80/tcp                                 nagios42
+5baa39dc6deb        jenkins                     "/bin/tini -- /usr/l…"   41 minutes ago      Up 41 minutes       0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   frosty_liskov
+[root@ip-172-31-19-188 monday1]# docker run -it 4611fbd65d73
+/bin/sh: Hi Devops: command not found
+[root@ip-172-31-19-188 monday1]# vi Dockerfile
+[root@ip-172-31-19-188 monday1]# vi Dockerfile
+[root@ip-172-31-19-188 monday1]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+mon                  latest              4611fbd65d73        4 minutes ago       202MB
+deepu                latest              786dd5fe5782        9 hours ago         223MB
+ubuntu               latest              47b19964fb50        5 days ago          88.1MB
+bash                 latest              d97778c0b68a        5 days ago          15.1MB
+jasonrivers/nagios   latest              8cbfaa87a840        2 weeks ago         737MB
+centos               latest              1e1148e4cc2c        2 months ago        202MB
+jenkins              latest              cd14cecfdb3a        6 months ago        696MB
+[root@ip-172-31-19-188 monday1]# docker build -t mon .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM centos:latest
+ ---> 1e1148e4cc2c
+Step 2/2 : CMD echo "Hi Devops"
+ ---> Running in 1634d7d08f09
+Removing intermediate container 1634d7d08f09
+ ---> 7c38e6b9513f
+Successfully built 7c38e6b9513f
+Successfully tagged mon:latest
+[root@ip-172-31-19-188 monday1]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+mon                  latest              7c38e6b9513f        5 seconds ago       202MB
+<none>               <none>              4611fbd65d73        5 minutes ago       202MB
+deepu                latest              786dd5fe5782        9 hours ago         223MB
+ubuntu               latest              47b19964fb50        5 days ago          88.1MB
+bash                 latest              d97778c0b68a        5 days ago          15.1MB
+jasonrivers/nagios   latest              8cbfaa87a840        2 weeks ago         737MB
+centos               latest              1e1148e4cc2c        2 months ago        202MB
+jenkins              latest              cd14cecfdb3a        6 months ago        696MB
+[root@ip-172-31-19-188 monday1]# docker run -it 7c38e6b9513f bash
+[root@119a34ab4e92 /]# docker ps
+bash: docker: command not found
+[root@119a34ab4e92 /]# exit
+[root@ip-172-31-19-188 monday1]# docker run -it 7c38e6b9513f echo "HI Hari"
+HI Hari
+[root@ip-172-31-19-188 monday1]# vi Dockerfile
+[root@ip-172-31-19-188 monday1]# docker build -t mon .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM centos:latest
+ ---> 1e1148e4cc2c
+Step 2/2 : ENTRYPOINT echo "Hi Devops"
+ ---> Running in d564b0e9f8da
+Removing intermediate container d564b0e9f8da
+ ---> cb0543214b8e
+Successfully built cb0543214b8e
+Successfully tagged mon:latest
+[root@ip-172-31-19-188 monday1]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+mon                  latest              cb0543214b8e        5 seconds ago       202MB
+<none>               <none>              7c38e6b9513f        2 minutes ago       202MB
+<none>               <none>              4611fbd65d73        7 minutes ago       202MB
+deepu                latest              786dd5fe5782        9 hours ago         223MB
+ubuntu               latest              47b19964fb50        5 days ago          88.1MB
+bash                 latest              d97778c0b68a        5 days ago          15.1MB
+jasonrivers/nagios   latest              8cbfaa87a840        2 weeks ago         737MB
+centos               latest              1e1148e4cc2c        2 months ago        202MB
+jenkins              latest              cd14cecfdb3a        6 months ago        696MB
+[root@ip-172-31-19-188 monday1]# docker run -it 7c38e6b9513f echo "HI Hari"7c38e6b9513f^C
+[root@ip-172-31-19-188 monday1]# docker run -it cb0543214b8e echo "HI Hari"
+Hi Devops
+[root@ip-172-31-19-188 monday1]# docker run -it cb0543214b8e echo "Bye"
+Hi Devops
+[root@ip-172-31-19-188 monday1]#

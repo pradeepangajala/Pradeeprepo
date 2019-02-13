@@ -1,0 +1,1765 @@
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/1/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_STPCPY''@/0/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/1/g' \
+      -e 's/@''GNULIB_STRNLEN''@/1/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/1/g' \
+      -e 's/@''GNULIB_STRSTR''@/1/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/1/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+      < ./string.in.h | \
+  sed -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_MEMCHR''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+      < ./string.in.h; \
+} > string.h-t && \
+mv string.h-t string.h
+rm -f strings.h-t strings.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_STRINGS_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRINGS_H''@|<strings.h>|g' \
+      -e 's|@''GNULIB_FFS''@|0|g' \
+      -e 's|@''HAVE_FFS''@|1|g' \
+      -e 's|@''HAVE_STRCASECMP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNCASECMP''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./strings.in.h; \
+} > strings.h-t && \
+mv strings.h-t strings.h
+/bin/mkdir -p sys
+rm -f sys/socket.h-t sys/socket.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_SOCKET_H''@|<sys/socket.h>|g' \
+      -e 's|@''HAVE_SYS_SOCKET_H''@|1|g' \
+      -e 's/@''GNULIB_CLOSE''@/0/g' \
+      -e 's/@''GNULIB_SOCKET''@/0/g' \
+      -e 's/@''GNULIB_CONNECT''@/0/g' \
+      -e 's/@''GNULIB_ACCEPT''@/0/g' \
+      -e 's/@''GNULIB_BIND''@/0/g' \
+      -e 's/@''GNULIB_GETPEERNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKOPT''@/0/g' \
+      -e 's/@''GNULIB_LISTEN''@/0/g' \
+      -e 's/@''GNULIB_RECV''@/0/g' \
+      -e 's/@''GNULIB_SEND''@/0/g' \
+      -e 's/@''GNULIB_RECVFROM''@/0/g' \
+      -e 's/@''GNULIB_SENDTO''@/0/g' \
+      -e 's/@''GNULIB_SETSOCKOPT''@/0/g' \
+      -e 's/@''GNULIB_SHUTDOWN''@/0/g' \
+      -e 's/@''GNULIB_ACCEPT4''@/0/g' \
+      -e 's|@''HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''HAVE_WS2TCPIP_H''@|0|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE''@|1|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY''@|1|g' \
+      -e 's|@''HAVE_SA_FAMILY_T''@|1|g' \
+      -e 's|@''HAVE_ACCEPT4''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./sys_socket.in.h; \
+} > sys/socket.h-t && \
+mv -f sys/socket.h-t sys/socket.h
+/bin/mkdir -p sys
+rm -f sys/types.h-t sys/types.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|<sys/types.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      < ./sys_types.in.h; \
+} > sys/types.h-t && \
+mv sys/types.h-t sys/types.h
+/bin/mkdir -p sys
+rm -f sys/uio.h-t sys/uio.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_UIO_H''@|<sys/uio.h>|g' \
+      -e 's|@''HAVE_SYS_UIO_H''@|1|g' \
+      < ./sys_uio.in.h; \
+} > sys/uio.h-t && \
+mv -f sys/uio.h-t sys/uio.h
+rm -f time.h-t time.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_TIME_H''@|<time.h>|g' \
+      -e 's/@''GNULIB_MKTIME''@/1/g' \
+      -e 's/@''GNULIB_NANOSLEEP''@/0/g' \
+      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+      -e 's/@''GNULIB_TIMEGM''@/1/g' \
+      -e 's/@''GNULIB_TIME_R''@/1/g' \
+      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+      -e 's|@''HAVE_STRPTIME''@|1|g' \
+      -e 's|@''HAVE_TIMEGM''@|1|g' \
+      -e 's|@''REPLACE_LOCALTIME_R''@|0|g' \
+      -e 's|@''REPLACE_MKTIME''@|1|g' \
+      -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TIMEGM''@|0|g' \
+      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./time.in.h; \
+} > time.h-t && \
+mv time.h-t time.h
+rm -f unistd.h-t unistd.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/0/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/1/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/1/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/1/g' \
+      -e 's/@''GNULIB_READLINK''@/0/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      < ./unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_DUP2''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > unistd.h-t && \
+mv unistd.h-t unistd.h
+rm -f wchar.h-t wchar.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_WCHAR_H''@|<wchar.h>|g' \
+      -e 's|@''HAVE_WCHAR_H''@|1|g' \
+      -e 's/@''GNULIB_BTOWC''@/1/g' \
+      -e 's/@''GNULIB_WCTOB''@/0/g' \
+      -e 's/@''GNULIB_MBSINIT''@/1/g' \
+      -e 's/@''GNULIB_MBRTOWC''@/1/g' \
+      -e 's/@''GNULIB_MBRLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBSNRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_WCRTOMB''@/1/g' \
+      -e 's/@''GNULIB_WCSRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCSNRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_WMEMCMP''@/0/g' \
+      -e 's/@''GNULIB_WMEMCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMMOVE''@/0/g' \
+      -e 's/@''GNULIB_WMEMSET''@/0/g' \
+      -e 's/@''GNULIB_WCSLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSNLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSNCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCOLL''@/0/g' \
+      -e 's/@''GNULIB_WCSXFRM''@/0/g' \
+      -e 's/@''GNULIB_WCSDUP''@/0/g' \
+      -e 's/@''GNULIB_WCSCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSRCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSCSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSPBRK''@/0/g' \
+      -e 's/@''GNULIB_WCSSTR''@/0/g' \
+      -e 's/@''GNULIB_WCSTOK''@/0/g' \
+      -e 's/@''GNULIB_WCSWIDTH''@/0/g' \
+      < ./wchar.in.h | \
+  sed -e 's|@''HAVE_WINT_T''@|1|g' \
+      -e 's|@''HAVE_BTOWC''@|1|g' \
+      -e 's|@''HAVE_MBSINIT''@|1|g' \
+      -e 's|@''HAVE_MBRTOWC''@|1|g' \
+      -e 's|@''HAVE_MBRLEN''@|1|g' \
+      -e 's|@''HAVE_MBSRTOWCS''@|1|g' \
+      -e 's|@''HAVE_MBSNRTOWCS''@|1|g' \
+      -e 's|@''HAVE_WCRTOMB''@|1|g' \
+      -e 's|@''HAVE_WCSRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WCSNRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WMEMCHR''@|1|g' \
+      -e 's|@''HAVE_WMEMCMP''@|1|g' \
+      -e 's|@''HAVE_WMEMCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMMOVE''@|1|g' \
+      -e 's|@''HAVE_WMEMSET''@|1|g' \
+      -e 's|@''HAVE_WCSLEN''@|1|g' \
+      -e 's|@''HAVE_WCSNLEN''@|1|g' \
+      -e 's|@''HAVE_WCSCPY''@|1|g' \
+      -e 's|@''HAVE_WCPCPY''@|1|g' \
+      -e 's|@''HAVE_WCSNCPY''@|1|g' \
+      -e 's|@''HAVE_WCPNCPY''@|1|g' \
+      -e 's|@''HAVE_WCSCAT''@|1|g' \
+      -e 's|@''HAVE_WCSNCAT''@|1|g' \
+      -e 's|@''HAVE_WCSCMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCMP''@|1|g' \
+      -e 's|@''HAVE_WCSCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSCOLL''@|1|g' \
+      -e 's|@''HAVE_WCSXFRM''@|1|g' \
+      -e 's|@''HAVE_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_WCSCHR''@|1|g' \
+      -e 's|@''HAVE_WCSRCHR''@|1|g' \
+      -e 's|@''HAVE_WCSCSPN''@|1|g' \
+      -e 's|@''HAVE_WCSSPN''@|1|g' \
+      -e 's|@''HAVE_WCSPBRK''@|1|g' \
+      -e 's|@''HAVE_WCSSTR''@|1|g' \
+      -e 's|@''HAVE_WCSTOK''@|1|g' \
+      -e 's|@''HAVE_WCSWIDTH''@|1|g' \
+      -e 's|@''HAVE_DECL_WCTOB''@|1|g' \
+      -e 's|@''HAVE_DECL_WCWIDTH''@|1|g' \
+  | \
+  sed -e 's|@''REPLACE_MBSTATE_T''@|0|g' \
+      -e 's|@''REPLACE_BTOWC''@|0|g' \
+      -e 's|@''REPLACE_WCTOB''@|0|g' \
+      -e 's|@''REPLACE_MBSINIT''@|0|g' \
+      -e 's|@''REPLACE_MBRTOWC''@|0|g' \
+      -e 's|@''REPLACE_MBRLEN''@|0|g' \
+      -e 's|@''REPLACE_MBSRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBSNRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_WCRTOMB''@|0|g' \
+      -e 's|@''REPLACE_WCSRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCSNRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSWIDTH''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > wchar.h-t && \
+mv wchar.h-t wchar.h
+rm -f wctype.h-t wctype.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's/@''HAVE_WCTYPE_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_WCTYPE_H''@|<wctype.h>|g' \
+      -e 's/@''GNULIB_ISWBLANK''@/0/g' \
+      -e 's/@''GNULIB_WCTYPE''@/0/g' \
+      -e 's/@''GNULIB_ISWCTYPE''@/0/g' \
+      -e 's/@''GNULIB_WCTRANS''@/0/g' \
+      -e 's/@''GNULIB_TOWCTRANS''@/0/g' \
+      -e 's/@''HAVE_ISWBLANK''@/1/g' \
+      -e 's/@''HAVE_ISWCNTRL''@/1/g' \
+      -e 's/@''HAVE_WCTYPE_T''@/1/g' \
+      -e 's/@''HAVE_WCTRANS_T''@/1/g' \
+      -e 's/@''HAVE_WINT_T''@/1/g' \
+      -e 's/@''REPLACE_ISWBLANK''@/0/g' \
+      -e 's/@''REPLACE_ISWCNTRL''@/0/g' \
+      -e 's/@''REPLACE_TOWLOWER''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./wctype.in.h; \
+} > wctype.h-t && \
+mv wctype.h-t wctype.h
+make  all-recursive
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+make[4]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+depbase=`echo base64.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT base64.o -MD -MP -MF $depbase.Tpo -c                        -o base64.o base64.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sha1.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sha1.o -MD -MP -MF $depbase.Tpo -c -                       o sha1.o sha1.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dirname.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT dirname.o -MD -MP -MF $depbase.Tpo -                       c -o dirname.o dirname.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo basename.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT basename.o -MD -MP -MF $depbase.Tpo                        -c -o basename.o basename.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dirname-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT dirname-lgpl.o -MD -MP -MF $depbase.                       Tpo -c -o dirname-lgpl.o dirname-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo basename-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT basename-lgpl.o -MD -MP -MF $depbase                       .Tpo -c -o basename-lgpl.o basename-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo stripslash.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT stripslash.o -MD -MP -MF $depbase.Tp                       o -c -o stripslash.o stripslash.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo exitfail.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT exitfail.o -MD -MP -MF $depbase.Tpo                        -c -o exitfail.o exitfail.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fd-hook.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fd-hook.o -MD -MP -MF $depbase.Tpo -                       c -o fd-hook.o fd-hook.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo full-read.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT full-read.o -MD -MP -MF $depbase.Tpo                        -c -o full-read.o full-read.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo idpriv-droptemp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT idpriv-droptemp.o -MD -MP -MF $depba                       se.Tpo -c -o idpriv-droptemp.o idpriv-droptemp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo localcharset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT localcharset.o -MD -MP -MF $depbase.                       Tpo -c -o localcharset.o localcharset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo glthread/lock.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT glthread/lock.o -MD -MP -MF $depbase                       .Tpo -c -o glthread/lock.o glthread/lock.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloca.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT malloca.o -MD -MP -MF $depbase.Tpo -                       c -o malloca.o malloca.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo math.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT math.o -MD -MP -MF $depbase.Tpo -c -                       o math.o math.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo safe-read.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT safe-read.o -MD -MP -MF $depbase.Tpo                        -c -o safe-read.o safe-read.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sockets.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sockets.o -MD -MP -MF $depbase.Tpo -                       c -o sockets.o sockets.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sys_socket.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sys_socket.o -MD -MP -MF $depbase.Tp                       o -c -o sys_socket.o sys_socket.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo glthread/threadlib.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT glthread/threadlib.o -MD -MP -MF $de                       pbase.Tpo -c -o glthread/threadlib.o glthread/threadlib.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo unistd.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT unistd.o -MD -MP -MF $depbase.Tpo -c                        -o unistd.o unistd.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo wctype-h.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT wctype-h.o -MD -MP -MF $depbase.Tpo                        -c -o wctype-h.o wctype-h.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xmalloc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xmalloc.o -MD -MP -MF $depbase.Tpo -                       c -o xmalloc.o xmalloc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xalloc-die.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xalloc-die.o -MD -MP -MF $depbase.Tp                       o -c -o xalloc-die.o xalloc-die.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xsize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xsize.o -MD -MP -MF $depbase.Tpo -c                        -o xsize.o xsize.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xstrndup.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xstrndup.o -MD -MP -MF $depbase.Tpo                        -c -o xstrndup.o xstrndup.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo asnprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT asnprintf.o -MD -MP -MF $depbase.Tpo                        -c -o asnprintf.o asnprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fsusage.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fsusage.o -MD -MP -MF $depbase.Tpo -                       c -o fsusage.o fsusage.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mktime.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mktime.o -MD -MP -MF $depbase.Tpo -c                        -o mktime.o mktime.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mountlist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mountlist.o -MD -MP -MF $depbase.Tpo                        -c -o mountlist.o mountlist.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo printf-args.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT printf-args.o -MD -MP -MF $depbase.T                       po -c -o printf-args.o printf-args.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo printf-parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT printf-parse.o -MD -MP -MF $depbase.                       Tpo -c -o printf-parse.o printf-parse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo vasnprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT vasnprintf.o -MD -MP -MF $depbase.Tp                       o -c -o vasnprintf.o vasnprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libgnu.a
+ar cru libgnu.a base64.o sha1.o dirname.o basename.o dirname-lgpl.o basename-lgp                       l.o stripslash.o exitfail.o fd-hook.o full-read.o idpriv-droptemp.o localcharset                       .o glthread/lock.o malloca.o math.o safe-read.o sockets.o sys_socket.o glthread/                       threadlib.o unistd.o wctype-h.o xmalloc.o xalloc-die.o xsize.o xstrndup.o asnpri                       ntf.o fsusage.o mktime.o mountlist.o printf-args.o printf-parse.o vasnprintf.o
+ranlib libgnu.a
+rm -f t-charset.alias charset.alias && \
+/bin/sh ./config.charset 'x86_64-unknown-linux-gnu' > t-charset.alias && \
+mv t-charset.alias charset.alias
+rm -f t-ref-add.sed ref-add.sed && \
+sed -e '/^#/d' -e 's/@''PACKAGE''@/nagios-plugins/g' ref-add.sin > t-ref-add.sed                        && \
+mv t-ref-add.sed ref-add.sed
+rm -f t-ref-del.sed ref-del.sed && \
+sed -e '/^#/d' -e 's/@''PACKAGE''@/nagios-plugins/g' ref-del.sin > t-ref-del.sed                        && \
+mv t-ref-del.sed ref-del.sed
+make[4]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+Making all in tap
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/tap'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/tap'
+Making all in lib
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/lib'
+Making all in .
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/lib'
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT utils_base.o -MD -MP -MF .deps/uti                       ls_base.Tpo -c -o utils_base.o utils_base.c
+mv -f .deps/utils_base.Tpo .deps/utils_base.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT utils_disk.o -MD -MP -MF .deps/uti                       ls_disk.Tpo -c -o utils_disk.o utils_disk.c
+mv -f .deps/utils_disk.Tpo .deps/utils_disk.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT utils_tcp.o -MD -MP -MF .deps/util                       s_tcp.Tpo -c -o utils_tcp.o utils_tcp.c
+mv -f .deps/utils_tcp.Tpo .deps/utils_tcp.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT utils_cmd.o -MD -MP -MF .deps/util                       s_cmd.Tpo -c -o utils_cmd.o utils_cmd.c
+mv -f .deps/utils_cmd.Tpo .deps/utils_cmd.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT parse_ini.o -MD -MP -MF .deps/pars                       e_ini.Tpo -c -o parse_ini.o parse_ini.c
+mv -f .deps/parse_ini.Tpo .deps/parse_ini.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I                       . -I../gl -I../intl -I../plugins   -g -O2 -MT extra_opts.o -MD -MP -MF .deps/ext                       ra_opts.Tpo -c -o extra_opts.o extra_opts.c
+mv -f .deps/extra_opts.Tpo .deps/extra_opts.Po
+rm -f libnagiosplug.a
+ar cru libnagiosplug.a utils_base.o utils_disk.o utils_tcp.o utils_cmd.o parse_i                       ni.o extra_opts.o
+ranlib libnagiosplug.a
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/lib'
+Making all in tests
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/lib'
+Making all in plugins
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins'
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT u                       tils.o -MD -MP -MF .deps/utils.Tpo -c -o utils.o utils.c
+utils.c: In function ‘strntolower’:
+utils.c:777:24: warning: implicit declaration of function ‘tolower’ [-Wimplicit-                       function-declaration]
+                 *ptr = tolower(*ptr);
+                        ^~~~~~~
+utils.c: In function ‘strntoupper’:
+utils.c:787:24: warning: implicit declaration of function ‘toupper’ [-Wimplicit-                       function-declaration]
+                 *ptr = toupper(*ptr);
+                        ^~~~~~~
+mv -f .deps/utils.Tpo .deps/utils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT n                       etutils.o -MD -MP -MF .deps/netutils.Tpo -c -o netutils.o netutils.c
+mv -f .deps/netutils.Tpo .deps/netutils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT s                       slutils.o -MD -MP -MF .deps/sslutils.Tpo -c -o sslutils.o sslutils.c
+mv -f .deps/sslutils.Tpo .deps/sslutils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT r                       uncmd.o -MD -MP -MF .deps/runcmd.Tpo -c -o runcmd.o runcmd.c
+mv -f .deps/runcmd.Tpo .deps/runcmd.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT p                       open.o -MD -MP -MF .deps/popen.Tpo -c -o popen.o popen.c
+mv -f .deps/popen.Tpo .deps/popen.Po
+rm -f libnpcommon.a
+ar cru libnpcommon.a utils.o netutils.o sslutils.o runcmd.o popen.o runcmd.o
+ranlib libnpcommon.a
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_apt.o -MD -MP -MF .deps/check_apt.Tpo -c -o check_apt.o check_apt.c
+mv -f .deps/check_apt.Tpo .deps/check_apt.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_apt check_apt.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -l                       pthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_apt check_apt.o  -L. l                       ibnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_cluster.o -MD -MP -MF .deps/check_cluster.Tpo -c -o check_cluster.o check_c                       luster.c
+mv -f .deps/check_cluster.Tpo .deps/check_cluster.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_cluster check_cluster.o libnpcommon.a ../lib/libnagiosplug.a ../gl/lib                       gnu.a -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_cluster check_cluster.                       o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_disk.o -MD -MP -MF .deps/check_disk.Tpo -c -o check_disk.o check_disk.c
+mv -f .deps/check_disk.Tpo .deps/check_disk.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_disk check_disk.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                        -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_disk check_disk.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_dummy.o -MD -MP -MF .deps/check_dummy.Tpo -c -o check_dummy.o check_dummy.c
+mv -f .deps/check_dummy.Tpo .deps/check_dummy.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_dummy check_dummy.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.                       a -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_dummy check_dummy.o  -                       L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_http.o -MD -MP -MF .deps/check_http.Tpo -c -o check_http.o check_http.c
+check_http.c: In function ‘redir’:
+check_http.c:1497:9: warning: ‘__builtin_memcpy’ writing 12 bytes into a region                        of size 6 overflows the destination [-Wstringop-overflow=]
+         strcpy (type,"server_type");
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+mv -f .deps/check_http.Tpo .deps/check_http.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_http check_http.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv  -lpthread -                       ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_http check_http.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -l                       dl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_load.o -MD -MP -MF .deps/check_load.Tpo -c -o check_load.o check_load.c
+mv -f .deps/check_load.Tpo .deps/check_load.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_load check_load.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                        -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_load check_load.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_mrtg.o -MD -MP -MF .deps/check_mrtg.Tpo -c -o check_mrtg.o check_mrtg.c
+mv -f .deps/check_mrtg.Tpo .deps/check_mrtg.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_mrtg check_mrtg.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                        -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_mrtg check_mrtg.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_mrtgtraf.o -MD -MP -MF .deps/check_mrtgtraf.Tpo -c -o check_mrtgtraf.o chec                       k_mrtgtraf.c
+mv -f .deps/check_mrtgtraf.Tpo .deps/check_mrtgtraf.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_mrtgtraf check_mrtgtraf.o libnpcommon.a ../lib/libnagiosplug.a ../gl/l                       ibgnu.a -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_mrtgtraf check_mrtgtra                       f.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ntp.o -MD -MP -MF .deps/check_ntp.Tpo -c -o check_ntp.o check_ntp.c
+mv -f .deps/check_ntp.Tpo .deps/check_ntp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ntp check_ntp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -                       lnsl -lresolv -lm -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ntp check_ntp.o  -L. l                       ibnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm -lpthread                        -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ntp_peer.o -MD -MP -MF .deps/check_ntp_peer.Tpo -c -o check_ntp_peer.o chec                       k_ntp_peer.c
+mv -f .deps/check_ntp_peer.Tpo .deps/check_ntp_peer.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ntp_peer check_ntp_peer.o libnpcommon.a ../lib/libnagiosplug.a ../gl/l                       ibgnu.a  -lnsl -lresolv -lm -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ntp_peer check_ntp_pee                       r.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm                        -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_nwstat.o -MD -MP -MF .deps/check_nwstat.Tpo -c -o check_nwstat.o check_nwst                       at.c
+mv -f .deps/check_nwstat.Tpo .deps/check_nwstat.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_nwstat check_nwstat.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgn                       u.a  -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_nwstat check_nwstat.o                         -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthrea                       d -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_overcr.o -MD -MP -MF .deps/check_overcr.Tpo -c -o check_overcr.o check_over                       cr.c
+mv -f .deps/check_overcr.Tpo .deps/check_overcr.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_overcr check_overcr.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgn                       u.a  -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_overcr check_overcr.o                         -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthrea                       d -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ping.o -MD -MP -MF .deps/check_ping.Tpo -c -o check_ping.o check_ping.c
+mv -f .deps/check_ping.Tpo .deps/check_ping.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ping check_ping.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                         -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ping check_ping.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -l                       dl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_real.o -MD -MP -MF .deps/check_real.Tpo -c -o check_real.o check_real.c
+mv -f .deps/check_real.Tpo .deps/check_real.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_real check_real.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                         -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_real check_real.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -l                       dl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_smtp.o -MD -MP -MF .deps/check_smtp.Tpo -c -o check_smtp.o check_smtp.c
+mv -f .deps/check_smtp.Tpo .deps/check_smtp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_smtp check_smtp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv  -lpthread -                       ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_smtp check_smtp.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -l                       dl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ssh.o -MD -MP -MF .deps/check_ssh.Tpo -c -o check_ssh.o check_ssh.c
+mv -f .deps/check_ssh.Tpo .deps/check_ssh.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ssh check_ssh.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -                       lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ssh check_ssh.o  -L. l                       ibnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_tcp.o -MD -MP -MF .deps/check_tcp.Tpo -c -o check_tcp.o check_tcp.c
+mv -f .deps/check_tcp.Tpo .deps/check_tcp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_tcp check_tcp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a li                       bnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv  -lpthread -ld                       l
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_tcp check_tcp.o  -L. l                       ibnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_time.o -MD -MP -MF .deps/check_time.Tpo -c -o check_time.o check_time.c
+mv -f .deps/check_time.Tpo .deps/check_time.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_time check_time.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a                         -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_time check_time.o  -L.                        libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -l                       dl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ntp_time.o -MD -MP -MF .deps/check_ntp_time.Tpo -c -o check_ntp_time.o chec                       k_ntp_time.c
+mv -f .deps/check_ntp_time.Tpo .deps/check_ntp_time.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ntp_time check_ntp_time.o libnpcommon.a ../lib/libnagiosplug.a ../gl/l                       ibgnu.a  -lnsl -lresolv -lm -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ntp_time check_ntp_tim                       e.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm                        -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ups.o -MD -MP -MF .deps/check_ups.Tpo -c -o check_ups.o check_ups.c
+mv -f .deps/check_ups.Tpo .deps/check_ups.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ups check_ups.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -                       lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ups check_ups.o  -L. l                       ibnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_users.o -MD -MP -MF .deps/check_users.Tpo -c -o check_users.o check_users.c
+mv -f .deps/check_users.Tpo .deps/check_users.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_users check_users.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.                       a   -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_users check_users.o  -                       L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT n                       egate.o -MD -MP -MF .deps/negate.Tpo -c -o negate.o negate.c
+mv -f .deps/negate.Tpo .deps/negate.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o negate negate.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthrea                       d -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o negate negate.o  -L. libnpco                       mmon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT u                       rlize.o -MD -MP -MF .deps/urlize.Tpo -c -o urlize.o urlize.c
+mv -f .deps/urlize.Tpo .deps/urlize.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o urlize urlize.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthrea                       d -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o urlize urlize.o  -L. libnpco                       mmon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_ide_smart.o -MD -MP -MF .deps/check_ide_smart.Tpo -c -o check_ide_smart.o c                       heck_ide_smart.c
+mv -f .deps/check_ide_smart.Tpo .deps/check_ide_smart.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_ide_smart check_ide_smart.o libnpcommon.a ../lib/libnagiosplug.a ../gl                       /libgnu.a -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_ide_smart check_ide_sm                       art.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_uptime.o -MD -MP -MF .deps/check_uptime.Tpo -c -o check_uptime.o check_upti                       me.c
+mv -f .deps/check_uptime.Tpo .deps/check_uptime.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L.                        -o check_uptime check_uptime.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgn                       u.a -lrt -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_uptime check_uptime.o                         -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lrt -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.                       . -I../lib -I../gl -I../intl -I/usr/include  -DNP_VERSION='"2.2.1"' -g -O2 -MT c                       heck_procs.o -MD -MP -MF .deps/check_procs.Tpo -c -o check_procs.o check_procs.c
+mv -f .deps/check_procs.Tpo .deps/check_procs.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_procs check_pead -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_procs check_procs.o  -L. libnpcommon.a ../lib
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..ios.o -MD -MP -MF .deps/check_nagios.Tpo -c -o check_nagios.o check_nagios.c
+mv -f .deps/check_nagios.Tpo .deps/check_nagios.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_nagios check_hread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_nagios check_nagios.o  -L. libnpcommon.a ../l
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I...o -MD -MP -MF .deps/check_dns.Tpo -c -o check_dns.o check_dns.c
+mv -f .deps/check_dns.Tpo .deps/check_dns.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_dns check_dnsesolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_dns check_dns.o  -L. libnpcommon.a ../lib/lib
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..ssh.o -MD -MP -MF .deps/check_by_ssh.Tpo -c -o check_by_ssh.o check_by_ssh.c
+mv -f .deps/check_by_ssh.Tpo .deps/check_by_ssh.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_by_ssh check_sl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_by_ssh check_by_ssh.o  -L. libnpcommon.a ../l
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..p.o -MD -MP -MF .deps/check_swap.Tpo -c -o check_swap.o check_swap.c
+mv -f .deps/check_swap.Tpo .deps/check_swap.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_swap check_swhread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_swap check_swap.o  -L. -lm libnpcommon.a ../l
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I...o -MD -MP -MF .deps/check_dig.Tpo -c -o check_dig.o check_dig.c
+mv -f .deps/check_dig.Tpo .deps/check_dig.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_dig check_digesolv -lm -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_dig check_dig.o  -L. libnpcommon.a ../lib/lib
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..o -MD -MP -MF .deps/check_nt.Tpo -c -o check_nt.o check_nt.c
+mv -f .deps/check_nt.Tpo .deps/check_nt.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_nt check_nt.oolv  -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_nt check_nt.o  -L. libnpcommon.a ../lib/libna
+rm -f check_ftp
+ln -s check_tcp check_ftp
+rm -f check_imap
+ln -s check_tcp check_imap
+rm -f check_nntp
+ln -s check_tcp check_nntp
+rm -f check_pop
+ln -s check_tcp check_pop
+rm -f check_udp
+ln -s check_tcp check_udp
+rm -f check_clamd
+ln -s check_tcp check_clamd
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins'
+Making all in plugins-scripts
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_breeze.pl > check_breeze
+chmod +x check_breeze
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_disk_smb.pl > check_disk_smb
+chmod +x check_disk_smb
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_flexlm.pl > check_flexlm
+chmod +x check_flexlm
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_ircd.pl > check_ircd
+chmod +x check_ircd
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_log.sh > check_log
+chmod +x check_log
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_oracle.sh > check_oracle
+chmod +x check_oracle
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_rpc.pl > check_rpc
+chmod +x check_rpc
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_sensors.sh > check_sensors
+chmod +x check_sensors
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_wave.pl > check_wave
+chmod +x check_wave
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_ifstatus.pl > check_ifstatus
+chmod +x check_ifstatus
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_ifoperstatus.pl > check_ifoperstatus
+chmod +x check_ifoperstatus
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_mailq.pl > check_mailq
+chmod +x check_mailq
+sed -e 's|[@]NP_VERSION[@]|2.2.1|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:xecdir[@]|/usr/local/nagios/libexec|g' check_file_age.pl > check_file_age
+chmod +x check_file_age
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+Making all in plugins-root
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-root'
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..-MT check_dhcp.o -MD -MP -MF .deps/check_dhcp.Tpo -c -o check_dhcp.o check_dhcp.c
+mv -f .deps/check_dhcp.Tpo .deps/check_dhcp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_dhcp check_dhg.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_dhcp check_dhcp.o ../plugins/netutils.o ../plresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I..-MT check_icmp.o -MD -MP -MF .deps/check_icmp.Tpo -c -o check_icmp.o check_icmp.c
+mv -f .deps/check_icmp.Tpo .deps/check_icmp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.2.1"' -g -O2  -L. -o check_icmp check_icg.a ../gl/libgnu.a  -lnsl -lresolv -lnsl -lresolv -lpthread -ldl
+libtool: link: gcc -DNP_VERSION=\"2.2.1\" -g -O2 -o check_icmp check_icmp.o ../plugins/netutils.o ../plresolv -lpthread -ldl
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-root'
+Making all in po
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/po'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/po'
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1'
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]# make install
+Making install in gl
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+make  install-recursive
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+make[4]: Entering directory `/opt/nagios-plugins-2.2.1/gl'
+if test yes = no; then \
+  case 'linux-gnu' in \
+    darwin[56]*) \
+      need_charset_alias=true ;; \
+    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+      need_charset_alias=false ;; \
+    *) \
+      need_charset_alias=true ;; \
+  esac ; \
+else \
+  need_charset_alias=false ; \
+fi ; \
+if $need_charset_alias; then \
+  /bin/sh ../build-aux/mkinstalldirs /usr/local/nagios/lib ; \
+fi ; \
+if test -f /usr/local/nagios/lib/charset.alias; then \
+  sed -f ref-add.sed /usr/local/nagios/lib/charset.alias > /usr/local/nagios/lib/charset.tmp ; \
+  /bin/install -c  -m 644 /usr/local/nagios/lib/charset.tmp /usr/local/nagios/lib/charset.alias ; \
+  rm -f /usr/local/nagios/lib/charset.tmp ; \
+else \
+  if $need_charset_alias; then \
+    sed -f ref-add.sed charset.alias > /usr/local/nagios/lib/charset.tmp ; \
+    /bin/install -c  -m 644 /usr/local/nagios/lib/charset.tmp /usr/local/nagios/lib/charset.alias ; \
+    rm -f /usr/local/nagios/lib/charset.tmp ; \
+  fi ; \
+fi
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/gl'
+Making install in tap
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/tap'
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/tap'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/usr/local/nagios/include" || /bin/mkdir -p "/usr/local/nagios/include"
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/tap'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/tap'
+Making install in lib
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/lib'
+Making install in .
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/lib'
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/lib'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/lib'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/lib'
+Making install in tests
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/lib/tests'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/lib'
+Making install in plugins
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/plugins'
+
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins'
+test -z "/usr/local/nagios/libexec" || /bin/mkdir -p "/usr/local/nagios/libexec"
+  /bin/sh ../libtool   --mode=install /bin/install -c  check_apt check_cluster check_disk check_dummy cp_peer check_nwstat check_overcr check_ping check_real check_smtp check_ssh check_tcp check_time check_k_uptime check_procs check_nagios check_dns check_by_ssh check_swap check_dig check_nt '/usr/local/nagi
+libtool: install: /bin/install -c check_apt /usr/local/nagios/libexec/check_apt
+libtool: install: /bin/install -c check_cluster /usr/local/nagios/libexec/check_cluster
+libtool: install: /bin/install -c check_disk /usr/local/nagios/libexec/check_disk
+libtool: install: /bin/install -c check_dummy /usr/local/nagios/libexec/check_dummy
+libtool: install: /bin/install -c check_http /usr/local/nagios/libexec/check_http
+libtool: install: /bin/install -c check_load /usr/local/nagios/libexec/check_load
+libtool: install: /bin/install -c check_mrtg /usr/local/nagios/libexec/check_mrtg
+libtool: install: /bin/install -c check_mrtgtraf /usr/local/nagios/libexec/check_mrtgtraf
+libtool: install: /bin/install -c check_ntp /usr/local/nagios/libexec/check_ntp
+libtool: install: /bin/install -c check_ntp_peer /usr/local/nagios/libexec/check_ntp_peer
+libtool: install: /bin/install -c check_nwstat /usr/local/nagios/libexec/check_nwstat
+libtool: install: /bin/install -c check_overcr /usr/local/nagios/libexec/check_overcr
+libtool: install: /bin/install -c check_ping /usr/local/nagios/libexec/check_ping
+libtool: install: /bin/install -c check_real /usr/local/nagios/libexec/check_real
+libtool: install: /bin/install -c check_smtp /usr/local/nagios/libexec/check_smtp
+libtool: install: /bin/install -c check_ssh /usr/local/nagios/libexec/check_ssh
+libtool: install: /bin/install -c check_tcp /usr/local/nagios/libexec/check_tcp
+libtool: install: /bin/install -c check_time /usr/local/nagios/libexec/check_time
+libtool: install: /bin/install -c check_ntp_time /usr/local/nagios/libexec/check_ntp_time
+libtool: install: /bin/install -c check_ups /usr/local/nagios/libexec/check_ups
+libtool: install: /bin/install -c check_users /usr/local/nagios/libexec/check_users
+libtool: install: /bin/install -c negate /usr/local/nagios/libexec/negate
+libtool: install: /bin/install -c urlize /usr/local/nagios/libexec/urlize
+libtool: install: /bin/install -c check_ide_smart /usr/local/nagios/libexec/check_ide_smart
+libtool: install: /bin/install -c check_uptime /usr/local/nagios/libexec/check_uptime
+libtool: install: /bin/install -c check_procs /usr/local/nagios/libexec/check_procs
+libtool: install: /bin/install -c check_nagios /usr/local/nagios/libexec/check_nagios
+libtool: install: /bin/install -c check_dns /usr/local/nagios/libexec/check_dns
+libtool: install: /bin/install -c check_by_ssh /usr/local/nagios/libexec/check_by_ssh
+libtool: install: /bin/install -c check_swap /usr/local/nagios/libexec/check_swap
+libtool: install: /bin/install -c check_dig /usr/local/nagios/libexec/check_dig
+libtool: install: /bin/install -c check_nt /usr/local/nagios/libexec/check_nt
+make  install-exec-hook
+make[3]: Entering directory `/opt/nagios-plugins-2.2.1/plugins'
+cd /usr/local/nagios/libexec && \
+for i in check_ftp check_imap check_nntp check_pop check_udp check_clamd  ; do rm -f $i; ln -s check_tc
+if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
+make[3]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins'
+Making install in plugins-scripts
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+test -z "/usr/local/nagios/libexec" || /bin/mkdir -p "/usr/local/nagios/libexec"
+ /bin/install -c  check_breeze check_disk_smb check_flexlm check_ircd check_log check_oracle check_rpc mailq check_file_age utils.sh utils.pm '/usr/local/nagios/libexec'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-scripts'
+Making install in plugins-root
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-root'
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1/plugins-root'
+ /bin/install -c  check_dhcp /usr/local/nagios/libexec/check_dhcp
+ chown root /usr/local/nagios/libexec/check_dhcp
+ chmod ug=rx,u+s /usr/local/nagios/libexec/check_dhcp
+ /bin/install -c  check_icmp /usr/local/nagios/libexec/check_icmp
+ chown root /usr/local/nagios/libexec/check_icmp
+ chmod ug=rx,u+s /usr/local/nagios/libexec/check_icmp
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-root'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/plugins-root'
+Making install in po
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1/po'
+/bin/mkdir -p /usr/local/nagios/share
+installing fr.gmo as /usr/local/nagios/share/locale/fr/LC_MESSAGES/nagios-plugins.mo
+installing de.gmo as /usr/local/nagios/share/locale/de/LC_MESSAGES/nagios-plugins.mo
+if test "nagios-plugins" = "gettext-tools"; then \
+  /bin/mkdir -p /usr/local/nagios/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /bin/install -c  -m 644 ./$file \
+                    /usr/local/nagios/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/local/nagios/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1/po'
+make[1]: Entering directory `/opt/nagios-plugins-2.2.1'
+make[2]: Entering directory `/opt/nagios-plugins-2.2.1'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/opt/nagios-plugins-2.2.1'
+make[1]: Leaving directory `/opt/nagios-plugins-2.2.1'
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]# usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagio
+bash: usr/local/nagios/bin/nagios: No such file or directory
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]# /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagi
+
+Nagios Core 4.4.3
+Copyright (c) 2009-present Nagios Core Development Team and Community Contributors
+Copyright (c) 1999-2009 Ethan Galstad
+Last Modified: 2019-01-15
+License: GPL
+
+Website: https://www.nagios.org
+Reading configuration data...
+   Read main config file okay...
+   Read object config files okay...
+
+Running pre-flight check on configuration data...
+
+Checking objects...
+        Checked 8 services.
+        Checked 1 hosts.
+        Checked 1 host groups.
+        Checked 0 service groups.
+        Checked 1 contacts.
+        Checked 1 contact groups.
+        Checked 24 commands.
+        Checked 5 time periods.
+        Checked 0 host escalations.
+        Checked 0 service escalations.
+Checking for circular paths...
+        Checked 1 hosts
+        Checked 0 service dependencies
+        Checked 0 host dependencies
+        Checked 5 timeperiods
+Checking global event handlers...
+Checking obsessive compulsive processor commands...
+Checking misc settings...
+
+Total Warnings: 0
+Total Errors:   0
+
+Things look okay - No serious problems were detected during the pre-flight check
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]# service nagios start
+Redirecting to /bin/systemctl start nagios.service
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]#
+[root@ip-172-31-21-45 nagios-plugins-2.2.1]# cd /
+[root@ip-172-31-21-45 /]# l
+bash: l: command not found
+[root@ip-172-31-21-45 /]# ls
+bin   dev  home  lib64  media  opt   root  sbin  sys  usr
+boot  etc  lib   local  mnt    proc  run   srv   tmp  var
+[root@ip-172-31-21-45 /]# touch swapfile
+[root@ip-172-31-21-45 /]# sudo fallocate -l 1G /swapfile
+[root@ip-172-31-21-45 /]# sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+1048576+0 records in
+1048576+0 records out
+1073741824 bytes (1.1 GB) copied, 14.8305 s, 72.4 MB/s
+[root@ip-172-31-21-45 /]# sudo chmod 600 /swapfile
+[root@ip-172-31-21-45 /]# sudo mkswap /swapfile
+Setting up swapspace version 1, size = 1024 MiB (1073737728 bytes)
+no label, UUID=bae71b43-0b31-4c30-af8b-789d2d68e633
+[root@ip-172-31-21-45 /]# sudo swapon /swapfile
+[root@ip-172-31-21-45 /]# sudo swapon --show
+NAME      TYPE  SIZE USED PRIO
+/swapfile file 1024M   0B   -2
+[root@ip-172-31-21-45 /]# sudo free -h
+              total        used        free      shared  buff/cache   available
+Mem:           985M         77M         66M        532K        841M        719M
+Swap:          1.0G          0B        1.0G
+(reverse-i-search)`s': ^Cdo free -h
+[root@ip-172-31-21-45 /]# ^C
+[root@ip-172-31-21-45 /]# service nagios restart
+Redirecting to /bin/systemctl restart nagios.service
+[root@ip-172-31-21-45 /]#
+[root@ip-172-31-21-45 /]#
+[root@ip-172-31-21-45 /]# sudo free -h
+              total        used        free      shared  buff/cache   available
+Mem:           985M         79M         60M        532K        846M        718M
+Swap:          1.0G          0B        1.0G
+[root@ip-172-31-21-45 /]#
+[root@ip-172-31-21-45 /]# cd /opt/
+[root@ip-172-31-21-45 opt]# ls
+lost+found  nagios-4.4.3  nagios-4.4.3.tar.gz  nagios-plugins-2.2.1  nagios-plugins-2.2.1.tar.gz
+[root@ip-172-31-21-45 opt]# wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+--2019-02-04 15:33:22--  https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+Resolving github.com (github.com)... 192.30.253.112, 192.30.253.113
+Connecting to github.com (github.com)|192.30.253.112|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/16119653/7bf72b26-8f13-11e7-9723-874acd145f76?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20190204%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190204T153322Z&X-Amz-Expires=300&X-Amz-Signature=72e4f0bdd2b15a18c0fd619c15eddf0a2209469b771d903ba5eb062370033dee&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dnrpe-3.2.1.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2019-02-04 15:33:22--  https://github-production-release-asset-2e65be.s3.amazonaws.com/16119653/7bf72b26-8f13-11e7-9723-874acd145f76?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20190204%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190204T153322Z&X-Amz-Expires=300&X-Amz-Signature=72e4f0bdd2b15a18c0fd619c15eddf0a2209469b771d903ba5eb062370033dee&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dnrpe-3.2.1.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.216.133.187
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.216.133.187|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 518015 (506K) [application/octet-stream]
+Saving to: ‘nrpe-3.2.1.tar.gz’
+
+100%[=============================================================>] 518,015     --.-K/s   in 0.02s
+
+2019-02-04 15:33:22 (30.8 MB/s) - ‘nrpe-3.2.1.tar.gz’ saved [518015/518015]
+
+[root@ip-172-31-21-45 opt]# tar xzf nrpe-3.2.1.tar.gz
+[root@ip-172-31-21-45 opt]# cd nrpe-3.2.1/
+[root@ip-172-31-21-45 nrpe-3.2.1]# ./configure
+checking for a BSD-compatible install... /bin/install -c
+checking what the operating system is ... linux
+checking what the distribution type is ... centos
+checking what init system is being used ... systemd
+checking what inetd is being used ... systemd
+checking for which paths to use ... default
+checking for which init file to use ... default-service
+checking for which inetd files to use ... default-socket
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether make sets $(MAKE)... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for inttypes.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for string.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking tcpd.h usability... no
+checking tcpd.h presence... no
+checking for tcpd.h... no
+checking for unistd.h... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking socket.h usability... no
+checking socket.h presence... no
+checking for socket.h... no
+checking for sys/types.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for sys/wait.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking for an ANSI C-conforming const... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking return type of signal handlers... void
+checking for uid_t in sys/types.h... yes
+checking type of array argument to getgroups... gid_t
+checking size of int... 4
+checking size of short... m2
+checking size of long... a8
+checking for uint32_t... yes
+checking for u_int32_t... kyes
+checking for int32_t... yes
+checking for struct sockaddr_storage... eyes
+checking for seteuid... yes
+checking for va_copy... yes
+checking for vsnprintf...  yes
+checking for snprintf... yes
+checking for asprintf... yes
+checking for vasprintf... yes
+checking for C99 vsnprintf... yes
+checking for getopt_long... yes
+checking for main in -lnsl... yes
+checking for socket in -lsocket... no
+checking for main in -lwrap... no
+checking for strdup... yes
+checking for strstr... yes
+checking for strtoul... yes
+checking for strtok_r... yes
+checking for initgroups... yes
+checking for closesocket... no
+checking for sigaction... yes
+checking for scandir... yes
+checking for socklen_t... yes
+checking for type of socket size... size_t
+checking for Kerberos include files... configure: WARNING: could not find include files
+checking for pkg-config... pkg-config
+checking for SSL headers... configure: error: Cannot find ssl headers
+[root@ip-172-31-21-45 nrpe-3.2.1]# make make all^C
+[root@ip-172-31-21-45 nrpe-3.2.1]# ^C
+[root@ip-172-31-21-45 nrpe-3.2.1]# make all
+make: *** No rule to make target `all'.  Stop.
+[root@ip-172-31-21-45 nrpe-3.2.1]# make all
+make: *** No rule to make target `all'.  Stop.
+[root@ip-172-31-21-45 nrpe-3.2.1]# make install-daemon
+make: *** No rule to make target `install-daemon'.  Stop.
+[root@ip-172-31-21-45 nrpe-3.2.1]# make
+make: *** No targets specified and no makefile found.  Stop.
+[root@ip-172-31-21-45 nrpe-3.2.1]# /usr/local/nagios/libexec/check_nrpe -H ip-172-31-33-79
+bash: /usr/local/nagios/libexec/check_nrpe: No such file or directory
+[root@ip-172-31-21-45 nrpe-3.2.1]# find / -name check_nrpe
+[root@ip-172-31-21-45 nrpe-3.2.1]# find / -name check_user
+[root@ip-172-31-21-45 nrpe-3.2.1]#
+[root@ip-172-31-21-45 nrpe-3.2.1]#
+[root@ip-172-31-21-45 nrpe-3.2.1]#
+[root@ip-172-31-21-45 nrpe-3.2.1]# cd /opt/
+[root@ip-172-31-21-45 opt]# rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Retrieving https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+warning: /var/tmp/rpm-tmp.ZSzR7c: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:epel-release-7-11                ################################# [100%]
+[root@ip-172-31-21-45 opt]# yum -y install nagios-plugins-nrpe
+
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                      | 2.4 kB  00:00:00
+epel/x86_64/metalink                                                            |  12 kB  00:00:00
+http://csc.mcs.sdsmt.edu/epel/7/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://csc.mcs.sdsmt.edu/epel/7/x86_64/repodata/repomd.xml: (28, 'Connection timed out after 5001 milliseconds')
+Trying other mirror.
+epel                                                                            | 4.7 kB  00:00:00
+(1/3): epel/x86_64/group_gz                                                     |  88 kB  00:00:00
+(2/3): epel/x86_64/updateinfo                                                   | 956 kB  00:00:00
+(3/3): epel/x86_64/primary_db                                                   | 6.6 MB  00:00:00
+156 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package nagios-plugins-nrpe.x86_64 0:3.2.1-8.el7 will be installed
+--> Processing Dependency: nagios-plugins for package: nagios-plugins-nrpe-3.2.1-8.el7.x86_64
+--> Running transaction check
+---> Package nagios-plugins.x86_64 0:2.2.1-16.20180725git3429dad.el7 will be installed
+--> Processing Dependency: nagios-common >= 3.3.1-1 for package: nagios-plugins-2.2.1-16.20180725git3429dad.el7.x86_64
+--> Running transaction check
+---> Package nagios-common.x86_64 0:4.4.3-1.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================
+ Package                     Arch           Version                                 Repository    Size
+=======================================================================================================
+Installing:
+ nagios-plugins-nrpe         x86_64         3.2.1-8.el7                             epel          48 k
+Installing for dependencies:
+ nagios-common               x86_64         4.4.3-1.el7                             epel          26 k
+ nagios-plugins              x86_64         2.2.1-16.20180725git3429dad.el7         epel         117 k
+
+Transaction Summary
+=======================================================================================================
+Install  1 Package (+2 Dependent packages)
+
+Total download size: 191 k
+Installed size: 394 k
+Downloading packages:
+warning: /var/cache/yum/x86_64/2/epel/packages/nagios-common-4.4.3-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for nagios-common-4.4.3-1.el7.x86_64.rpm is not installed
+(1/3): nagios-common-4.4.3-1.el7.x86_64.rpm                                     |  26 kB  00:00:00
+(2/3): nagios-plugins-2.2.1-16.20180725git3429dad.el7.x86_64.rpm                | 117 kB  00:00:00
+(3/3): nagios-plugins-nrpe-3.2.1-8.el7.x86_64.rpm                               |  48 kB  00:00:00
+-------------------------------------------------------------------------------------------------------
+Total                                                                  1.1 MB/s | 191 kB  00:00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Warning: RPMDB altered outside of yum.
+  Installing : nagios-common-4.4.3-1.el7.x86_64                                                    1/3
+  Installing : nagios-plugins-2.2.1-16.20180725git3429dad.el7.x86_64                               2/3
+  Installing : nagios-plugins-nrpe-3.2.1-8.el7.x86_64                                              3/3
+  Verifying  : nagios-plugins-2.2.1-16.20180725git3429dad.el7.x86_64                               1/3
+  Verifying  : nagios-plugins-nrpe-3.2.1-8.el7.x86_64                                              2/3
+  Verifying  : nagios-common-4.4.3-1.el7.x86_64                                                    3/3
+
+Installed:
+  nagios-plugins-nrpe.x86_64 0:3.2.1-8.el7
+
+Dependency Installed:
+  nagios-common.x86_64 0:4.4.3-1.el7      nagios-plugins.x86_64 0:2.2.1-16.20180725git3429dad.el7
+
+Complete!
+[root@ip-172-31-21-45 opt]#
+[root@ip-172-31-21-45 opt]# vi /usr/local/nagios/etc/nagios.cfg
+[root@ip-172-31-21-45 opt]# mkdir /usr/local/nagios/etc/servers
+[root@ip-172-31-21-45 opt]# vi /usr/local/nagios/etc/objects/commands.cfg
+[root@ip-172-31-21-45 opt]# vi /usr/local/nagios/etc/servers/client.itzgeek.local.cfg
+[root@ip-172-31-21-45 opt]# vi /usr/local/nagios/etc/servers/nagios-client.cfg
+[root@ip-172-31-21-45 opt]# /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+Nagios Core 4.4.3
+Copyright (c) 2009-present Nagios Core Development Team and Community Contributors
+Copyright (c) 1999-2009 Ethan Galstad
+Last Modified: 2019-01-15
+License: GPL
+
+Website: https://www.nagios.org
+Reading configuration data...
+   Read main config file okay...
+   Read object config files okay...
+
+Running pre-flight check on configuration data...
+
+Checking objects...
+        Checked 13 services.
+        Checked 2 hosts.
+        Checked 2 host groups.
+        Checked 0 service groups.
+        Checked 1 contacts.
+        Checked 1 contact groups.
+        Checked 25 commands.
+        Checked 5 time periods.
+        Checked 0 host escalations.
+        Checked 0 service escalations.
+Checking for circular paths...
+        Checked 2 hosts
+        Checked 0 service dependencies
+        Checked 0 host dependencies
+        Checked 5 timeperiods
+Checking global event handlers...
+Checking obsessive compulsive processor commands...
+Checking misc settings...
+
+Total Warnings: 0
+Total Errors:   0
+
+Things look okay - No serious problems were detected during the pre-flight check
+[root@ip-172-31-21-45 opt]# service nagios restart
+Redirecting to /bin/systemctl restart nagios.service
+[root@ip-172-31-21-45 opt]# vi /usr/local/nagios/etc/servers/nagios-client.cfg
+[root@ip-172-31-21-45 opt]# /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+Nagios Core 4.4.3
+Copyright (c) 2009-present Nagios Core Development Team and Community Contributors
+Copyright (c) 1999-2009 Ethan Galstad
+Last Modified: 2019-01-15
+License: GPL
+
+Website: https://www.nagios.org
+Reading configuration data...
+   Read main config file okay...
+   Read object config files okay...
+
+Running pre-flight check on configuration data...
+
+Checking objects...
+        Checked 13 services.
+        Checked 2 hosts.
+        Checked 2 host groups.
+        Checked 0 service groups.
+        Checked 1 contacts.
+        Checked 1 contact groups.
+        Checked 25 commands.
+        Checked 5 time periods.
+        Checked 0 host escalations.
+        Checked 0 service escalations.
+Checking for circular paths...
+        Checked 2 hosts
+        Checked 0 service dependencies
+        Checked 0 host dependencies
+        Checked 5 timeperiods
+Checking global event handlers...
+Checking obsessive compulsive processor commands...
+Checking misc settings...
+
+Total Warnings: 0
+Total Errors:   0
+
+Things look okay - No serious problems were detected during the pre-flight check
+[root@ip-172-31-21-45 opt]# service nagios restart
+Redirecting to /bin/systemctl restart nagios.service
+[root@ip-172-31-21-45 opt]# find / -name check_nrpe^C
+[root@ip-172-31-21-45 opt]# ^C
+[root@ip-172-31-21-45 opt]# histort
+bash: histort: command not found
+[root@ip-172-31-21-45 opt]# history
+    1  cd
+    2  lsblk
+    3  lsbls
+    4  lsblk
+    5  dh -h
+    6  df -h
+    7  file -s /dev/xvdf
+    8  mount -t ext4 /dev/xvdf /opt
+    9  mount -t ext4 /dev/xvdf /opt
+   10  mkfs -t ext4 /dev/xvdf
+   11  mount /dev/xvdf /opt
+   12  lsblk
+   13  df -h
+   14  lsblk
+   15  pvdisplay
+   16  cd
+   17  yum update
+   18  yum install httpd php php-cli gcc unzip wget glibc glibc-common gd gd-devel net-snmp
+   19  service httpd start
+   20  service httpd status
+   21  useradd nagios
+   22  passwd nagios
+   23  groupadd nagcmd
+   24  usermod -a -G nagcmd nagios
+   25  usermod -a -G nagcmd apache
+   26  cd /opt/
+   27  wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.3.tar.gz
+   28  ls
+   29  tar -xvf nagios-4.4.3.tar.gz
+   30  als
+   31  ls
+   32  cd nagios-4.4.3/
+   33  ls
+   34  ./configure
+   35  make all
+   36  make install
+   37  make install-init
+   38  make install-daemoninit
+   39  make install-config
+   40  make install-commandmode
+   41  make install-exfoliation
+   42  make install-webconf
+   43  htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   44  service httpd restart
+   45  cd /opt/
+   46  ls
+   47  wget http://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
+   48  tar -xvf nagios-plugins-2.2.1.tar.gz
+   49  cd nagios-
+   50  cd nagios-plugins-2.2.1/
+   51  ./configure
+   52  make
+   53  make install
+   54  usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   55  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   56  service nagios start
+   57  cd /
+   58  l
+   59  ls
+   60  touch swapfile
+   61  sudo fallocate -l 1G /swapfile
+   62  sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+   63  sudo chmod 600 /swapfile
+   64  sudo mkswap /swapfile
+   65  sudo swapon /swapfile
+   66  sudo swapon --show
+   67  sudo free -h
+   68  service nagios restart
+   69  sudo free -h
+   70  cd /opt/
+   71  ls
+   72  wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+   73  tar xzf nrpe-3.2.1.tar.gz
+   74  cd nrpe-3.2.1/
+   75  ./configure
+   76  make all
+   77  make all
+   78  make install-daemon
+   79  make
+   80  /usr/local/nagios/libexec/check_nrpe -H ip-172-31-33-79
+   81  find / -name check_nrpe
+   82  find / -name check_user
+   83  cd /opt/
+   84  rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   85  yum -y install nagios-plugins-nrpe
+   86  vi /usr/local/nagios/etc/nagios.cfg
+   87  mkdir /usr/local/nagios/etc/servers
+   88  vi /usr/local/nagios/etc/objects/commands.cfg
+   89  vi /usr/local/nagios/etc/servers/client.itzgeek.local.cfg
+   90  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   91  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   92  service nagios restart
+   93  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   94  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   95  service nagios restart
+   96  histort
+   97  history
+[root@ip-172-31-21-45 opt]#
+[root@ip-172-31-21-45 opt]#
+[root@ip-172-31-21-45 opt]#
+[root@ip-172-31-21-45 opt]#
+[root@ip-172-31-21-45 opt]# cd /usr/local/nagios/etc/
+[root@ip-172-31-21-45 etc]# vi nagios.cfg
+[root@ip-172-31-21-45 etc]#
+[root@ip-172-31-21-45 etc]# cd /usr/local/nagios/etc/servers
+[root@ip-172-31-21-45 servers]# ls
+nagios-client.cfg
+[root@ip-172-31-21-45 servers]# vi nagios-client.cfg
+[root@ip-172-31-21-45 servers]# service nagios restart
+Redirecting to /bin/systemctl restart nagios.service
+[root@ip-172-31-21-45 servers]# vi nagios-client.cfg
+[root@ip-172-31-21-45 servers]# history
+    1  cd
+    2  lsblk
+    3  lsbls
+    4  lsblk
+    5  dh -h
+    6  df -h
+    7  file -s /dev/xvdf
+    8  mount -t ext4 /dev/xvdf /opt
+    9  mount -t ext4 /dev/xvdf /opt
+   10  mkfs -t ext4 /dev/xvdf
+   11  mount /dev/xvdf /opt
+   12  lsblk
+   13  df -h
+   14  lsblk
+   15  pvdisplay
+   16  cd
+   17  yum update
+   18  yum install httpd php php-cli gcc unzip wget glibc glibc-common gd gd-devel net-snmp
+   19  service httpd start
+   20  service httpd status
+   21  useradd nagios
+   22  passwd nagios
+   23  groupadd nagcmd
+   24  usermod -a -G nagcmd nagios
+   25  usermod -a -G nagcmd apache
+   26  cd /opt/
+   27  wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.3.tar.gz
+   28  ls
+   29  tar -xvf nagios-4.4.3.tar.gz
+   30  als
+   31  ls
+   32  cd nagios-4.4.3/
+   33  ls
+   34  ./configure
+   35  make all
+   36  make install
+   37  make install-init
+   38  make install-daemoninit
+   39  make install-config
+   40  make install-commandmode
+   41  make install-exfoliation
+   42  make install-webconf
+   43  htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   44  service httpd restart
+   45  cd /opt/
+   46  ls
+   47  wget http://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
+   48  tar -xvf nagios-plugins-2.2.1.tar.gz
+   49  cd nagios-
+   50  cd nagios-plugins-2.2.1/
+   51  ./configure
+   52  make
+   53  make install
+   54  usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   55  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   56  service nagios start
+   57  cd /
+   58  l
+   59  ls
+   60  touch swapfile
+   61  sudo fallocate -l 1G /swapfile
+   62  sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+   63  sudo chmod 600 /swapfile
+   64  sudo mkswap /swapfile
+   65  sudo swapon /swapfile
+   66  sudo swapon --show
+   67  sudo free -h
+   68  service nagios restart
+   69  sudo free -h
+   70  cd /opt/
+   71  ls
+   72  wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+   73  tar xzf nrpe-3.2.1.tar.gz
+   74  cd nrpe-3.2.1/
+   75  ./configure
+   76  make all
+   77  make all
+   78  make install-daemon
+   79  make
+   80  /usr/local/nagios/libexec/check_nrpe -H ip-172-31-33-79
+   81  find / -name check_nrpe
+   82  find / -name check_user
+   83  cd /opt/
+   84  rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   85  yum -y install nagios-plugins-nrpe
+   86  vi /usr/local/nagios/etc/nagios.cfg
+   87  mkdir /usr/local/nagios/etc/servers
+   88  vi /usr/local/nagios/etc/objects/commands.cfg
+   89  vi /usr/local/nagios/etc/servers/client.itzgeek.local.cfg
+   90  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   91  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   92  service nagios restart
+   93  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   94  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   95  service nagios restart
+   96  histort
+   97  history
+   98  cd /usr/local/nagios/etc/
+   99  vi nagios.cfg
+  100  cd /usr/local/nagios/etc/servers
+  101  ls
+  102  vi nagios-client.cfg
+  103  service nagios restart
+  104  vi nagios-client.cfg
+  105  history
+[root@ip-172-31-21-45 servers]#  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+Nagios Core 4.4.3
+Copyright (c) 2009-present Nagios Core Development Team and Community Contributors
+Copyright (c) 1999-2009 Ethan Galstad
+Last Modified: 2019-01-15
+License: GPL
+
+Website: https://www.nagios.org
+Reading configuration data...
+   Read main config file okay...
+   Read object config files okay...
+
+Running pre-flight check on configuration data...
+
+Checking objects...
+        Checked 13 services.
+        Checked 2 hosts.
+        Checked 2 host groups.
+        Checked 0 service groups.
+        Checked 1 contacts.
+        Checked 1 contact groups.
+        Checked 25 commands.
+        Checked 5 time periods.
+        Checked 0 host escalations.
+        Checked 0 service escalations.
+Checking for circular paths...
+        Checked 2 hosts
+        Checked 0 service dependencies
+        Checked 0 host dependencies
+        Checked 5 timeperiods
+Checking global event handlers...
+Checking obsessive compulsive processor commands...
+Checking misc settings...
+
+Total Warnings: 0
+Total Errors:   0
+
+Things look okay - No serious problems were detected during the pre-flight check
+[root@ip-172-31-21-45 servers]# history
+    1  cd
+    2  lsblk
+    3  lsbls
+    4  lsblk
+    5  dh -h
+    6  df -h
+    7  file -s /dev/xvdf
+    8  mount -t ext4 /dev/xvdf /opt
+    9  mount -t ext4 /dev/xvdf /opt
+   10  mkfs -t ext4 /dev/xvdf
+   11  mount /dev/xvdf /opt
+   12  lsblk
+   13  df -h
+   14  lsblk
+   15  pvdisplay
+   16  cd
+   17  yum update
+   18  yum install httpd php php-cli gcc unzip wget glibc glibc-common gd gd-devel net-snmp
+   19  service httpd start
+   20  service httpd status
+   21  useradd nagios
+   22  passwd nagios
+   23  groupadd nagcmd
+   24  usermod -a -G nagcmd nagios
+   25  usermod -a -G nagcmd apache
+   26  cd /opt/
+   27  wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.3.tar.gz
+   28  ls
+   29  tar -xvf nagios-4.4.3.tar.gz
+   30  als
+   31  ls
+   32  cd nagios-4.4.3/
+   33  ls
+   34  ./configure
+   35  make all
+   36  make install
+   37  make install-init
+   38  make install-daemoninit
+   39  make install-config
+   40  make install-commandmode
+   41  make install-exfoliation
+   42  make install-webconf
+   43  htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   44  service httpd restart
+   45  cd /opt/
+   46  ls
+   47  wget http://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
+   48  tar -xvf nagios-plugins-2.2.1.tar.gz
+   49  cd nagios-
+   50  cd nagios-plugins-2.2.1/
+   51  ./configure
+   52  make
+   53  make install
+   54  usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   55  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   56  service nagios start
+   57  cd /
+   58  l
+   59  ls
+   60  touch swapfile
+   61  sudo fallocate -l 1G /swapfile
+   62  sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+   63  sudo chmod 600 /swapfile
+   64  sudo mkswap /swapfile
+   65  sudo swapon /swapfile
+   66  sudo swapon --show
+   67  sudo free -h
+   68  service nagios restart
+   69  sudo free -h
+   70  cd /opt/
+   71  ls
+   72  wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+   73  tar xzf nrpe-3.2.1.tar.gz
+   74  cd nrpe-3.2.1/
+   75  ./configure
+   76  make all
+   77  make all
+   78  make install-daemon
+   79  make
+   80  /usr/local/nagios/libexec/check_nrpe -H ip-172-31-33-79
+   81  find / -name check_nrpe
+   82  find / -name check_user
+   83  cd /opt/
+   84  rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   85  yum -y install nagios-plugins-nrpe
+   86  vi /usr/local/nagios/etc/nagios.cfg
+   87  mkdir /usr/local/nagios/etc/servers
+   88  vi /usr/local/nagios/etc/objects/commands.cfg
+   89  vi /usr/local/nagios/etc/servers/client.itzgeek.local.cfg
+   90  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   91  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   92  service nagios restart
+   93  vi /usr/local/nagios/etc/servers/nagios-client.cfg
+   94  /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   95  service nagios restart
+   96  histort
+   97  history
+   98  cd /usr/local/nagios/etc/
+   99  vi nagios.cfg
+  100  cd /usr/local/nagios/etc/servers
+  101  ls
+  102  vi nagios-client.cfg
+  103  service nagios restart
+  104  vi nagios-client.cfg
+  105  history
+  106   /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+  107  history
+[root@ip-172-31-21-45 servers]#

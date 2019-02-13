@@ -1,0 +1,7 @@
+docker run -it -d -p 8080:80 --name myapp imagename/image id
+
+docker run -d -p 8080:8080 -p 50000:50000 -v /opt:/var/jenkins_home jenkins
+
+docker cp <filename> containerID:containerpath
+
+docker run -d --name nagios4 -p 0.0.0.0:8080:80 jasonrivers/nagios:latest

@@ -1,0 +1,74 @@
+ 455  terraform pla
+  456  terraform plan
+  457  vi vpc.tf
+  458  terraform plan
+  459  vi vpc.tf
+  460  vi vpc.tf
+  461  terraform plan
+  462  vi samplevpc.tf
+  463  terraform plan
+  464  terraform samplevpc.tf plan
+  465  terraform plan
+  466  vi vpc.terra
+  467  terraform init
+  468  terraform init
+  469  terraform plan
+  470  terraform init
+  471  terraform -v
+  472  terraform init
+  473  terraform init
+  474  terraform init vpc.terra
+  475  ls
+  476  mv vpc.terra vpc.tf
+  477  ls
+  478  vi vpc.tf
+  479  terraform init
+  480  terraform plan
+  481  terraform apply
+  482  terraform destroy
+  483  vi vpc.tf
+  484  ls
+  485  vi vpc.tf
+  486  ls
+  487  cd saturday
+  488  mkdir saturday
+  489  cd
+  490  cd Desktop
+  491  cd saturday
+  492  mkdir saturday
+  493  cd saturday/
+  494  ls
+  495  cp ../terademo/vpc.tf .
+  496  ls -ltr
+  497  ls -ltr
+  498  vi vpc.tf
+  499  ls
+  500  vi instance.td
+  501  cat vpc.tf >instance.tf
+  502  vi instance.tf
+  503  rm -rf vpc.tf
+  504  terraform init
+  505  ls
+  506  vi instance.tf
+  507  terraform plan
+  508  ls
+  509  vi instance.tf
+  510  terraform plan
+  511  terraform apply
+  512  terraform destroy
+  513  vi instance.tf
+  514  ssh-keygen -t rsa
+  515  cd
+  516  cp .ssh/id_rsa.pub .ssh/id_rsa Desktop/saturday/
+  517  cd -
+  518  ls
+  519  mv id_rsa krishinst
+  520  mv id_rsa.pub krishninst.pub
+  521  cat krishninst.pub
+  522  vi instance.tf
+  523  terraform plan
+  524  terraform apply
+  525  ssh -i krishinst ec2-user@54.210.164.22
+  526  terraform plan
+  527  vi instance.tf
+  528  terraform destroy

@@ -1,0 +1,2031 @@
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch          Version                    Repository   Size
+================================================================================
+Installing:
+ httpd               x86_64        2.4.6-88.el7.centos        base        2.7 M
+ unzip               x86_64        6.0-19.el7                 base        170 k
+ wget                x86_64        1.14-18.el7                base        547 k
+Installing for dependencies:
+ apr                 x86_64        1.4.8-3.el7_4.1            base        103 k
+ apr-util            x86_64        1.5.2-6.el7                base         92 k
+ centos-logos        noarch        70.0.6-3.el7.centos        base         21 M
+ httpd-tools         x86_64        2.4.6-88.el7.centos        base         90 k
+ mailcap             noarch        2.1.41-2.el7               base         31 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages (+5 Dependent packages)
+
+Total download size: 25 M
+Installed size: 34 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               34 MB/s |  25 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apr-1.4.8-3.el7_4.1.x86_64                                   1/8
+  Installing : apr-util-1.5.2-6.el7.x86_64                                  2/8
+  Installing : httpd-tools-2.4.6-88.el7.centos.x86_64                       3/8
+  Installing : centos-logos-70.0.6-3.el7.centos.noarch                      4/8
+  Installing : mailcap-2.1.41-2.el7.noarch                                  5/8
+  Installing : httpd-2.4.6-88.el7.centos.x86_64                             6/8
+  Installing : unzip-6.0-19.el7.x86_64                                      7/8
+  Installing : wget-1.14-18.el7.x86_64                                      8/8
+install-info: No such file or directory for /usr/share/info/wget.info.gz
+  Verifying  : mailcap-2.1.41-2.el7.noarch                                  1/8
+  Verifying  : apr-util-1.5.2-6.el7.x86_64                                  2/8
+  Verifying  : wget-1.14-18.el7.x86_64                                      3/8
+  Verifying  : httpd-tools-2.4.6-88.el7.centos.x86_64                       4/8
+  Verifying  : unzip-6.0-19.el7.x86_64                                      5/8
+  Verifying  : httpd-2.4.6-88.el7.centos.x86_64                             6/8
+  Verifying  : apr-1.4.8-3.el7_4.1.x86_64                                   7/8
+  Verifying  : centos-logos-70.0.6-3.el7.centos.noarch                      8/8
+
+Installed:
+  httpd.x86_64 0:2.4.6-88.el7.centos          unzip.x86_64 0:6.0-19.el7
+  wget.x86_64 0:1.14-18.el7
+
+Dependency Installed:
+  apr.x86_64 0:1.4.8-3.el7_4.1
+  apr-util.x86_64 0:1.5.2-6.el7
+  centos-logos.noarch 0:70.0.6-3.el7.centos
+  httpd-tools.x86_64 0:2.4.6-88.el7.centos
+  mailcap.noarch 0:2.1.41-2.el7
+
+Complete!
+Removing intermediate container 54bd87f70124
+ ---> c6921bfad8a4
+Step 4/9 : WORKDIR /opt
+ ---> Running in 76c9e5c52142
+Removing intermediate container 76c9e5c52142
+ ---> d5b29ebf544e
+Step 5/9 : RUN wget https://www.tooplate.com/zip-templates/2108_dashboard.zip
+ ---> Running in 7e8782d7a032
+--2019-02-10 15:46:26--  https://www.tooplate.com/zip-templates/2108_dashboard.zip
+Resolving www.tooplate.com (www.tooplate.com)... 67.227.140.19
+Connecting to www.tooplate.com (www.tooplate.com)|67.227.140.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2515546 (2.4M) [application/zip]
+Saving to: '2108_dashboard.zip'
+
+     0K .......... .......... .......... .......... ..........  2%  478K 5s
+    50K .......... .......... .......... .......... ..........  4%  714K 4s
+   100K .......... .......... .......... .......... ..........  6%  714K 4s
+   150K .......... .......... .......... .......... ..........  8%  709K 4s
+   200K .......... .......... .......... .......... .......... 10% 1.39M 3s
+   250K .......... .......... .......... .......... .......... 12% 1.37M 3s
+   300K .......... .......... .......... .......... .......... 14% 1.38M 3s
+   350K .......... .......... .......... .......... .......... 16% 1.37M 2s
+   400K .......... .......... .......... .......... .......... 18% 1.37M 2s
+   450K .......... .......... .......... .......... .......... 20% 1.36M 2s
+   500K .......... .......... .......... .......... .......... 22% 1.37M 2s
+   550K .......... .......... .......... .......... .......... 24% 1.37M 2s
+   600K .......... .......... .......... .......... .......... 26%  240M 2s
+   650K .......... .......... .......... .......... .......... 28% 1.37M 2s
+   700K .......... .......... .......... .......... .......... 30% 1.37M 2s
+   750K .......... .......... .......... .......... .......... 32% 1.37M 1s
+   800K .......... .......... .......... .......... .......... 34% 1.36M 1s
+   850K .......... .......... .......... .......... .......... 36%  227M 1s
+   900K .......... .......... .......... .......... .......... 38% 1.37M 1s
+   950K .......... .......... .......... .......... .......... 40%  303M 1s
+  1000K .......... .......... .......... .......... .......... 42% 1.37M 1s
+  1050K .......... .......... .......... .......... .......... 44% 1.36M 1s
+  1100K .......... .......... .......... .......... .......... 46%  293M 1s
+  1150K .......... .......... .......... .......... .......... 48% 1.36M 1s
+  1200K .......... .......... .......... .......... .......... 50% 1.35M 1s
+  1250K .......... .......... .......... .......... .......... 52% 56.8M 1s
+  1300K .......... .......... .......... .......... .......... 54% 1.38M 1s
+  1350K .......... .......... .......... .......... .......... 56%  237M 1s
+  1400K .......... .......... .......... .......... .......... 59% 1.36M 1s
+  1450K .......... .......... .......... .......... .......... 61%  316M 1s
+  1500K .......... .......... .......... .......... .......... 63% 1.34M 1s
+  1550K .......... .......... .......... .......... .......... 65% 61.2M 1s
+  1600K .......... .......... .......... .......... .......... 67% 1.39M 1s
+  1650K .......... .......... .......... .......... .......... 69% 37.4M 0s
+  1700K .......... .......... .......... .......... .......... 71% 1.40M 0s
+  1750K .......... .......... .......... .......... .......... 73%  321M 0s
+  1800K .......... .......... .......... .......... .......... 75% 1.34M 0s
+  1850K .......... .......... .......... .......... .......... 77%  315M 0s
+  1900K .......... .......... .......... .......... .......... 79% 1.37M 0s
+  1950K .......... .......... .......... .......... .......... 81%  295M 0s
+  2000K .......... .......... .......... .......... .......... 83% 1.35M 0s
+  2050K .......... .......... .......... .......... .......... 85%  305M 0s
+  2100K .......... .......... .......... .......... .......... 87% 1.33M 0s
+  2150K .......... .......... .......... .......... .......... 89% 90.4M 0s
+  2200K .......... .......... .......... .......... .......... 91% 1.37M 0s
+  2250K .......... .......... .......... .......... .......... 93%  296M 0s
+  2300K .......... .......... .......... .......... .......... 95%  325M 0s
+  2350K .......... .......... .......... .......... .......... 97% 1.35M 0s
+  2400K .......... .......... .......... .......... .......... 99% 50.2M 0s
+  2450K ......                                                100%  217M=1.3s
+
+2019-02-10 15:46:28 (1.81 MB/s) - '2108_dashboard.zip' saved [2515546/2515546]
+
+Removing intermediate container 7e8782d7a032
+ ---> f0f25a070beb
+Step 6/9 : RUN unzip 2108_dashboard.zip
+ ---> Running in b2691fc44e95
+Archive:  2108_dashboard.zip
+   creating: 2108_dashboard/
+  inflating: 2108_dashboard/accounts.html
+  inflating: 2108_dashboard/add-product.html
+   creating: 2108_dashboard/css/
+  inflating: 2108_dashboard/css/bootstrap.min.css
+  inflating: 2108_dashboard/css/fontawesome.min.css
+  inflating: 2108_dashboard/css/fullcalendar.min.css
+  inflating: 2108_dashboard/css/tooplate.css
+  inflating: 2108_dashboard/edit-product.html
+   creating: 2108_dashboard/img/
+  inflating: 2108_dashboard/img/dash-bg-01.jpg
+  inflating: 2108_dashboard/img/dash-bg-02.jpg
+  inflating: 2108_dashboard/img/dash-bg-03.jpg
+  inflating: 2108_dashboard/img/product-image.jpg
+  inflating: 2108_dashboard/img/profile-image.png
+  inflating: 2108_dashboard/index.html
+   creating: 2108_dashboard/jquery-ui-datepicker/
+  inflating: 2108_dashboard/jquery-ui-datepicker/AUTHORS.txt
+   creating: 2108_dashboard/jquery-ui-datepicker/external/
+   creating: 2108_dashboard/jquery-ui-datepicker/external/jquery/
+  inflating: 2108_dashboard/jquery-ui-datepicker/external/jquery/jquery.js
+   creating: 2108_dashboard/jquery-ui-datepicker/images/
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/index.html
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/LICENSE.txt
+  inflating: 2108_dashboard/jquery-ui-datepicker/package.json
+   creating: 2108_dashboard/js/
+  inflating: 2108_dashboard/js/bootstrap.min.js
+  inflating: 2108_dashboard/js/Chart.min.js
+  inflating: 2108_dashboard/js/fullcalendar.min.js
+  inflating: 2108_dashboard/js/jquery-3.3.1.min.js
+  inflating: 2108_dashboard/js/moment.min.js
+  inflating: 2108_dashboard/js/tooplate-scripts.js
+  inflating: 2108_dashboard/js/utils.js
+  inflating: 2108_dashboard/LICENSE-fullcalendar.txt
+  inflating: 2108_dashboard/login.html
+  inflating: 2108_dashboard/products.html
+   creating: 2108_dashboard/webfonts/
+  inflating: 2108_dashboard/webfonts/fa-brands-400.eot
+  inflating: 2108_dashboard/webfonts/fa-brands-400.svg
+  inflating: 2108_dashboard/webfonts/fa-brands-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-regular-400.eot
+  inflating: 2108_dashboard/webfonts/fa-regular-400.svg
+  inflating: 2108_dashboard/webfonts/fa-regular-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-solid-900.eot
+  inflating: 2108_dashboard/webfonts/fa-solid-900.svg
+  inflating: 2108_dashboard/webfonts/fa-solid-900.ttf
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff2
+  inflating: 2108_dashboard/ABOUT THIS TEMPLATE.txt
+Removing intermediate container b2691fc44e95
+ ---> 9d7126475f53
+Step 7/9 : RUN cp -r 2108_dashboard/* /var/www/html
+ ---> Running in 5339131fcf64
+Removing intermediate container 5339131fcf64
+ ---> af7b946f9c74
+Step 8/9 : EXPOSE 80
+ ---> Running in 54d8b6efca78
+Removing intermediate container 54d8b6efca78
+ ---> b5c36fabb9bd
+Step 9/9 : ENTRYPOINT ["/bin/bash", "service httpd restart"]
+ ---> Running in f4d232e299e5
+Removing intermediate container f4d232e299e5
+ ---> 60086c3616ea
+Successfully built 60086c3616ea
+Successfully tagged krish:latest
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+krish               latest              60086c3616ea        8 seconds ago       470MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker run -it -d --name sun -p 80:80 60086c3616ea bash
+c31b65d1d065f002844924f67130f79a9e3707ffc42149498806c543ed1a342a
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+c31b65d1d065        60086c3616ea        "/bin/bash 'service …"   18 seconds ago      Exited (127) 17 seconds ago                       sun
+d47b8346d845        050bac0ef15b        "/bin/sh -c 'service…"   2 minutes ago       Exited (127) 2 minutes ago                        compassionate_booth
+[root@ip-172-31-19-188 ~]# docker run -it -d --name sun -p 80:80 60086c3616ea
+docker: Error response from daemon: Conflict. The container name "/sun" is already in use by container "c31b65d1d065f002844924f67130f79a9e3707ffc42149498806c543ed1a342a". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+[root@ip-172-31-19-188 ~]# ^Ccker run -it -d --name sun -p 80:80 60086c3616ea
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker rm -f $(docker ps -aq)
+c31b65d1d065
+d47b8346d845
+[root@ip-172-31-19-188 ~]# docker run -it -d --name sun -p 80:80 60086c3616ea bash
+b36ca6e589075734c62c744afd6bb8af753618832da5aa5d41a8c100b513aa12
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker ps 0^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# vi Dockerfile o
+2 files to edit
+[root@ip-172-31-19-188 ~]# docker rm -f $(docker ps -aq)
+b36ca6e58907
+[root@ip-172-31-19-188 ~]# docker run -it -d --name sun -p 80:80 60086c3616ea bash^C
+[root@ip-172-31-19-188 ~]# docker rmi -f $(docker images -a -q)
+Untagged: krish:latest
+Deleted: sha256:60086c3616ea18d1dd3b18235d53f9f0a6c2a413ff25f325532a4246b206b37c
+Deleted: sha256:b5c36fabb9bdcaa94c2e30f515b6e2f7e5694172ca110b76ba55362809d91361
+Deleted: sha256:af7b946f9c744720b6eed8a012202a154b4e184074d4f2dc9d02227c9fe736f1
+Deleted: sha256:24350bce87fa20a98af944208095a91e5854ac12dee58e94a45dbb3b699951a3
+Deleted: sha256:9d7126475f5331d404614aee0a7b0e3fa9d537d23ac58d92a309305ac18dec9c
+Deleted: sha256:33c096bc320fb69f3bc10382e1b841d68d21f4ae56d2c5b7b4889fcd27179c80
+Deleted: sha256:f0f25a070beb3bf4cb0274fa8f66a030042a491e252cb259b728ecce462b9c14
+Deleted: sha256:919dbcdbfecb9fbd4d2b1031bca112358e53789a398ce5cba1b79f5ae070a7bd
+Deleted: sha256:d5b29ebf544e4fa4f33faaa5162740392626cff40c7772b78713b73f78511142
+Deleted: sha256:c6921bfad8a442987e08af1a36d3440aa361cc3446506e7e3aa4603f0f2d8378
+Deleted: sha256:e06914d0ce8af9ec20e17cb77c37aeee10216166964ed037249aa618be1c0e3b
+Deleted: sha256:be50b469cdde788ed719819a16177cbadf25f9f8701fa190ab5a5fb8af47f4e8
+Deleted: sha256:9ec0dc0b64c8941e4bc672aa9720f4317d09f79a4ff9249afcabd12110531c83
+Untagged: centos:latest
+Untagged: centos@sha256:184e5f35598e333bfa7de10d8fb1cebb5ee4df5bc0f970bf2b1e7c7345136426
+Deleted: sha256:1e1148e4cc2c148c6890a18e3b2d2dde41a6745ceb4e5fe94a923d811bf82ddb
+Deleted: sha256:071d8bd765171080d01682844524be57ac9883e53079b6ac66707e192ea25956
+Error: No such image: b5c36fabb9bd
+Error: No such image: af7b946f9c74
+Error: No such image: 9d7126475f53
+Error: No such image: f0f25a070beb
+Error: No such image: d5b29ebf544e
+Error: No such image: c6921bfad8a4
+Error: No such image: be50b469cdde
+[root@ip-172-31-19-188 ~]# docker ps^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker rmi -f $(docker images -a -q)^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker build -t krish .
+Sending build context to Docker daemon  11.26kB
+Step 1/9 : FROM centos:latest
+latest: Pulling from library/centos
+a02a4930cb5d: Pull complete
+Digest: sha256:184e5f35598e333bfa7de10d8fb1cebb5ee4df5bc0f970bf2b1e7c7345136426
+Status: Downloaded newer image for centos:latest
+ ---> 1e1148e4cc2c
+Step 2/9 : RUN yum update -y
+ ---> Running in aa4d57edcbaf
+Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: repos-va.psychz.net
+ * extras: repos-va.psychz.net
+ * updates: repos-va.psychz.net
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-license.noarch 32:9.9.4-72.el7 will be updated
+---> Package bind-license.noarch 32:9.9.4-73.el7_6 will be an update
+---> Package device-mapper.x86_64 7:1.02.149-10.el7_6.2 will be updated
+---> Package device-mapper.x86_64 7:1.02.149-10.el7_6.3 will be an update
+---> Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.2 will be updated
+---> Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.3 will be an update
+---> Package glibc.x86_64 0:2.17-260.el7 will be updated
+---> Package glibc.x86_64 0:2.17-260.el7_6.3 will be an update
+---> Package glibc-common.x86_64 0:2.17-260.el7 will be updated
+---> Package glibc-common.x86_64 0:2.17-260.el7_6.3 will be an update
+---> Package krb5-libs.x86_64 0:1.15.1-34.el7 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-37.el7_6 will be an update
+---> Package nss.x86_64 0:3.36.0-7.el7_5 will be updated
+---> Package nss.x86_64 0:3.36.0-7.1.el7_6 will be an update
+---> Package nss-sysinit.x86_64 0:3.36.0-7.el7_5 will be updated
+---> Package nss-sysinit.x86_64 0:3.36.0-7.1.el7_6 will be an update
+---> Package nss-tools.x86_64 0:3.36.0-7.el7_5 will be updated
+---> Package nss-tools.x86_64 0:3.36.0-7.1.el7_6 will be an update
+---> Package nss-util.x86_64 0:3.36.0-1.el7_5 will be updated
+---> Package nss-util.x86_64 0:3.36.0-1.1.el7_6 will be an update
+---> Package openldap.x86_64 0:2.4.44-20.el7 will be updated
+---> Package openldap.x86_64 0:2.4.44-21.el7_6 will be an update
+---> Package systemd.x86_64 0:219-62.el7 will be updated
+---> Package systemd.x86_64 0:219-62.el7_6.3 will be an update
+---> Package systemd-libs.x86_64 0:219-62.el7 will be updated
+---> Package systemd-libs.x86_64 0:219-62.el7_6.3 will be an update
+---> Package tzdata.noarch 0:2018g-1.el7 will be updated
+---> Package tzdata.noarch 0:2018i-1.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch       Version                    Repository   Size
+================================================================================
+Updating:
+ bind-license           noarch     32:9.9.4-73.el7_6          updates      87 k
+ device-mapper          x86_64     7:1.02.149-10.el7_6.3      updates     292 k
+ device-mapper-libs     x86_64     7:1.02.149-10.el7_6.3      updates     320 k
+ glibc                  x86_64     2.17-260.el7_6.3           updates     3.7 M
+ glibc-common           x86_64     2.17-260.el7_6.3           updates      12 M
+ krb5-libs              x86_64     1.15.1-37.el7_6            updates     803 k
+ nss                    x86_64     3.36.0-7.1.el7_6           updates     835 k
+ nss-sysinit            x86_64     3.36.0-7.1.el7_6           updates      62 k
+ nss-tools              x86_64     3.36.0-7.1.el7_6           updates     515 k
+ nss-util               x86_64     3.36.0-1.1.el7_6           updates      78 k
+ openldap               x86_64     2.4.44-21.el7_6            updates     356 k
+ systemd                x86_64     219-62.el7_6.3             updates     5.1 M
+ systemd-libs           x86_64     219-62.el7_6.3             updates     406 k
+ tzdata                 noarch     2018i-1.el7                updates     490 k
+
+Transaction Summary
+================================================================================
+Upgrade  14 Packages
+
+Total download size: 24 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+warning: /var/cache/yum/x86_64/7/updates/packages/bind-license-9.9.4-73.el7_6.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for bind-license-9.9.4-73.el7_6.noarch.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                               42 MB/s |  24 MB  00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-6.1810.2.el7.centos.x86_64 (@CentOS)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : tzdata-2018i-1.el7.noarch                                   1/28
+  Updating   : glibc-2.17-260.el7_6.3.x86_64                               2/28
+  Updating   : glibc-common-2.17-260.el7_6.3.x86_64                        3/28
+  Updating   : nss-util-3.36.0-1.1.el7_6.x86_64                            4/28
+  Updating   : systemd-libs-219-62.el7_6.3.x86_64                          5/28
+  Updating   : systemd-219-62.el7_6.3.x86_64                               6/28
+Failed to get D-Bus connection: Operation not permitted
+  Updating   : 7:device-mapper-1.02.149-10.el7_6.3.x86_64                  7/28
+  Updating   : 7:device-mapper-libs-1.02.149-10.el7_6.3.x86_64             8/28
+  Updating   : nss-sysinit-3.36.0-7.1.el7_6.x86_64                         9/28
+  Updating   : nss-3.36.0-7.1.el7_6.x86_64                                10/28
+  Updating   : nss-tools-3.36.0-7.1.el7_6.x86_64                          11/28
+  Updating   : openldap-2.4.44-21.el7_6.x86_64                            12/28
+  Updating   : krb5-libs-1.15.1-37.el7_6.x86_64                           13/28
+  Updating   : 32:bind-license-9.9.4-73.el7_6.noarch                      14/28
+  Cleanup    : 32:bind-license-9.9.4-72.el7.noarch                        15/28
+  Cleanup    : openldap-2.4.44-20.el7.x86_64                              16/28
+  Cleanup    : nss-tools-3.36.0-7.el7_5.x86_64                            17/28
+  Cleanup    : nss-sysinit-3.36.0-7.el7_5.x86_64                          18/28
+  Cleanup    : nss-3.36.0-7.el7_5.x86_64                                  19/28
+  Cleanup    : 7:device-mapper-1.02.149-10.el7_6.2.x86_64                 20/28
+  Cleanup    : 7:device-mapper-libs-1.02.149-10.el7_6.2.x86_64            21/28
+  Cleanup    : systemd-219-62.el7.x86_64                                  22/28
+  Cleanup    : systemd-libs-219-62.el7.x86_64                             23/28
+  Cleanup    : nss-util-3.36.0-1.el7_5.x86_64                             24/28
+  Cleanup    : krb5-libs-1.15.1-34.el7.x86_64                             25/28
+  Cleanup    : glibc-common-2.17-260.el7.x86_64                           26/28
+  Cleanup    : glibc-2.17-260.el7.x86_64                                  27/28
+  Cleanup    : tzdata-2018g-1.el7.noarch                                  28/28
+  Verifying  : systemd-libs-219-62.el7_6.3.x86_64                          1/28
+  Verifying  : nss-tools-3.36.0-7.1.el7_6.x86_64                           2/28
+  Verifying  : systemd-219-62.el7_6.3.x86_64                               3/28
+  Verifying  : 32:bind-license-9.9.4-73.el7_6.noarch                       4/28
+  Verifying  : nss-util-3.36.0-1.1.el7_6.x86_64                            5/28
+  Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.3.x86_64             6/28
+  Verifying  : krb5-libs-1.15.1-37.el7_6.x86_64                            7/28
+  Verifying  : nss-sysinit-3.36.0-7.1.el7_6.x86_64                         8/28
+  Verifying  : nss-3.36.0-7.1.el7_6.x86_64                                 9/28
+  Verifying  : tzdata-2018i-1.el7.noarch                                  10/28
+  Verifying  : glibc-2.17-260.el7_6.3.x86_64                              11/28
+  Verifying  : glibc-common-2.17-260.el7_6.3.x86_64                       12/28
+  Verifying  : 7:device-mapper-1.02.149-10.el7_6.3.x86_64                 13/28
+  Verifying  : openldap-2.4.44-21.el7_6.x86_64                            14/28
+  Verifying  : nss-3.36.0-7.el7_5.x86_64                                  15/28
+  Verifying  : openldap-2.4.44-20.el7.x86_64                              16/28
+  Verifying  : nss-util-3.36.0-1.el7_5.x86_64                             17/28
+  Verifying  : 7:device-mapper-1.02.149-10.el7_6.2.x86_64                 18/28
+  Verifying  : systemd-libs-219-62.el7.x86_64                             19/28
+  Verifying  : glibc-common-2.17-260.el7.x86_64                           20/28
+  Verifying  : systemd-219-62.el7.x86_64                                  21/28
+  Verifying  : nss-tools-3.36.0-7.el7_5.x86_64                            22/28
+  Verifying  : glibc-2.17-260.el7.x86_64                                  23/28
+  Verifying  : krb5-libs-1.15.1-34.el7.x86_64                             24/28
+  Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.2.x86_64            25/28
+  Verifying  : 32:bind-license-9.9.4-72.el7.noarch                        26/28
+  Verifying  : nss-sysinit-3.36.0-7.el7_5.x86_64                          27/28
+  Verifying  : tzdata-2018g-1.el7.noarch                                  28/28
+
+Updated:
+  bind-license.noarch 32:9.9.4-73.el7_6
+  device-mapper.x86_64 7:1.02.149-10.el7_6.3
+  device-mapper-libs.x86_64 7:1.02.149-10.el7_6.3
+  glibc.x86_64 0:2.17-260.el7_6.3
+  glibc-common.x86_64 0:2.17-260.el7_6.3
+  krb5-libs.x86_64 0:1.15.1-37.el7_6
+  nss.x86_64 0:3.36.0-7.1.el7_6
+  nss-sysinit.x86_64 0:3.36.0-7.1.el7_6
+  nss-tools.x86_64 0:3.36.0-7.1.el7_6
+  nss-util.x86_64 0:3.36.0-1.1.el7_6
+  openldap.x86_64 0:2.4.44-21.el7_6
+  systemd.x86_64 0:219-62.el7_6.3
+  systemd-libs.x86_64 0:219-62.el7_6.3
+  tzdata.noarch 0:2018i-1.el7
+
+Complete!
+Removing intermediate container aa4d57edcbaf
+ ---> 2543bf032770
+Step 3/9 : RUN yum install wget unzip httpd -y
+ ---> Running in b3ceda8aef1c
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: repos-va.psychz.net
+ * extras: repos-va.psychz.net
+ * updates: repos-va.psychz.net
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-88.el7.centos will be installed
+--> Processing Dependency: httpd-tools = 2.4.6-88.el7.centos for package: httpd-2.4.6-88.el7.centos.x86_64
+--> Processing Dependency: system-logos >= 7.92.1-1 for package: httpd-2.4.6-88.el7.centos.x86_64
+--> Processing Dependency: /etc/mime.types for package: httpd-2.4.6-88.el7.centos.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-88.el7.centos.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-88.el7.centos.x86_64
+---> Package unzip.x86_64 0:6.0-19.el7 will be installed
+---> Package wget.x86_64 0:1.14-18.el7 will be installed
+--> Running transaction check
+---> Package apr.x86_64 0:1.4.8-3.el7_4.1 will be installed
+---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed
+---> Package centos-logos.noarch 0:70.0.6-3.el7.centos will be installed
+---> Package httpd-tools.x86_64 0:2.4.6-88.el7.centos will be installed
+---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package             Arch          Version                    Repository   Size
+================================================================================
+Installing:
+ httpd               x86_64        2.4.6-88.el7.centos        base        2.7 M
+ unzip               x86_64        6.0-19.el7                 base        170 k
+ wget                x86_64        1.14-18.el7                base        547 k
+Installing for dependencies:
+ apr                 x86_64        1.4.8-3.el7_4.1            base        103 k
+ apr-util            x86_64        1.5.2-6.el7                base         92 k
+ centos-logos        noarch        70.0.6-3.el7.centos        base         21 M
+ httpd-tools         x86_64        2.4.6-88.el7.centos        base         90 k
+ mailcap             noarch        2.1.41-2.el7               base         31 k
+
+Transaction Summary
+================================================================================
+Install  3 Packages (+5 Dependent packages)
+
+Total download size: 25 M
+Installed size: 34 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               29 MB/s |  25 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apr-1.4.8-3.el7_4.1.x86_64                                   1/8
+  Installing : apr-util-1.5.2-6.el7.x86_64                                  2/8
+  Installing : httpd-tools-2.4.6-88.el7.centos.x86_64                       3/8
+  Installing : centos-logos-70.0.6-3.el7.centos.noarch                      4/8
+  Installing : mailcap-2.1.41-2.el7.noarch                                  5/8
+  Installing : httpd-2.4.6-88.el7.centos.x86_64                             6/8
+  Installing : unzip-6.0-19.el7.x86_64                                      7/8
+  Installing : wget-1.14-18.el7.x86_64                                      8/8
+install-info: No such file or directory for /usr/share/info/wget.info.gz
+  Verifying  : mailcap-2.1.41-2.el7.noarch                                  1/8
+  Verifying  : apr-util-1.5.2-6.el7.x86_64                                  2/8
+  Verifying  : wget-1.14-18.el7.x86_64                                      3/8
+  Verifying  : httpd-tools-2.4.6-88.el7.centos.x86_64                       4/8
+  Verifying  : unzip-6.0-19.el7.x86_64                                      5/8
+  Verifying  : httpd-2.4.6-88.el7.centos.x86_64                             6/8
+  Verifying  : apr-1.4.8-3.el7_4.1.x86_64                                   7/8
+  Verifying  : centos-logos-70.0.6-3.el7.centos.noarch                      8/8
+
+Installed:
+  httpd.x86_64 0:2.4.6-88.el7.centos          unzip.x86_64 0:6.0-19.el7
+  wget.x86_64 0:1.14-18.el7
+
+Dependency Installed:
+  apr.x86_64 0:1.4.8-3.el7_4.1
+  apr-util.x86_64 0:1.5.2-6.el7
+  centos-logos.noarch 0:70.0.6-3.el7.centos
+  httpd-tools.x86_64 0:2.4.6-88.el7.centos
+  mailcap.noarch 0:2.1.41-2.el7
+
+Complete!
+Removing intermediate container b3ceda8aef1c
+ ---> 0925aad47242
+Step 4/9 : WORKDIR /opt
+ ---> Running in a2d46bd4571c
+Removing intermediate container a2d46bd4571c
+ ---> 950f54fbf4a8
+Step 5/9 : RUN wget https://www.tooplate.com/zip-templates/2108_dashboard.zip
+ ---> Running in 518127746a1e
+--2019-02-10 15:50:13--  https://www.tooplate.com/zip-templates/2108_dashboard.zip
+Resolving www.tooplate.com (www.tooplate.com)... 67.227.140.19
+Connecting to www.tooplate.com (www.tooplate.com)|67.227.140.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2515546 (2.4M) [application/zip]
+Saving to: '2108_dashboard.zip'
+
+     0K .......... .......... .......... .......... ..........  2%  507K 5s
+    50K .......... .......... .......... .......... ..........  4%  758K 4s
+   100K .......... .......... .......... .......... ..........  6%  759K 4s
+   150K .......... .......... .......... .......... ..........  8%  756K 3s
+   200K .......... .......... .......... .......... .......... 10% 1.46M 3s
+   250K .......... .......... .......... .......... .......... 12% 1.46M 3s
+   300K .......... .......... .......... .......... .......... 14%  742K 3s
+   350K .......... .......... .......... .......... .......... 16% 1.45M 2s
+   400K .......... .......... .......... .......... .......... 18% 1.45M 2s
+   450K .......... .......... .......... .......... .......... 20% 1.45M 2s
+   500K .......... .......... .......... .......... .......... 22% 1.47M 2s
+   550K .......... .......... .......... .......... .......... 24% 1.45M 2s
+   600K .......... .......... .......... .......... .......... 26%  217M 2s
+   650K .......... .......... .......... .......... .......... 28% 1.44M 2s
+   700K .......... .......... .......... .......... .......... 30% 1.45M 2s
+   750K .......... .......... .......... .......... .......... 32% 1.43M 1s
+   800K .......... .......... .......... .......... .......... 34% 1.46M 1s
+   850K .......... .......... .......... .......... .......... 36%  233M 1s
+   900K .......... .......... .......... .......... .......... 38% 1.44M 1s
+   950K .......... .......... .......... .......... .......... 40% 1.44M 1s
+  1000K .......... .......... .......... .......... .......... 42%  231M 1s
+  1050K .......... .......... .......... .......... .......... 44% 1.40M 1s
+  1100K .......... .......... .......... .......... .......... 46%  310M 1s
+  1150K .......... .......... .......... .......... .......... 48% 1.42M 1s
+  1200K .......... .......... .......... .......... .......... 50% 1.43M 1s
+  1250K .......... .......... .......... .......... .......... 52% 41.5M 1s
+  1300K .......... .......... .......... .......... .......... 54% 1.47M 1s
+  1350K .......... .......... .......... .......... .......... 56%  320M 1s
+  1400K .......... .......... .......... .......... .......... 59% 1.42M 1s
+  1450K .......... .......... .......... .......... .......... 61% 1.43M 1s
+  1500K .......... .......... .......... .......... .......... 63%  303M 1s
+  1550K .......... .......... .......... .......... .......... 65% 1.42M 1s
+  1600K .......... .......... .......... .......... .......... 67%  251M 1s
+  1650K .......... .......... .......... .......... .......... 69% 1.43M 0s
+  1700K .......... .......... .......... .......... .......... 71%  307M 0s
+  1750K .......... .......... .......... .......... .......... 73% 1.43M 0s
+  1800K .......... .......... .......... .......... .......... 75% 81.1M 0s
+  1850K .......... .......... .......... .......... .......... 77% 1.40M 0s
+  1900K .......... .......... .......... .......... .......... 79%  293M 0s
+  1950K .......... .......... .......... .......... .......... 81%  307M 0s
+  2000K .......... .......... .......... .......... .......... 83% 1.42M 0s
+  2050K .......... .......... .......... .......... .......... 85%  304M 0s
+  2100K .......... .......... .......... .......... .......... 87% 1.42M 0s
+  2150K .......... .......... .......... .......... .......... 89%  324M 0s
+  2200K .......... .......... .......... .......... .......... 91% 1.41M 0s
+  2250K .......... .......... .......... .......... .......... 93% 85.6M 0s
+  2300K .......... .......... .......... .......... .......... 95% 1.46M 0s
+  2350K .......... .......... .......... .......... .......... 97% 60.5M 0s
+  2400K .......... .......... .......... .......... .......... 99%  117M 0s
+  2450K ......                                                100%  277M=1.3s
+
+2019-02-10 15:50:15 (1.86 MB/s) - '2108_dashboard.zip' saved [2515546/2515546]
+
+Removing intermediate container 518127746a1e
+ ---> 42e7e5211868
+Step 6/9 : RUN unzip 2108_dashboard.zip
+ ---> Running in 78307fdd6216
+Archive:  2108_dashboard.zip
+   creating: 2108_dashboard/
+  inflating: 2108_dashboard/accounts.html
+  inflating: 2108_dashboard/add-product.html
+   creating: 2108_dashboard/css/
+  inflating: 2108_dashboard/css/bootstrap.min.css
+  inflating: 2108_dashboard/css/fontawesome.min.css
+  inflating: 2108_dashboard/css/fullcalendar.min.css
+  inflating: 2108_dashboard/css/tooplate.css
+  inflating: 2108_dashboard/edit-product.html
+   creating: 2108_dashboard/img/
+  inflating: 2108_dashboard/img/dash-bg-01.jpg
+  inflating: 2108_dashboard/img/dash-bg-02.jpg
+  inflating: 2108_dashboard/img/dash-bg-03.jpg
+  inflating: 2108_dashboard/img/product-image.jpg
+  inflating: 2108_dashboard/img/profile-image.png
+  inflating: 2108_dashboard/index.html
+   creating: 2108_dashboard/jquery-ui-datepicker/
+  inflating: 2108_dashboard/jquery-ui-datepicker/AUTHORS.txt
+   creating: 2108_dashboard/jquery-ui-datepicker/external/
+   creating: 2108_dashboard/jquery-ui-datepicker/external/jquery/
+  inflating: 2108_dashboard/jquery-ui-datepicker/external/jquery/jquery.js
+   creating: 2108_dashboard/jquery-ui-datepicker/images/
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/index.html
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/LICENSE.txt
+  inflating: 2108_dashboard/jquery-ui-datepicker/package.json
+   creating: 2108_dashboard/js/
+  inflating: 2108_dashboard/js/bootstrap.min.js
+  inflating: 2108_dashboard/js/Chart.min.js
+  inflating: 2108_dashboard/js/fullcalendar.min.js
+  inflating: 2108_dashboard/js/jquery-3.3.1.min.js
+  inflating: 2108_dashboard/js/moment.min.js
+  inflating: 2108_dashboard/js/tooplate-scripts.js
+  inflating: 2108_dashboard/js/utils.js
+  inflating: 2108_dashboard/LICENSE-fullcalendar.txt
+  inflating: 2108_dashboard/login.html
+  inflating: 2108_dashboard/products.html
+   creating: 2108_dashboard/webfonts/
+  inflating: 2108_dashboard/webfonts/fa-brands-400.eot
+  inflating: 2108_dashboard/webfonts/fa-brands-400.svg
+  inflating: 2108_dashboard/webfonts/fa-brands-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-regular-400.eot
+  inflating: 2108_dashboard/webfonts/fa-regular-400.svg
+  inflating: 2108_dashboard/webfonts/fa-regular-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-solid-900.eot
+  inflating: 2108_dashboard/webfonts/fa-solid-900.svg
+  inflating: 2108_dashboard/webfonts/fa-solid-900.ttf
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff2
+  inflating: 2108_dashboard/ABOUT THIS TEMPLATE.txt
+Removing intermediate container 78307fdd6216
+ ---> be9ae259da43
+Step 7/9 : RUN cp -r 2108_dashboard/* /var/www/html
+ ---> Running in 32548ed9a565
+Removing intermediate container 32548ed9a565
+ ---> 4fb347f964fd
+Step 8/9 : EXPOSE 80
+ ---> Running in 72262fc4b1e0
+Removing intermediate container 72262fc4b1e0
+ ---> 0b5af84558cf
+Step 9/9 : CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+ ---> Running in 29754aa03da7
+Removing intermediate container 29754aa03da7
+ ---> 08b07364f5b2
+Successfully built 08b07364f5b2
+Successfully tagged krish:latest
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+krish               latest              08b07364f5b2        14 seconds ago      470MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker run -it -d --name sunny -p 80:80 60086c36^Cea bash
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# netsta -tlnp
+bash: netsta: command not found
+[root@ip-172-31-19-188 ~]# netstat -tlnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      2663/rpcbind
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3288/sshd
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      3152/master
+tcp6       0      0 :::111                  :::*                    LISTEN      2663/rpcbind
+tcp6       0      0 :::22                   :::*                    LISTEN      3288/sshd
+[root@ip-172-31-19-188 ~]# docker ps^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+krish               latest              08b07364f5b2        About a minute ago   470MB
+centos              latest              1e1148e4cc2c        2 months ago         202MB
+[root@ip-172-31-19-188 ~]# docker run -it --name sun -p 80:80 08b07364f5b2  bash
+[root@31c386176485 opt]# ls
+2108_dashboard  2108_dashboard.zip
+[root@31c386176485 opt]# ps -eaf | grep httpd
+root        16     1  0 15:52 pts/0    00:00:00 grep --color=auto httpd
+[root@31c386176485 opt]# ^C
+[root@31c386176485 opt]# exit
+[root@ip-172-31-19-188 ~]# vi Dockerfile
+[root@ip-172-31-19-188 ~]# docker build -t sai .
+Sending build context to Docker daemon  11.26kB
+Step 1/9 : FROM ubuntu:latest
+latest: Pulling from library/ubuntu
+6cf436f81810: Pull complete
+987088a85b96: Pull complete
+b4624b3efe06: Pull complete
+d42beb8ded59: Pull complete
+Digest: sha256:7a47ccc3bbe8a451b500d2b53104868b46d60ee8f5b35a24b41a86077c650210
+Status: Downloaded newer image for ubuntu:latest
+ ---> 47b19964fb50
+Step 2/9 : RUN apt-get update -y
+ ---> Running in 68855b2f242f
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:2 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [339 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [3451 B]
+Get:5 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [147 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [679 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [6955 B]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [929 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [10.7 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4690 B]
+Fetched 15.5 MB in 3s (5754 kB/s)
+Reading package lists...
+Removing intermediate container 68855b2f242f
+ ---> 460a70489396
+Step 3/9 : RUN apt-get install wget unzip httpd -y
+ ---> Running in aa1546793025
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package httpd is a virtual package provided by:
+  nginx-light 1.14.0-0ubuntu1.2
+  nginx-full 1.14.0-0ubuntu1.2
+  nginx-extras 1.14.0-0ubuntu1.2
+  nginx-core 1.14.0-0ubuntu1.2
+  apache2 2.4.29-1ubuntu4.5
+  yaws 2.0.4+dfsg-2
+  webfs 1.21+ds1-12
+  tntnet 2.2.1-3build1
+  mini-httpd 1.23-1.2build1
+  micro-httpd 20051212-15.1
+  lighttpd 1.4.45-1ubuntu3
+  ebhttpd 1:1.0.dfsg.1-4.3build1
+  aolserver4-daemon 4.5.1-18.1
+  aolserver4-core 4.5.1-18.1
+
+E: Package 'httpd' has no installation candidate
+The command '/bin/sh -c apt-get install wget unzip httpd -y' returned a non-zero code: 100
+[root@ip-172-31-19-188 ~]# vi Dockerfile
+[root@ip-172-31-19-188 ~]# docker build -t sai .
+Sending build context to Docker daemon  11.26kB
+Step 1/9 : FROM ubuntu:latest
+ ---> 47b19964fb50
+Step 2/9 : RUN apt-get update -y
+ ---> Using cache
+ ---> 460a70489396
+Step 3/9 : RUN apt-get install wget unzip apache2 -y
+ ---> Running in eb838ada673e
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils ca-certificates file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal
+  libexpat1 libgdbm-compat4 libgdbm5 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal libicu60
+  libkrb5-26-heimdal libldap-2.4-2 libldap-common liblua5.2-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.26 libpsl5 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.1 libwind0-heimdal
+  libxml2 mime-support netbase openssl perl perl-modules-5.26 publicsuffix
+  ssl-cert xz-utils
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw
+  gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  openssl-blacklist zip
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils ca-certificates file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal
+  libexpat1 libgdbm-compat4 libgdbm5 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal libicu60
+  libkrb5-26-heimdal libldap-2.4-2 libldap-common liblua5.2-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.26 libpsl5 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.1 libwind0-heimdal
+  libxml2 mime-support netbase openssl perl perl-modules-5.26 publicsuffix
+  ssl-cert unzip wget xz-utils
+0 upgraded, 47 newly installed, 0 to remove and 3 not upgraded.
+Need to get 21.5 MB of archives.
+After this operation, 101 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl-modules-5.26 all 5.26.1-6ubuntu0.3 [2763 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm5 amd64 1.14.1-6 [26.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm-compat4 amd64 1.14.1-6 [6084 B]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libperl5.26 amd64 5.26.1-6ubuntu0.3 [3527 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl amd64 5.26.1-6ubuntu0.3 [201 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 mime-support all 3.60ubuntu1 [30.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/main amd64 libexpat1 amd64 2.2.5-3 [80.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.0g-2ubuntu4.3 [1130 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsqlite3-0 amd64 3.22.0-1 [496 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic/main amd64 libroken18-heimdal amd64 7.5.0+dfsg-1 [41.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic/main amd64 libasn1-8-heimdal amd64 7.5.0+dfsg-1 [175 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic/main amd64 libheimbase1-heimdal amd64 7.5.0+dfsg-1 [29.3 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic/main amd64 libhcrypto4-heimdal amd64 7.5.0+dfsg-1 [85.9 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic/main amd64 libwind0-heimdal amd64 7.5.0+dfsg-1 [47.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic/main amd64 libhx509-5-heimdal amd64 7.5.0+dfsg-1 [107 kB]
+Get:19 http://archive.ubuntu.com/ubuntu bionic/main amd64 libkrb5-26-heimdal amd64 7.5.0+dfsg-1 [206 kB]
+Get:20 http://archive.ubuntu.com/ubuntu bionic/main amd64 libheimntlm0-heimdal amd64 7.5.0+dfsg-1 [14.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgssapi3-heimdal amd64 7.5.0+dfsg-1 [96.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-modules-db amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [14.8 kB]
+Get:23 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-2 amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [49.2 kB]
+Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-common all 2.4.45+dfsg-1ubuntu1.1 [16.6 kB]
+Get:25 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.1 [155 kB]
+Get:26 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+Get:27 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:28 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnghttp2-14 amd64 1.30.0-1ubuntu1 [77.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu bionic/main amd64 libicu60 amd64 60.2-3ubuntu3 [8054 kB]
+Get:30 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxml2 amd64 2.9.4+dfsg1-6.1ubuntu1.2 [663 kB]
+Get:31 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.5 [1071 kB]
+Get:32 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.5 [83.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.5 [160 kB]
+Get:34 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.5 [95.1 kB]
+Get:35 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 openssl amd64 1.1.0g-2ubuntu4.3 [532 kB]
+Get:36 http://archive.ubuntu.com/ubuntu bionic/main amd64 ca-certificates all 20180409 [151 kB]
+Get:37 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic-mgc amd64 1:5.32-2ubuntu0.1 [184 kB]
+Get:38 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic1 amd64 1:5.32-2ubuntu0.1 [68.4 kB]
+Get:39 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 file amd64 1:5.32-2ubuntu0.1 [22.1 kB]
+Get:40 http://archive.ubuntu.com/ubuntu bionic/main amd64 netbase all 5.4 [12.7 kB]
+Get:41 http://archive.ubuntu.com/ubuntu bionic/main amd64 xz-utils amd64 5.2.2-1.3 [83.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu bionic/main amd64 libpsl5 amd64 0.19.1-5build1 [41.8 kB]
+Get:43 http://archive.ubuntu.com/ubuntu bionic/main amd64 publicsuffix all 20180223.1310-1 [97.6 kB]
+Get:44 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 wget amd64 1.19.4-1ubuntu2.1 [316 kB]
+Get:45 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-modules amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [48.7 kB]
+Get:46 http://archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Get:47 http://archive.ubuntu.com/ubuntu bionic/main amd64 unzip amd64 6.0-21ubuntu1 [167 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 21.5 MB in 2s (10.4 MB/s)
+Selecting previously unselected package perl-modules-5.26.
+(Reading database ... 4039 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb ...
+Unpacking perl-modules-5.26 (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package libgdbm5:amd64.
+Preparing to unpack .../01-libgdbm5_1.14.1-6_amd64.deb ...
+Unpacking libgdbm5:amd64 (1.14.1-6) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.14.1-6_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.14.1-6) ...
+Selecting previously unselected package libperl5.26:amd64.
+Preparing to unpack .../03-libperl5.26_5.26.1-6ubuntu0.3_amd64.deb ...
+Unpacking libperl5.26:amd64 (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.26.1-6ubuntu0.3_amd64.deb ...
+Unpacking perl (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../05-mime-support_3.60ubuntu1_all.deb ...
+Unpacking mime-support (3.60ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../06-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../07-libexpat1_2.2.5-3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.5-3) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../08-libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.0g-2ubuntu4.3) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../09-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../10-libsqlite3-0_3.22.0-1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.22.0-1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../11-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../12-libroken18-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../13-libasn1-8-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../14-libheimbase1-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../15-libhcrypto4-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../16-libwind0-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../17-libhx509-5-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../18-libkrb5-26-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../19-libheimntlm0-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../20-libgssapi3-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../21-libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../22-libsasl2-2_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../23-libldap-common_2.4.45+dfsg-1ubuntu1.1_all.deb ...
+Unpacking libldap-common (2.4.45+dfsg-1ubuntu1.1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../24-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../25-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../26-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../27-libnghttp2-14_1.30.0-1ubuntu1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
+Selecting previously unselected package libicu60:amd64.
+Preparing to unpack .../28-libicu60_60.2-3ubuntu3_amd64.deb ...
+Unpacking libicu60:amd64 (60.2-3ubuntu3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../29-libxml2_2.9.4+dfsg1-6.1ubuntu1.2_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.4+dfsg1-6.1ubuntu1.2) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../30-apache2-bin_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../31-apache2-utils_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../32-apache2-data_2.4.29-1ubuntu4.5_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../33-apache2_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../34-openssl_1.1.0g-2ubuntu4.3_amd64.deb ...
+Unpacking openssl (1.1.0g-2ubuntu4.3) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../35-ca-certificates_20180409_all.deb ...
+Unpacking ca-certificates (20180409) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../36-libmagic-mgc_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking libmagic-mgc (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../37-libmagic1_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../38-file_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking file (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../39-netbase_5.4_all.deb ...
+Unpacking netbase (5.4) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../40-xz-utils_5.2.2-1.3_amd64.deb ...
+Unpacking xz-utils (5.2.2-1.3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../41-libpsl5_0.19.1-5build1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.19.1-5build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../42-publicsuffix_20180223.1310-1_all.deb ...
+Unpacking publicsuffix (20180223.1310-1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../43-wget_1.19.4-1ubuntu2.1_amd64.deb ...
+Unpacking wget (1.19.4-1ubuntu2.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../44-libsasl2-modules_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../45-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Selecting previously unselected package unzip.
+Preparing to unpack .../46-unzip_6.0-21ubuntu1_amd64.deb ...
+Unpacking unzip (6.0-21ubuntu1) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Setting up libexpat1:amd64 (2.2.5-3) ...
+Setting up libicu60:amd64 (60.2-3ubuntu3) ...
+Setting up libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
+Setting up mime-support (3.60ubuntu1) ...
+Setting up libldap-common (2.4.45+dfsg-1ubuntu1.1) ...
+Setting up libpsl5:amd64 (0.19.1-5build1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up unzip (6.0-21ubuntu1) ...
+Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up apache2-data (2.4.29-1ubuntu4.5) ...
+Setting up libroken18-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up perl-modules-5.26 (5.26.1-6ubuntu0.3) ...
+Setting up libgdbm5:amd64 (1.14.1-6) ...
+Setting up libxml2:amd64 (2.9.4+dfsg1-6.1ubuntu1.2) ...
+Setting up libmagic-mgc (1:5.32-2ubuntu0.1) ...
+Setting up libmagic1:amd64 (1:5.32-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up publicsuffix (20180223.1310-1) ...
+Setting up libssl1.1:amd64 (1.1.0g-2ubuntu4.3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up xz-utils (5.2.2-1.3) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Setting up libheimbase1-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up openssl (1.1.0g-2ubuntu4.3) ...
+Setting up wget (1.19.4-1ubuntu2.1) ...
+Setting up libsqlite3-0:amd64 (3.22.0-1) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libgdbm-compat4:amd64 (1.14.1-6) ...
+Setting up libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up ca-certificates (20180409) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+133 added, 0 removed; done.
+Setting up netbase (5.4) ...
+Setting up libwind0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.5) ...
+Setting up libasn1-8-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up ssl-cert (1.0.39) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up file (1:5.32-2ubuntu0.1) ...
+Setting up libhx509-5-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libperl5.26:amd64 (5.26.1-6ubuntu0.3) ...
+Setting up libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up perl (5.26.1-6ubuntu0.3) ...
+Setting up libgssapi3-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.5) ...
+Setting up apache2 (2.4.29-1ubuntu4.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for ca-certificates (20180409) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Removing intermediate container eb838ada673e
+ ---> cd1b37d5f4b2
+Step 4/9 : WORKDIR /opt
+ ---> Running in c6d750d1ffd6
+Removing intermediate container c6d750d1ffd6
+ ---> 1dd184c4f7aa
+Step 5/9 : RUN wget https://www.tooplate.com/zip-templates/2108_dashboard.zip
+ ---> Running in 555a5146b726
+--2019-02-10 15:53:56--  https://www.tooplate.com/zip-templates/2108_dashboard.zip
+Resolving www.tooplate.com (www.tooplate.com)... 67.227.140.19
+Connecting to www.tooplate.com (www.tooplate.com)|67.227.140.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2515546 (2.4M) [application/zip]
+Saving to: '2108_dashboard.zip'
+
+     0K .......... .......... .......... .......... ..........  2%  538K 4s
+    50K .......... .......... .......... .......... ..........  4%  801K 4s
+   100K .......... .......... .......... .......... ..........  6%  804K 3s
+   150K .......... .......... .......... .......... ..........  8%  804K 3s
+   200K .......... .......... .......... .......... .......... 10% 1.51M 3s
+   250K .......... .......... .......... .......... .......... 12% 1.55M 2s
+   300K .......... .......... .......... .......... .......... 14%  791K 2s
+   350K .......... .......... .......... .......... .......... 16% 1.54M 2s
+   400K .......... .......... .......... .......... .......... 18% 1.55M 2s
+   450K .......... .......... .......... .......... .......... 20% 1.56M 2s
+   500K .......... .......... .......... .......... .......... 22% 1.53M 2s
+   550K .......... .......... .......... .......... .......... 24% 1.54M 2s
+   600K .......... .......... .......... .......... .......... 26%  219M 2s
+   650K .......... .......... .......... .......... .......... 28% 1.54M 1s
+   700K .......... .......... .......... .......... .......... 30% 1.53M 1s
+   750K .......... .......... .......... .......... .......... 32% 1.53M 1s
+   800K .......... .......... .......... .......... .......... 34% 1.54M 1s
+   850K .......... .......... .......... .......... .......... 36%  218M 1s
+   900K .......... .......... .......... .......... .......... 38% 1.51M 1s
+   950K .......... .......... .......... .......... .......... 40% 1.55M 1s
+  1000K .......... .......... .......... .......... .......... 42% 52.3M 1s
+  1050K .......... .......... .......... .......... .......... 44% 1.55M 1s
+  1100K .......... .......... .......... .......... .......... 46% 53.0M 1s
+  1150K .......... .......... .......... .......... .......... 48% 1.53M 1s
+  1200K .......... .......... .......... .......... .......... 50% 1.54M 1s
+  1250K .......... .......... .......... .......... .......... 52%  272M 1s
+  1300K .......... .......... .......... .......... .......... 54% 1.52M 1s
+  1350K .......... .......... .......... .......... .......... 56%  301M 1s
+  1400K .......... .......... .......... .......... .......... 59% 1.46M 1s
+  1450K .......... .......... .......... .......... .......... 61% 1.57M 1s
+  1500K .......... .......... .......... .......... .......... 63% 82.8M 1s
+  1550K .......... .......... .......... .......... .......... 65% 1.50M 1s
+  1600K .......... .......... .......... .......... .......... 67% 73.6M 0s
+  1650K .......... .......... .......... .......... .......... 69% 1.54M 0s
+  1700K .......... .......... .......... .......... .......... 71% 80.4M 0s
+  1750K .......... .......... .......... .......... .......... 73% 1.52M 0s
+  1800K .......... .......... .......... .......... .......... 75%  202M 0s
+  1850K .......... .......... .......... .......... .......... 77% 1.47M 0s
+  1900K .......... .......... .......... .......... .......... 79%  275M 0s
+  1950K .......... .......... .......... .......... .......... 81% 1.48M 0s
+  2000K .......... .......... .......... .......... .......... 83%  232M 0s
+  2050K .......... .......... .......... .......... .......... 85% 1.48M 0s
+  2100K .......... .......... .......... .......... .......... 87% 40.7M 0s
+  2150K .......... .......... .......... .......... .......... 89% 64.0M 0s
+  2200K .......... .......... .......... .......... .......... 91% 1.55M 0s
+  2250K .......... .......... .......... .......... .......... 93%  291M 0s
+  2300K .......... .......... .......... .......... .......... 95% 1.46M 0s
+  2350K .......... .......... .......... .......... .......... 97% 49.6M 0s
+  2400K .......... .......... .......... .......... .......... 99% 1.61M 0s
+  2450K ......                                                100%  217M=1.2s
+
+2019-02-10 15:53:58 (1.92 MB/s) - '2108_dashboard.zip' saved [2515546/2515546]
+
+Removing intermediate container 555a5146b726
+ ---> 905372c02731
+Step 6/9 : RUN unzip 2108_dashboard.zip
+ ---> Running in f15189babe0a
+Archive:  2108_dashboard.zip
+   creating: 2108_dashboard/
+  inflating: 2108_dashboard/accounts.html
+  inflating: 2108_dashboard/add-product.html
+   creating: 2108_dashboard/css/
+  inflating: 2108_dashboard/css/bootstrap.min.css
+  inflating: 2108_dashboard/css/fontawesome.min.css
+  inflating: 2108_dashboard/css/fullcalendar.min.css
+  inflating: 2108_dashboard/css/tooplate.css
+  inflating: 2108_dashboard/edit-product.html
+   creating: 2108_dashboard/img/
+  inflating: 2108_dashboard/img/dash-bg-01.jpg
+  inflating: 2108_dashboard/img/dash-bg-02.jpg
+  inflating: 2108_dashboard/img/dash-bg-03.jpg
+  inflating: 2108_dashboard/img/product-image.jpg
+  inflating: 2108_dashboard/img/profile-image.png
+  inflating: 2108_dashboard/index.html
+   creating: 2108_dashboard/jquery-ui-datepicker/
+  inflating: 2108_dashboard/jquery-ui-datepicker/AUTHORS.txt
+   creating: 2108_dashboard/jquery-ui-datepicker/external/
+   creating: 2108_dashboard/jquery-ui-datepicker/external/jquery/
+  inflating: 2108_dashboard/jquery-ui-datepicker/external/jquery/jquery.js
+   creating: 2108_dashboard/jquery-ui-datepicker/images/
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/index.html
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/LICENSE.txt
+  inflating: 2108_dashboard/jquery-ui-datepicker/package.json
+   creating: 2108_dashboard/js/
+  inflating: 2108_dashboard/js/bootstrap.min.js
+  inflating: 2108_dashboard/js/Chart.min.js
+  inflating: 2108_dashboard/js/fullcalendar.min.js
+  inflating: 2108_dashboard/js/jquery-3.3.1.min.js
+  inflating: 2108_dashboard/js/moment.min.js
+  inflating: 2108_dashboard/js/tooplate-scripts.js
+  inflating: 2108_dashboard/js/utils.js
+  inflating: 2108_dashboard/LICENSE-fullcalendar.txt
+  inflating: 2108_dashboard/login.html
+  inflating: 2108_dashboard/products.html
+   creating: 2108_dashboard/webfonts/
+  inflating: 2108_dashboard/webfonts/fa-brands-400.eot
+  inflating: 2108_dashboard/webfonts/fa-brands-400.svg
+  inflating: 2108_dashboard/webfonts/fa-brands-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-regular-400.eot
+  inflating: 2108_dashboard/webfonts/fa-regular-400.svg
+  inflating: 2108_dashboard/webfonts/fa-regular-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-solid-900.eot
+  inflating: 2108_dashboard/webfonts/fa-solid-900.svg
+  inflating: 2108_dashboard/webfonts/fa-solid-900.ttf
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff2
+  inflating: 2108_dashboard/ABOUT THIS TEMPLATE.txt
+Removing intermediate container f15189babe0a
+ ---> 014e312db5fb
+Step 7/9 : RUN cp -r 2108_dashboard/* /var/www/html
+ ---> Running in 817d931afc5b
+Removing intermediate container 817d931afc5b
+ ---> a2d52fdb4cfd
+Step 8/9 : EXPOSE 80
+ ---> Running in 6820ceb971aa
+Removing intermediate container 6820ceb971aa
+ ---> 8d096edaee29
+Step 9/9 : CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+ ---> Running in ed19c4cb7fef
+Removing intermediate container ed19c4cb7fef
+ ---> 79b3078af1d9
+Successfully built 79b3078af1d9
+Successfully tagged sai:latest
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sai                 latest              79b3078af1d9        13 seconds ago      223MB
+krish               latest              08b07364f5b2        3 minutes ago       470MB
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker exec -it ^C
+[root@ip-172-31-19-188 ~]# netstat -tlnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      2663/rpcbind
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3288/sshd
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      3152/master
+tcp6       0      0 :::111                  :::*                    LISTEN      2663/rpcbind
+tcp6       0      0 :::22                   :::*                    LISTEN      3288/sshd
+[root@ip-172-31-19-188 ~]# doc^C
+[root@ip-172-31-19-188 ~]# docekr ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# docker rm -f $(docker ps -aq)
+aa1546793025
+31c386176485
+[root@ip-172-31-19-188 ~]# docker images^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# l^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker run ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sai                 latest              79b3078af1d9        50 seconds ago      223MB
+krish               latest              08b07364f5b2        4 minutes ago       470MB
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker run -it -d -p 80:80 79b3078af1d9 bash
+b90aafbfa8136cd5fe0061fea35e6578c2b3f0b255f4795381ee2f5e74adf918
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+b90aafbfa813        79b3078af1d9        "bash"              2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp   pedantic_cori
+[root@ip-172-31-19-188 ~]# docker rm -f $(docker ps -aq)
+b90aafbfa813
+[root@ip-172-31-19-188 ~]# docker rmi -f $(docker images -aq)
+Untagged: sai:latest
+Deleted: sha256:79b3078af1d9752cf62b38f64657c5723e9dfc6e1f065d6f58954d1478b4dd14
+Deleted: sha256:8d096edaee29e7229163ebdce33ba07f71848a8bb6fadcdbf022443b5ce7e194
+Deleted: sha256:a2d52fdb4cfd701baa486265ba3dab0e194352fef5ecebf7436afb870228f08a
+Deleted: sha256:269e3d0587b17c6407b885d7cee29eddbce5dcc9c88465f214788a9451a8b221
+Deleted: sha256:014e312db5fb5b2b9129d88520c0ae23791f27567104a2b6d1a102355a190e2a
+Deleted: sha256:6233232d8123496a1e3f6fa571d2d5c0c046019e72371b7807313da09fffff97
+Deleted: sha256:905372c02731cb05566fd0210954fd57970f16d3fb5f4f90e69222363ce16459
+Deleted: sha256:6709bca4b5015004028b42b88d5e851eeb3c220e01c90140a663984fc6dd7482
+Deleted: sha256:1dd184c4f7aa53ae6986fe8c7af60f9784b3ec5e4e3f9473fecc0de46d084463
+Deleted: sha256:cd1b37d5f4b2cb5c359cf311adbd0fce5d5b30611624708dbbc2cd6bf17ebce0
+Deleted: sha256:92ac0242dfc9b7ff9582e11830fbc71ba7bce930b2a170c0003c2643e6f20305
+Deleted: sha256:460a704893969d9b63f4290113d37814dc0214ea97aa929aae6d94d290df7e6f
+Deleted: sha256:fe839132ef5ac150cb79abe95ce15ec5b8fb3beef111396c7aca09e02e8e0bcf
+Untagged: krish:latest
+Deleted: sha256:08b07364f5b22423b243b4cd37465db2005c316e43d929f6d3a719f26b57222e
+Deleted: sha256:0b5af84558cfeb6aebb51091688afd10b109fc53a863e1018e14001203042e75
+Deleted: sha256:4fb347f964fd32452a9762ea2d5ce217c7221c9ca1e26b7ffca7238aa3a0d71e
+Deleted: sha256:4a6ae52b6d11781003d18817c0c59d80aef47d4939d9f17f538f73b6df1984a8
+Deleted: sha256:be9ae259da43c7fca404573b2af18972995d2bc93b08189322df3e2bfa25439a
+Deleted: sha256:8010d914b1a1a7ff7c3ced6ba4c25f36b53dfa0be9c96204c5a56fad5f5f0a4a
+Deleted: sha256:42e7e52118688f36c32e573a578ee82e811a8be4b7596ca38c21055e25aff122
+Deleted: sha256:7c3c1e2db94f3d619a70b6c52dfb6eaf4f3f1f5cd7269e5eca678771719f741d
+Deleted: sha256:950f54fbf4a88697f77ff8f6c268ac4e938b50760e7c02ec00f65d8544cb7b44
+Deleted: sha256:0925aad472429ab841e641f64a626e68a4d2172fa16ceb50673bbbfaa1f9ca02
+Deleted: sha256:814f82c16f704070d71465e9c3572b7b76b13e7c5ee20f929627a60fe9f5bbe1
+Deleted: sha256:2543bf032770074839605085b81f361f8ed54d734e3119b010922f4dd538bc90
+Deleted: sha256:c260c15745cd74e143794f0ce5697f1baa67d7c9de94c85edb61f1a459ddf721
+Untagged: ubuntu:latest
+Untagged: ubuntu@sha256:7a47ccc3bbe8a451b500d2b53104868b46d60ee8f5b35a24b41a86077c650210
+Deleted: sha256:47b19964fb500f3158ae57f20d16d8784cc4af37c52c49d3b4f5bc5eede49541
+Deleted: sha256:d4c69838355b876cd3eb0d92b4ef27b1839f5b094a4eb1ad2a1d747dd5d6088f
+Deleted: sha256:1c29a32189d8f2738d0d99378dc0912c9f9d289b52fb698bdd6c1c8cd7a33727
+Deleted: sha256:d801a12f6af7beff367268f99607376584d8b2da656dcd8656973b7ad9779ab4
+Deleted: sha256:bebe7ce6215aee349bee5d67222abeb5c5a834bbeaa2f2f5d05363d9fd68db41
+Untagged: centos:latest
+Untagged: centos@sha256:184e5f35598e333bfa7de10d8fb1cebb5ee4df5bc0f970bf2b1e7c7345136426
+Deleted: sha256:1e1148e4cc2c148c6890a18e3b2d2dde41a6745ceb4e5fe94a923d811bf82ddb
+Deleted: sha256:071d8bd765171080d01682844524be57ac9883e53079b6ac66707e192ea25956
+Error response from daemon: conflict: unable to delete 8d096edaee29 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete a2d52fdb4cfd (cannot be forced) - image has dependent child images
+Error: No such image: 905372c02731
+Error: No such image: 014e312db5fb
+Error: No such image: cd1b37d5f4b2
+Error: No such image: 1dd184c4f7aa
+Error: No such image: 460a70489396
+Error response from daemon: conflict: unable to delete 4fb347f964fd (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 0b5af84558cf (cannot be forced) - image has dependent child images
+Error: No such image: 42e7e5211868
+Error: No such image: be9ae259da43
+Error: No such image: 950f54fbf4a8
+Error: No such image: 0925aad47242
+Error: No such image: 2543bf032770
+[root@ip-172-31-19-188 ~]# vi D
+[root@ip-172-31-19-188 ~]# vi Dockerfile
+[root@ip-172-31-19-188 ~]# docker build -t sai .
+Sending build context to Docker daemon  11.26kB
+Step 1/9 : FROM ubuntu:latest
+latest: Pulling from library/ubuntu
+6cf436f81810: Pull complete
+987088a85b96: Pull complete
+b4624b3efe06: Pull complete
+d42beb8ded59: Pull complete
+Digest: sha256:7a47ccc3bbe8a451b500d2b53104868b46d60ee8f5b35a24b41a86077c650210
+Status: Downloaded newer image for ubuntu:latest
+ ---> 47b19964fb50
+Step 2/9 : RUN apt-get update -y
+ ---> Running in 482e86c9a8e3
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [147 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [3451 B]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [339 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [10.7 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [679 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [929 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [6955 B]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4690 B]
+Fetched 15.5 MB in 3s (5720 kB/s)
+Reading package lists...
+Removing intermediate container 482e86c9a8e3
+ ---> ad0df5aea224
+Step 3/9 : RUN apt-get install wget unzip apache2 -y
+ ---> Running in 78a7e78f6016
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils ca-certificates file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal
+  libexpat1 libgdbm-compat4 libgdbm5 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal libicu60
+  libkrb5-26-heimdal libldap-2.4-2 libldap-common liblua5.2-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.26 libpsl5 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.1 libwind0-heimdal
+  libxml2 mime-support netbase openssl perl perl-modules-5.26 publicsuffix
+  ssl-cert xz-utils
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw
+  gdbm-l10n libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  openssl-blacklist zip
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils ca-certificates file libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasn1-8-heimdal
+  libexpat1 libgdbm-compat4 libgdbm5 libgssapi3-heimdal libhcrypto4-heimdal
+  libheimbase1-heimdal libheimntlm0-heimdal libhx509-5-heimdal libicu60
+  libkrb5-26-heimdal libldap-2.4-2 libldap-common liblua5.2-0 libmagic-mgc
+  libmagic1 libnghttp2-14 libperl5.26 libpsl5 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.1 libwind0-heimdal
+  libxml2 mime-support netbase openssl perl perl-modules-5.26 publicsuffix
+  ssl-cert unzip wget xz-utils
+0 upgraded, 47 newly installed, 0 to remove and 3 not upgraded.
+Need to get 21.5 MB of archives.
+After this operation, 101 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl-modules-5.26 all 5.26.1-6ubuntu0.3 [2763 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm5 amd64 1.14.1-6 [26.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgdbm-compat4 amd64 1.14.1-6 [6084 B]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libperl5.26 amd64 5.26.1-6ubuntu0.3 [3527 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 perl amd64 5.26.1-6ubuntu0.3 [201 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/main amd64 mime-support all 3.60ubuntu1 [30.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/main amd64 libexpat1 amd64 2.2.5-3 [80.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libssl1.1 amd64 1.1.0g-2ubuntu4.3 [1130 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsqlite3-0 amd64 3.22.0-1 [496 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic/main amd64 libroken18-heimdal amd64 7.5.0+dfsg-1 [41.3 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic/main amd64 libasn1-8-heimdal amd64 7.5.0+dfsg-1 [175 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic/main amd64 libheimbase1-heimdal amd64 7.5.0+dfsg-1 [29.3 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic/main amd64 libhcrypto4-heimdal amd64 7.5.0+dfsg-1 [85.9 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic/main amd64 libwind0-heimdal amd64 7.5.0+dfsg-1 [47.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic/main amd64 libhx509-5-heimdal amd64 7.5.0+dfsg-1 [107 kB]
+Get:19 http://archive.ubuntu.com/ubuntu bionic/main amd64 libkrb5-26-heimdal amd64 7.5.0+dfsg-1 [206 kB]
+Get:20 http://archive.ubuntu.com/ubuntu bionic/main amd64 libheimntlm0-heimdal amd64 7.5.0+dfsg-1 [14.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu bionic/main amd64 libgssapi3-heimdal amd64 7.5.0+dfsg-1 [96.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-modules-db amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [14.8 kB]
+Get:23 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-2 amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [49.2 kB]
+Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-common all 2.4.45+dfsg-1ubuntu1.1 [16.6 kB]
+Get:25 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libldap-2.4-2 amd64 2.4.45+dfsg-1ubuntu1.1 [155 kB]
+Get:26 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+Get:27 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:28 http://archive.ubuntu.com/ubuntu bionic/main amd64 libnghttp2-14 amd64 1.30.0-1ubuntu1 [77.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu bionic/main amd64 libicu60 amd64 60.2-3ubuntu3 [8054 kB]
+Get:30 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libxml2 amd64 2.9.4+dfsg1-6.1ubuntu1.2 [663 kB]
+Get:31 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.5 [1071 kB]
+Get:32 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.5 [83.3 kB]
+Get:33 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.5 [160 kB]
+Get:34 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.5 [95.1 kB]
+Get:35 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 openssl amd64 1.1.0g-2ubuntu4.3 [532 kB]
+Get:36 http://archive.ubuntu.com/ubuntu bionic/main amd64 ca-certificates all 20180409 [151 kB]
+Get:37 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic-mgc amd64 1:5.32-2ubuntu0.1 [184 kB]
+Get:38 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libmagic1 amd64 1:5.32-2ubuntu0.1 [68.4 kB]
+Get:39 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 file amd64 1:5.32-2ubuntu0.1 [22.1 kB]
+Get:40 http://archive.ubuntu.com/ubuntu bionic/main amd64 netbase all 5.4 [12.7 kB]
+Get:41 http://archive.ubuntu.com/ubuntu bionic/main amd64 xz-utils amd64 5.2.2-1.3 [83.8 kB]
+Get:42 http://archive.ubuntu.com/ubuntu bionic/main amd64 libpsl5 amd64 0.19.1-5build1 [41.8 kB]
+Get:43 http://archive.ubuntu.com/ubuntu bionic/main amd64 publicsuffix all 20180223.1310-1 [97.6 kB]
+Get:44 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 wget amd64 1.19.4-1ubuntu2.1 [316 kB]
+Get:45 http://archive.ubuntu.com/ubuntu bionic/main amd64 libsasl2-modules amd64 2.1.27~101-g0780600+dfsg-3ubuntu2 [48.7 kB]
+Get:46 http://archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Get:47 http://archive.ubuntu.com/ubuntu bionic/main amd64 unzip amd64 6.0-21ubuntu1 [167 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 21.5 MB in 3s (7364 kB/s)
+Selecting previously unselected package perl-modules-5.26.
+(Reading database ... 4039 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb ...
+Unpacking perl-modules-5.26 (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package libgdbm5:amd64.
+Preparing to unpack .../01-libgdbm5_1.14.1-6_amd64.deb ...
+Unpacking libgdbm5:amd64 (1.14.1-6) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../02-libgdbm-compat4_1.14.1-6_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.14.1-6) ...
+Selecting previously unselected package libperl5.26:amd64.
+Preparing to unpack .../03-libperl5.26_5.26.1-6ubuntu0.3_amd64.deb ...
+Unpacking libperl5.26:amd64 (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.26.1-6ubuntu0.3_amd64.deb ...
+Unpacking perl (5.26.1-6ubuntu0.3) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../05-mime-support_3.60ubuntu1_all.deb ...
+Unpacking mime-support (3.60ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../06-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../07-libexpat1_2.2.5-3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.5-3) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../08-libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.0g-2ubuntu4.3) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../09-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../10-libsqlite3-0_3.22.0-1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.22.0-1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../11-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../12-libroken18-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../13-libasn1-8-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../14-libheimbase1-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../15-libhcrypto4-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../16-libwind0-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../17-libhx509-5-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../18-libkrb5-26-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../19-libheimntlm0-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../20-libgssapi3-heimdal_7.5.0+dfsg-1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (7.5.0+dfsg-1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../21-libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../22-libsasl2-2_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../23-libldap-common_2.4.45+dfsg-1ubuntu1.1_all.deb ...
+Unpacking libldap-common (2.4.45+dfsg-1ubuntu1.1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../24-libldap-2.4-2_2.4.45+dfsg-1ubuntu1.1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../25-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../26-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../27-libnghttp2-14_1.30.0-1ubuntu1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
+Selecting previously unselected package libicu60:amd64.
+Preparing to unpack .../28-libicu60_60.2-3ubuntu3_amd64.deb ...
+Unpacking libicu60:amd64 (60.2-3ubuntu3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../29-libxml2_2.9.4+dfsg1-6.1ubuntu1.2_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.4+dfsg1-6.1ubuntu1.2) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../30-apache2-bin_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../31-apache2-utils_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../32-apache2-data_2.4.29-1ubuntu4.5_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../33-apache2_2.4.29-1ubuntu4.5_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.5) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../34-openssl_1.1.0g-2ubuntu4.3_amd64.deb ...
+Unpacking openssl (1.1.0g-2ubuntu4.3) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../35-ca-certificates_20180409_all.deb ...
+Unpacking ca-certificates (20180409) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../36-libmagic-mgc_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking libmagic-mgc (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../37-libmagic1_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../38-file_1%3a5.32-2ubuntu0.1_amd64.deb ...
+Unpacking file (1:5.32-2ubuntu0.1) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../39-netbase_5.4_all.deb ...
+Unpacking netbase (5.4) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../40-xz-utils_5.2.2-1.3_amd64.deb ...
+Unpacking xz-utils (5.2.2-1.3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../41-libpsl5_0.19.1-5build1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.19.1-5build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../42-publicsuffix_20180223.1310-1_all.deb ...
+Unpacking publicsuffix (20180223.1310-1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../43-wget_1.19.4-1ubuntu2.1_amd64.deb ...
+Unpacking wget (1.19.4-1ubuntu2.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../44-libsasl2-modules_2.1.27~101-g0780600+dfsg-3ubuntu2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../45-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Selecting previously unselected package unzip.
+Preparing to unpack .../46-unzip_6.0-21ubuntu1_amd64.deb ...
+Unpacking unzip (6.0-21ubuntu1) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Setting up libexpat1:amd64 (2.2.5-3) ...
+Setting up libicu60:amd64 (60.2-3ubuntu3) ...
+Setting up libnghttp2-14:amd64 (1.30.0-1ubuntu1) ...
+Setting up mime-support (3.60ubuntu1) ...
+Setting up libldap-common (2.4.45+dfsg-1ubuntu1.1) ...
+Setting up libpsl5:amd64 (0.19.1-5build1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up unzip (6.0-21ubuntu1) ...
+Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up apache2-data (2.4.29-1ubuntu4.5) ...
+Setting up libroken18-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up perl-modules-5.26 (5.26.1-6ubuntu0.3) ...
+Setting up libgdbm5:amd64 (1.14.1-6) ...
+Setting up libxml2:amd64 (2.9.4+dfsg1-6.1ubuntu1.2) ...
+Setting up libmagic-mgc (1:5.32-2ubuntu0.1) ...
+Setting up libmagic1:amd64 (1:5.32-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up publicsuffix (20180223.1310-1) ...
+Setting up libssl1.1:amd64 (1.1.0g-2ubuntu4.3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up xz-utils (5.2.2-1.3) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Setting up libheimbase1-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up openssl (1.1.0g-2ubuntu4.3) ...
+Setting up wget (1.19.4-1ubuntu2.1) ...
+Setting up libsqlite3-0:amd64 (3.22.0-1) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libgdbm-compat4:amd64 (1.14.1-6) ...
+Setting up libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3ubuntu2) ...
+Setting up ca-certificates (20180409) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+133 added, 0 removed; done.
+Setting up netbase (5.4) ...
+Setting up libwind0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.5) ...
+Setting up libasn1-8-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libhcrypto4-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up ssl-cert (1.0.39) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up file (1:5.32-2ubuntu0.1) ...
+Setting up libhx509-5-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libperl5.26:amd64 (5.26.1-6ubuntu0.3) ...
+Setting up libkrb5-26-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libheimntlm0-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up perl (5.26.1-6ubuntu0.3) ...
+Setting up libgssapi3-heimdal:amd64 (7.5.0+dfsg-1) ...
+Setting up libldap-2.4-2:amd64 (2.4.45+dfsg-1ubuntu1.1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.5) ...
+Setting up apache2 (2.4.29-1ubuntu4.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for ca-certificates (20180409) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Removing intermediate container 78a7e78f6016
+ ---> 045e91ab0be4
+Step 4/9 : WORKDIR /opt
+ ---> Running in 693ade37e2d7
+Removing intermediate container 693ade37e2d7
+ ---> 17ef526d44e1
+Step 5/9 : RUN wget https://www.tooplate.com/zip-templates/2108_dashboard.zip
+ ---> Running in 41f9a09b3bb2
+--2019-02-10 15:58:46--  https://www.tooplate.com/zip-templates/2108_dashboard.zip
+Resolving www.tooplate.com (www.tooplate.com)... 67.227.140.19
+Connecting to www.tooplate.com (www.tooplate.com)|67.227.140.19|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2515546 (2.4M) [application/zip]
+Saving to: '2108_dashboard.zip'
+
+     0K .......... .......... .......... .......... ..........  2%  529K 5s
+    50K .......... .......... .......... .......... ..........  4%  794K 4s
+   100K .......... .......... .......... .......... ..........  6%  783K 3s
+   150K .......... .......... .......... .......... ..........  8% 1.52M 3s
+   200K .......... .......... .......... .......... .......... 10% 1.53M 3s
+   250K .......... .......... .......... .......... .......... 12%  784K 3s
+   300K .......... .......... .......... .......... .......... 14% 1.52M 2s
+   350K .......... .......... .......... .......... .......... 16% 1.52M 2s
+   400K .......... .......... .......... .......... .......... 18% 1.50M 2s
+   450K .......... .......... .......... .......... .......... 20% 1.52M 2s
+   500K .......... .......... .......... .......... .......... 22% 1.51M 2s
+   550K .......... .......... .......... .......... .......... 24%  238M 2s
+   600K .......... .......... .......... .......... .......... 26% 1.49M 2s
+   650K .......... .......... .......... .......... .......... 28% 1.52M 1s
+   700K .......... .......... .......... .......... .......... 30% 1.49M 1s
+   750K .......... .......... .......... .......... .......... 32%  288M 1s
+   800K .......... .......... .......... .......... .......... 34% 1.44M 1s
+   850K .......... .......... .......... .......... .......... 36% 1.52M 1s
+   900K .......... .......... .......... .......... .......... 38% 1.49M 1s
+   950K .......... .......... .......... .......... .......... 40% 50.7M 1s
+  1000K .......... .......... .......... .......... .......... 42% 1.52M 1s
+  1050K .......... .......... .......... .......... .......... 44%  308M 1s
+  1100K .......... .......... .......... .......... .......... 46% 1.48M 1s
+  1150K .......... .......... .......... .......... .......... 48% 1.47M 1s
+  1200K .......... .......... .......... .......... .......... 50%  244M 1s
+  1250K .......... .......... .......... .......... .......... 52% 1.47M 1s
+  1300K .......... .......... .......... .......... .......... 54% 85.5M 1s
+  1350K .......... .......... .......... .......... .......... 56% 1.49M 1s
+  1400K .......... .......... .......... .......... .......... 59% 1.50M 1s
+  1450K .......... .......... .......... .......... .......... 61%  288M 1s
+  1500K .......... .......... .......... .......... .......... 63% 1.44M 1s
+  1550K .......... .......... .......... .......... .......... 65% 69.1M 1s
+  1600K .......... .......... .......... .......... .......... 67% 1.52M 0s
+  1650K .......... .......... .......... .......... .......... 69% 82.4M 0s
+  1700K .......... .......... .......... .......... .......... 71% 1.49M 0s
+  1750K .......... .......... .......... .......... .......... 73%  308M 0s
+  1800K .......... .......... .......... .......... .......... 75% 1.44M 0s
+  1850K .......... .......... .......... .......... .......... 77%  124M 0s
+  1900K .......... .......... .......... .......... .......... 79% 1.49M 0s
+  1950K .......... .......... .......... .......... .......... 81%  291M 0s
+  2000K .......... .......... .......... .......... .......... 83% 1.46M 0s
+  2050K .......... .......... .......... .......... .......... 85% 46.4M 0s
+  2100K .......... .......... .......... .......... .......... 87% 66.7M 0s
+  2150K .......... .......... .......... .......... .......... 89% 1.53M 0s
+  2200K .......... .......... .......... .......... .......... 91%  282M 0s
+  2250K .......... .......... .......... .......... .......... 93% 1.43M 0s
+  2300K .......... .......... .......... .......... .......... 95% 71.3M 0s
+  2350K .......... .......... .......... .......... .......... 97% 1.54M 0s
+  2400K .......... .......... .......... .......... .......... 99% 80.6M 0s
+  2450K ......                                                100%  266M=1.2s
+
+2019-02-10 15:58:48 (1.99 MB/s) - '2108_dashboard.zip' saved [2515546/2515546]
+
+Removing intermediate container 41f9a09b3bb2
+ ---> 07307366e860
+Step 6/9 : RUN unzip 2108_dashboard.zip
+ ---> Running in 8a970abc37ef
+Archive:  2108_dashboard.zip
+   creating: 2108_dashboard/
+  inflating: 2108_dashboard/accounts.html
+  inflating: 2108_dashboard/add-product.html
+   creating: 2108_dashboard/css/
+  inflating: 2108_dashboard/css/bootstrap.min.css
+  inflating: 2108_dashboard/css/fontawesome.min.css
+  inflating: 2108_dashboard/css/fullcalendar.min.css
+  inflating: 2108_dashboard/css/tooplate.css
+  inflating: 2108_dashboard/edit-product.html
+   creating: 2108_dashboard/img/
+  inflating: 2108_dashboard/img/dash-bg-01.jpg
+  inflating: 2108_dashboard/img/dash-bg-02.jpg
+  inflating: 2108_dashboard/img/dash-bg-03.jpg
+  inflating: 2108_dashboard/img/product-image.jpg
+  inflating: 2108_dashboard/img/profile-image.png
+  inflating: 2108_dashboard/index.html
+   creating: 2108_dashboard/jquery-ui-datepicker/
+  inflating: 2108_dashboard/jquery-ui-datepicker/AUTHORS.txt
+   creating: 2108_dashboard/jquery-ui-datepicker/external/
+   creating: 2108_dashboard/jquery-ui-datepicker/external/jquery/
+  inflating: 2108_dashboard/jquery-ui-datepicker/external/jquery/jquery.js
+   creating: 2108_dashboard/jquery-ui-datepicker/images/
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png
+  inflating: 2108_dashboard/jquery-ui-datepicker/index.html
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.min.js
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.structure.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/jquery-ui.theme.min.css
+  inflating: 2108_dashboard/jquery-ui-datepicker/LICENSE.txt
+  inflating: 2108_dashboard/jquery-ui-datepicker/package.json
+   creating: 2108_dashboard/js/
+  inflating: 2108_dashboard/js/bootstrap.min.js
+  inflating: 2108_dashboard/js/Chart.min.js
+  inflating: 2108_dashboard/js/fullcalendar.min.js
+  inflating: 2108_dashboard/js/jquery-3.3.1.min.js
+  inflating: 2108_dashboard/js/moment.min.js
+  inflating: 2108_dashboard/js/tooplate-scripts.js
+  inflating: 2108_dashboard/js/utils.js
+  inflating: 2108_dashboard/LICENSE-fullcalendar.txt
+  inflating: 2108_dashboard/login.html
+  inflating: 2108_dashboard/products.html
+   creating: 2108_dashboard/webfonts/
+  inflating: 2108_dashboard/webfonts/fa-brands-400.eot
+  inflating: 2108_dashboard/webfonts/fa-brands-400.svg
+  inflating: 2108_dashboard/webfonts/fa-brands-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff
+  inflating: 2108_dashboard/webfonts/fa-brands-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-regular-400.eot
+  inflating: 2108_dashboard/webfonts/fa-regular-400.svg
+  inflating: 2108_dashboard/webfonts/fa-regular-400.ttf
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff
+  inflating: 2108_dashboard/webfonts/fa-regular-400.woff2
+  inflating: 2108_dashboard/webfonts/fa-solid-900.eot
+  inflating: 2108_dashboard/webfonts/fa-solid-900.svg
+  inflating: 2108_dashboard/webfonts/fa-solid-900.ttf
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff
+  inflating: 2108_dashboard/webfonts/fa-solid-900.woff2
+  inflating: 2108_dashboard/ABOUT THIS TEMPLATE.txt
+Removing intermediate container 8a970abc37ef
+ ---> 4c7b10f7dbcd
+Step 7/9 : RUN cp -r 2108_dashboard/* /var/www/html
+ ---> Running in 2f00995b0cea
+Removing intermediate container 2f00995b0cea
+ ---> 17b4656d9cba
+Step 8/9 : EXPOSE 80
+ ---> Running in 674d92bc120a
+Removing intermediate container 674d92bc120a
+ ---> 839165519a2b
+Step 9/9 : CMD [“apachectl, “-D”, “FOREGROUND”]
+ ---> Running in 6646a7871b0f
+Removing intermediate container 6646a7871b0f
+ ---> 70534c5c9efb
+Successfully built 70534c5c9efb
+Successfully tagged sai:latest
+[root@ip-172-31-19-188 ~]# docekr image^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]# ^C
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sai                 latest              70534c5c9efb        9 seconds ago       223MB
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+[root@ip-172-31-19-188 ~]# docker run -it --name sun -d -p 80
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+[root@ip-172-31-19-188 ~]# docker run -it --name sun -d -p 80:80 70534c5c9efb bash
+8c2f507f7a2c7140feeb67ea4dd2dbd543ad7e31c8fd6fd1f7527b0e20e6e967
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+8c2f507f7a2c        70534c5c9efb        "bash"              2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp   sun
+[root@ip-172-31-19-188 ~]# netstat -tlnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      2663/rpcbind
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3288/sshd
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      3152/master
+tcp6       0      0 :::111                  :::*                    LISTEN      2663/rpcbind
+tcp6       0      0 :::80                   :::*                    LISTEN      3980/docker-proxy
+tcp6       0      0 :::22                   :::*                    LISTEN      3288/sshd
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+8c2f507f7a2c        70534c5c9efb        "bash"              36 seconds ago      Up 36 seconds       0.0.0.0:80->80/tcp   sun
+[root@ip-172-31-19-188 ~]# docker exec -it 8c2f507f7a2c bash
+root@8c2f507f7a2c:/opt# curl localhost
+bash: curl: command not found
+root@8c2f507f7a2c:/opt# apt-get install curl -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 librtmp1
+Suggested packages:
+  krb5-doc krb5-user
+The following NEW packages will be installed:
+  curl krb5-locales libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 librtmp1
+0 upgraded, 9 newly installed, 0 to remove and 3 not upgraded.
+Need to get 967 kB of archives.
+After this operation, 3289 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 krb5-locales all 1.16-2ubuntu0.1 [13.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5support0 amd64 1.16-2ubuntu0.1 [30.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libk5crypto3 amd64 1.16-2ubuntu0.1 [85.6 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic/main amd64 libkeyutils1 amd64 1.5.9-9.2ubuntu2 [8720 B]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libkrb5-3 amd64 1.16-2ubuntu0.1 [279 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libgssapi-krb5-2 amd64 1.16-2ubuntu0.1 [122 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-1 [54.2 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.6 [214 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.6 [159 kB]
+Fetched 967 kB in 1s (1426 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package krb5-locales.
+(Reading database ... 7284 files and directories currently installed.)
+Preparing to unpack .../0-krb5-locales_1.16-2ubuntu0.1_all.deb ...
+Unpacking krb5-locales (1.16-2ubuntu0.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../1-libkrb5support0_1.16-2ubuntu0.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.16-2ubuntu0.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../2-libk5crypto3_1.16-2ubuntu0.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.16-2ubuntu0.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../3-libkeyutils1_1.5.9-9.2ubuntu2_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.5.9-9.2ubuntu2) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../4-libkrb5-3_1.16-2ubuntu0.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.16-2ubuntu0.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../5-libgssapi-krb5-2_1.16-2ubuntu0.1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.16-2ubuntu0.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../6-librtmp1_2.4+20151223.gitfa8646d.1-1_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../7-libcurl4_7.58.0-2ubuntu3.6_amd64.deb ...
+Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.6) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../8-curl_7.58.0-2ubuntu3.6_amd64.deb ...
+Unpacking curl (7.58.0-2ubuntu3.6) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1) ...
+Setting up libkrb5support0:amd64 (1.16-2ubuntu0.1) ...
+Setting up krb5-locales (1.16-2ubuntu0.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up libkeyutils1:amd64 (1.5.9-9.2ubuntu2) ...
+Setting up libk5crypto3:amd64 (1.16-2ubuntu0.1) ...
+Setting up libkrb5-3:amd64 (1.16-2ubuntu0.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.16-2ubuntu0.1) ...
+Setting up libcurl4:amd64 (7.58.0-2ubuntu3.6) ...
+Setting up curl (7.58.0-2ubuntu3.6) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+root@8c2f507f7a2c:/opt# curl localhost
+curl: (7) Failed to connect to localhost port 80: Connection refused
+root@8c2f507f7a2c:/opt# service httpd staus
+httpd: unrecognized service
+root@8c2f507f7a2c:/opt# ps -eaf | grep apache
+root       126    10  0 16:00 pts/1    00:00:00 grep --color=auto apache
+root@8c2f507f7a2c:/opt# ps -eaf | grep httpd
+root       128    10  0 16:00 pts/1    00:00:00 grep --color=auto httpd
+root@8c2f507f7a2c:/opt# netstat -tnlp
+bash: netstat: command not found
+root@8c2f507f7a2c:/opt#

@@ -1,0 +1,443 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Fri Feb  8 14:16:02 2019 from 122.166.94.168
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-19-188 ~]$ sudos u
+-bash: sudos: command not found
+[ec2-user@ip-172-31-19-188 ~]$ sudo su
+[root@ip-172-31-19-188 ec2-user]# cd
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              45 hours ago        Up 45 hours                             vigilant_mirzakhani
+ce09af96edb4        ubuntu              "bash"              46 hours ago        Up 46 hours                             flamboyant_allen
+[root@ip-172-31-19-188 ~]# docker -it -d 14c51e818d0d bash
+unknown shorthand flag: 'i' in -it
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  checkpoint  Manage checkpoints
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+[root@ip-172-31-19-188 ~]# docker run -d 14c51e818d0d bash
+Unable to find image '14c51e818d0d:latest' locally
+docker: Error response from daemon: pull access denied for 14c51e818d0d, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+[root@ip-172-31-19-188 ~]# docker run -it -d centos bash
+49ab4c6c9192021eba261c91b9c6c6c606eb23ca88b4c71375fe4f6a9abe52d8
+[root@ip-172-31-19-188 ~]# docker exec -it -d centos bash
+Error: No such container: centos
+[root@ip-172-31-19-188 ~]# docker exec -it centos bash
+Error: No such container: centos
+[root@ip-172-31-19-188 ~]# dock
+[root@ip-172-31-19-188 ~]# docker status
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  config      Manage Docker configs
+  container   Manage containers
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+[root@ip-172-31-19-188 ~]# docker service status
+
+Usage:  docker service COMMAND
+
+Manage services
+
+Commands:
+  create      Create a new service
+  inspect     Display detailed information on one or more services
+  logs        Fetch the logs of a service or task
+  ls          List services
+  ps          List the tasks of one or more services
+  rm          Remove one or more services
+  rollback    Revert changes to a service's configuration
+  scale       Scale one or multiple replicated services
+  update      Update a service
+
+Run 'docker service COMMAND --help' for more information on a command.
+[root@ip-172-31-19-188 ~]# docker service start
+
+Usage:  docker service COMMAND
+
+Manage services
+
+Commands:
+  create      Create a new service
+  inspect     Display detailed information on one or more services
+  logs        Fetch the logs of a service or task
+  ls          List services
+  ps          List the tasks of one or more services
+  rm          Remove one or more services
+  rollback    Revert changes to a service's configuration
+  scale       Scale one or multiple replicated services
+  update      Update a service
+
+Run 'docker service COMMAND --help' for more information on a command.
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+49ab4c6c9192        centos              "bash"              3 minutes ago       Up 3 minutes                            trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              45 hours ago        Up 45 hours                             vigilant_mirzakhani
+ce09af96edb4        ubuntu              "bash"              46 hours ago        Up 46 hours                             flamboyant_allen
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker service status
+
+Usage:  docker service COMMAND
+
+Manage services
+
+Commands:
+  create      Create a new service
+  inspect     Display detailed information on one or more services
+  logs        Fetch the logs of a service or task
+  ls          List services
+  ps          List the tasks of one or more services
+  rm          Remove one or more services
+  rollback    Revert changes to a service's configuration
+  scale       Scale one or multiple replicated services
+  update      Update a service
+
+Run 'docker service COMMAND --help' for more information on a command.
+[root@ip-172-31-19-188 ~]# service docker status
+Redirecting to /bin/systemctl status docker.service
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2019-02-08 14:18:26 UTC; 1 day 23h ago
+     Docs: https://docs.docker.com
+  Process: 11969 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 11927 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 11978 (dockerd)
+    Tasks: 64
+   Memory: 234.5M
+   CGroup: /system.slice/docker.service
+           ├─ 9597 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/ce09af96edb44236e24c06ec41bd...
+           ├─10089 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/14c51e818d0dd79a7652bf32d9a8...
+           ├─10275 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/11f7885f25783db9d4e1287ab5aa...
+           ├─11978 /usr/bin/dockerd --default-ulimit nofile=1024:4096
+           ├─11988 docker-containerd --config /var/run/docker/containerd/containerd.toml
+           └─18326 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/49ab4c6c9192021eba261c91b9c6...
+
+Feb 08 14:18:26 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T14:18:26.071471818Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 08 15:40:02 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T15:40:02Z" level=info msg="shim docker-containerd-shim started" address="/cont...pid=9597
+Feb 08 16:00:12 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:00:12Z" level=info msg="shim docker-containerd-shim started" address="/cont...pid=9789
+Feb 08 16:04:37 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:04:37Z" level=info msg="shim reaped" id=14c51e818d0dd79a7652bf32d9a86bcdf94...7e27caa3
+Feb 08 16:04:37 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:04:37.682565024Z" level=info msg="ignoring event" module=libcontainerd name...kDelete"
+Feb 08 16:07:34 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:07:34Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=10089
+Feb 08 16:08:25 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:08:25Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=10275
+Feb 10 13:21:01 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:21:01.934101887Z" level=error msg="Not continuing with pull after error: er...uired\n"
+Feb 10 13:21:01 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:21:01.934647215Z" level=info msg="Ignoring extra error returned from regist...equired"
+Feb 10 13:22:07 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:22:07Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=18326
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# service docker status
+Redirecting to /bin/systemctl status docker.service
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Fri 2019-02-08 14:18:26 UTC; 1 day 23h ago
+     Docs: https://docs.docker.com
+  Process: 11969 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 11927 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 11978 (dockerd)
+    Tasks: 64
+   Memory: 234.5M
+   CGroup: /system.slice/docker.service
+           ├─ 9597 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/ce09af96edb44236e24c06ec41bd...
+           ├─10089 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/14c51e818d0dd79a7652bf32d9a8...
+           ├─10275 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/11f7885f25783db9d4e1287ab5aa...
+           ├─11978 /usr/bin/dockerd --default-ulimit nofile=1024:4096
+           ├─11988 docker-containerd --config /var/run/docker/containerd/containerd.toml
+           └─18326 docker-containerd-shim -namespace moby -workdir /var/lib/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/49ab4c6c9192021eba261c91b9c6...
+
+Feb 08 14:18:26 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T14:18:26.071471818Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 08 15:40:02 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T15:40:02Z" level=info msg="shim docker-containerd-shim started" address="/cont...pid=9597
+Feb 08 16:00:12 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:00:12Z" level=info msg="shim docker-containerd-shim started" address="/cont...pid=9789
+Feb 08 16:04:37 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:04:37Z" level=info msg="shim reaped" id=14c51e818d0dd79a7652bf32d9a86bcdf94...7e27caa3
+Feb 08 16:04:37 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:04:37.682565024Z" level=info msg="ignoring event" module=libcontainerd name...kDelete"
+Feb 08 16:07:34 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:07:34Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=10089
+Feb 08 16:08:25 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-08T16:08:25Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=10275
+Feb 10 13:21:01 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:21:01.934101887Z" level=error msg="Not continuing with pull after error: er...uired\n"
+Feb 10 13:21:01 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:21:01.934647215Z" level=info msg="Ignoring extra error returned from regist...equired"
+Feb 10 13:22:07 ip-172-31-19-188.ec2.internal dockerd[11978]: time="2019-02-10T13:22:07Z" level=info msg="shim docker-containerd-shim started" address="/cont...id=18326
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@ip-172-31-19-188 ~]#
+[root@ip-172-31-19-188 ~]# sudo su
+[root@ip-172-31-19-188 ~]# cd
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+49ab4c6c9192        centos              "bash"              7 minutes ago       Up 7 minutes                            trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              45 hours ago        Up 45 hours                             vigilant_mirzakhani
+ce09af96edb4        ubuntu              "bash"              46 hours ago        Up 46 hours                             flamboyant_allen
+[root@ip-172-31-19-188 ~]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+49ab4c6c9192        centos              "bash"              8 minutes ago       Up 8 minutes                            trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 45 hours                             vigilant_mirzakhani
+ce09af96edb4        ubuntu              "bash"              46 hours ago        Up 46 hours                             flamboyant_allen
+[root@ip-172-31-19-188 ~]# docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+Digest: sha256:7a47ccc3bbe8a451b500d2b53104868b46d60ee8f5b35a24b41a86077c650210
+Status: Image is up to date for ubuntu:latest
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker run -it -d ubuntu bash
+09f054afa2c2b7d08f2c06da93e00244b260ca1e10e408a312add587e9e41f41
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+09f054afa2c2        ubuntu              "bash"              48 seconds ago      Up 47 seconds                           agitated_hodgkin
+49ab4c6c9192        centos              "bash"              12 minutes ago      Up 12 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 45 hours                             vigilant_mirzakhani
+ce09af96edb4        ubuntu              "bash"              46 hours ago        Up 46 hours                             flamboyant_allen
+[root@ip-172-31-19-188 ~]# docker rm ce09af96edb4
+Error response from daemon: You cannot remove a running container ce09af96edb44236e24c06ec41bdf425a0f4d57a797eeab2abaf63f99295a67b. Stop the container before attempting removal or force remove
+[root@ip-172-31-19-188 ~]# docker stop ce09af96edb4
+ce09af96edb4
+[root@ip-172-31-19-188 ~]# docker rm ce09af96edb4
+ce09af96edb4
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+09f054afa2c2        ubuntu              "bash"              2 minutes ago       Up 2 minutes                            agitated_hodgkin
+49ab4c6c9192        centos              "bash"              13 minutes ago      Up 13 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 45 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]# docker ps -q
+09f054afa2c2
+49ab4c6c9192
+11f7885f2578
+14c51e818d0d
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+09f054afa2c2        ubuntu              "bash"              3 minutes ago       Up 3 minutes                            agitated_hodgkin
+49ab4c6c9192        centos              "bash"              14 minutes ago      Up 14 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              45 hours ago        Up 45 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 45 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              47b19964fb50        4 days ago          88.1MB
+centos              latest              1e1148e4cc2c        2 months ago        202MB
+[root@ip-172-31-19-188 ~]# docker run -it -d --name myapp 47b19964fb50
+e73d0658b8c906c07c27e724d65c4d1d1d20a4479182c9b36474db6fe5b298d9
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+e73d0658b8c9        47b19964fb50        "/bin/bash"         5 seconds ago       Up 3 seconds                            myapp
+09f054afa2c2        ubuntu              "bash"              6 minutes ago       Up 6 minutes                            agitated_hodgkin
+49ab4c6c9192        centos              "bash"              17 minutes ago      Up 17 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              46 hours ago        Up 46 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 46 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]# docker exec -it myapp bash
+root@e73d0658b8c9:/# ps
+  PID TTY          TIME CMD
+   10 pts/1    00:00:00 bash
+   19 pts/1    00:00:00 ps
+root@e73d0658b8c9:/# ps -eaf
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 13:39 pts/0    00:00:00 /bin/bash
+root        10     0  0 13:40 pts/1    00:00:00 bash
+root        20    10  0 13:41 pts/1    00:00:00 ps -eaf
+root@e73d0658b8c9:/# kill -9 1
+root@e73d0658b8c9:/# ps -eaf
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 13:39 pts/0    00:00:00 /bin/bash
+root        10     0  0 13:40 pts/1    00:00:00 bash
+root        21    10  0 13:44 pts/1    00:00:00 ps -eaf
+root@e73d0658b8c9:/# exit
+exit
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+e73d0658b8c9        47b19964fb50        "/bin/bash"         5 minutes ago       Up 5 minutes                            myapp
+09f054afa2c2        ubuntu              "bash"              11 minutes ago      Up 11 minutes                           agitated_hodgkin
+49ab4c6c9192        centos              "bash"              23 minutes ago      Up 23 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              46 hours ago        Up 46 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 46 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]# docker exec -it myapp bash
+root@e73d0658b8c9:/# sudo su
+bash: sudo: command not found
+root@e73d0658b8c9:/# cd
+root@e73d0658b8c9:~# mkdir devops
+root@e73d0658b8c9:~# ls
+devops
+root@e73d0658b8c9:~# cd /tmp
+root@e73d0658b8c9:/tmp# mkdir devops
+root@e73d0658b8c9:/tmp# ls
+devops
+root@e73d0658b8c9:/tmp# touch sunday
+root@e73d0658b8c9:/tmp# ls
+devops  sunday
+root@e73d0658b8c9:/tmp# exit
+exit
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+e73d0658b8c9        47b19964fb50        "/bin/bash"         10 minutes ago      Up 10 minutes                           myapp
+09f054afa2c2        ubuntu              "bash"              16 minutes ago      Up 16 minutes                           agitated_hodgkin
+49ab4c6c9192        centos              "bash"              28 minutes ago      Up 28 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              46 hours ago        Up 46 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 46 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]# docker stop myapp
+myapp
+[root@ip-172-31-19-188 ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+09f054afa2c2        ubuntu              "bash"              17 minutes ago      Up 17 minutes                           agitated_hodgkin
+49ab4c6c9192        centos              "bash"              29 minutes ago      Up 29 minutes                           trusting_haibt
+11f7885f2578        centos              "bash"              46 hours ago        Up 46 hours                             lucid_golick
+14c51e818d0d        centos              "bash"              46 hours ago        Up 46 hours                             vigilant_mirzakhani
+[root@ip-172-31-19-188 ~]#
