@@ -1,0 +1,737 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+4 package(s) needed for security, out of 9 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-80-73 ~]$ sudo su
+[root@ip-172-31-80-73 ec2-user]# cd
+[root@ip-172-31-80-73 ~]# K
+[root@ip-172-31-80-73 ~]# aws configure
+AWS Access Key ID [None]: AKIAJUPDUEDBF75HYZYA
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-east-2
+Default output format [None]: json
+[root@ip-172-31-80-73 ~]# aws s3 ls
+[root@ip-172-31-80-73 ~]# aws s3 ls --profile myuser
+
+The config profile (myuser) could not be found
+[root@ip-172-31-80-73 ~]# aws s3 ls --profile test
+
+The config profile (test) could not be found
+[root@ip-172-31-80-73 ~]# aws configure --profile test
+AWS Access Key ID [None]: AKIAJUPDUEDBF75HYZYA
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-east-1
+Default output format [None]: text
+[root@ip-172-31-80-73 ~]# aws s3 ls
+[root@ip-172-31-80-73 ~]# aws s3 ls --profile myuser
+
+The config profile (myuser) could not be found
+[root@ip-172-31-80-73 ~]# aws s3 ls --profile test
+[root@ip-172-31-80-73 ~]# ls
+[root@ip-172-31-80-73 ~]# aws -version
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: too few arguments
+[root@ip-172-31-80-73 ~]# aws --version
+aws-cli/1.15.80 Python/2.7.14 Linux/4.14.88-88.76.amzn2.x86_64 botocore/1.10.79
+[root@ip-172-31-80-73 ~]# cd /opt/
+[root@ip-172-31-80-73 opt]# ls
+aws  rh
+[root@ip-172-31-80-73 opt]# yum install wget
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                            | 2.4 kB  00:00:00
+Package wget-1.14-18.amzn2.x86_64 already installed and latest version
+Nothing to do
+[root@ip-172-31-80-73 opt]# wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+--2019-02-15 14:47:01--  https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+Resolving releases.hashicorp.com (releases.hashicorp.com)... 151.101.249.183, 2a04:4e42:3b::439
+Connecting to releases.hashicorp.com (releases.hashicorp.com)|151.101.249.183|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 20971661 (20M) [application/zip]
+Saving to: ‘terraform_0.11.11_linux_amd64.zip’
+
+100%[===================================================>] 20,971,661   109MB/s   in 0.2s
+
+2019-02-15 14:47:01 (109 MB/s) - ‘terraform_0.11.11_linux_amd64.zip’ saved [20971661/20971661]
+
+[root@ip-172-31-80-73 opt]# ks
+bash: ks: command not found
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# unzip https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+unzip:  cannot find or open https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip, https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip.zip or https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip.ZIP.
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# unzip terraform_0.11.11_linux_amd64.zip
+Archive:  terraform_0.11.11_linux_amd64.zip
+  inflating: terraform
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# cd terraform
+bash: cd: terraform: Not a directory
+[root@ip-172-31-80-73 opt]# mv terraform /usr/local/bin/
+[root@ip-172-31-80-73 opt]# teraform -version
+bash: teraform: command not found
+[root@ip-172-31-80-73 opt]# terraform -version
+bash: terraform: command not found
+[root@ip-172-31-80-73 opt]# vi /etc/
+[root@ip-172-31-80-73 opt]# cd /etc/
+[root@ip-172-31-80-73 etc]# ls
+adjtime                  group                nanorc             scl
+aliases                  group-               netconfig          screenrc
+aliases.db               grub2.cfg            NetworkManager     securetty
+alternatives             grub.d               networks           security
+amazon                   gshadow              nfs.conf           selinux
+anacrontab               gshadow-             nfsmount.conf      services
+at.deny                  gss                  nsswitch.conf      sestatus.conf
+audisp                   gssproxy             nsswitch.conf.bak  setuptool.d
+audit                    hibagent-config.cfg  openldap           shadow
+bash_completion.d        host.conf            opt                shadow-
+bashrc                   hostname             os-release         shells
+binfmt.d                 hosts                pam.d              skel
+chkconfig.d              hosts.allow          passwd             ssh
+chrony.conf              hosts.deny           passwd-            ssl
+chrony.keys              idmapd.conf          pkcs11             statetab
+cifs-utils               image-id             pki                statetab.d
+cloud                    init.d               plymouth           subgid
+cron.d                   inittab              pm                 subuid
+cron.daily               inputrc              popt.d             sudo.conf
+cron.deny                iproute2             postfix            sudoers
+cron.hourly              issue                ppp                sudoers.d
+cron.monthly             issue.net            prelink.conf.d     sudo-ldap.conf
+crontab                  krb5.conf            printcap           sysconfig
+cron.weekly              krb5.conf.d          profile            sysctl.conf
+csh.cshrc                ld.so.cache          profile.d          sysctl.d
+csh.login                ld.so.conf           protocols          systemd
+dbus-1                   ld.so.conf.d         python             system-release
+default                  libaudit.conf        rc0.d              system-release-cpe
+depmod.d                 libnl                rc1.d              terminfo
+dhcp                     libuser.conf         rc2.d              tmpfiles.d
+DIR_COLORS               locale.conf          rc3.d              trusted-key.key
+DIR_COLORS.256color      localtime            rc4.d              udev
+DIR_COLORS.lightbgcolor  login.defs           rc5.d              updatedb.conf
+dracut.conf              logrotate.conf       rc6.d              update-motd.d
+dracut.conf.d            logrotate.d          rc.d               vconsole.conf
+e2fsck.conf              lsm                  rc.local           vimrc
+environment              lvm                  request-key.conf   virc
+exports                  machine-id           request-key.d      wgetrc
+exports.d                magic                resolv.conf        X11
+filesystems              man_db.conf          rpc                xdg
+fstab                    mke2fs.conf          rpm                xinetd.d
+gcrypt                   modprobe.d           rsyncd.conf        yum
+GeoIP.conf               modules-load.d       rsyslog.conf       yum.conf
+GeoIP.conf.default       motd                 rsyslog.d          yum.repos.d
+gnupg                    mtab                 rwtab
+GREP_COLORS              my.cnf               rwtab.d
+groff                    my.cnf.d             sasl2
+[root@ip-172-31-80-73 etc]# vi /etc/profile.d/tera.sh
+[root@ip-172-31-80-73 etc]#
+[root@ip-172-31-80-73 etc]# terraform
+bash: terraform: command not found
+[root@ip-172-31-80-73 etc]# terraform -version
+bash: terraform: command not found
+[root@ip-172-31-80-73 etc]# source /etc/profile.d/tera.sh
+[root@ip-172-31-80-73 etc]# terraform -version
+bash: terraform: command not found
+[root@ip-172-31-80-73 etc]# cd /opt/
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# vi /usr/bin/
+[root@ip-172-31-80-73 opt]# cd /usr/bin/
+[root@ip-172-31-80-73 bin]# ls
+[                                   join                     reset
+a2p                                 journalctl               resizecons
+ac                                  jp.py                    rev
+addr2line                           jp.py-2                  rm
+alias                               jp.py-2.7                rmail
+amazon-linux-extras                 jsonpointer              rmail.postfix
+amazon-ssm-agent                    json_reformat            rmdir
+apropos                             jsonschema               rnano
+ar                                  json_verify              rngtest
+arch                                kbdinfo                  rpcgen
+as                                  kbd_mode                 rpm
+at                                  kbdrate                  rpm2cpio
+atq                                 kernel-install           rpmdb
+atrm                                keyctl                   rpmkeys
+attr                                kill                     rpmquery
+aulast                              killall                  rpmverify
+aulastlog                           kmod                     rst2html
+ausyscall                           last                     rst2latex
+auvirt                              lastb                    rst2man
+awk                                 lastcomm                 rst2odt
+aws                                 lastlog                  rst2odt_prepstyles
+aws_completer                       lchfn                    rst2pseudoxml
+base64                              lchsh                    rst2s5
+basename                            ld                       rst2xetex
+bash                                ld.bfd                   rst2xml
+bashbug                             ldd                      rstpep2html
+bashbug-64                          ld.gold                  rsync
+batch                               less                     rsyslog-recover-qi.pl
+bc                                  lessecho                 runcon
+bg                                  lesskey                  run-parts
+blkiomon                            lesspipe.sh              rvi
+blkparse                            lexgrog                  rview
+blkrawverify                        link                     rvim
+blktrace                            linux32                  s2p
+bno_plot.py                         linux64                  sadf
+bond2team                           linux-boot-prober        sar
+bootctl                             ln                       scl
+btrace                              loadkeys                 scl_enabled
+btrecord                            loadunimap               scl_source
+btreplay                            locale                   scp
+btt                                 localectl                screen
+bunzip2                             localedef                script
+busctl                              locate                   scriptreplay
+bzcat                               logger                   sdiff
+bzcmp                               login                    secon
+bzdiff                              loginctl                 sed
+bzgrep                              logname                  seq
+bzip2                               look                     setarch
+bzip2recover                        ls                       setfacl
+bzless                              lsattr                   setfattr
+bzmore                              lsblk                    setfont
+c2ph                                lscpu                    setkeycodes
+cal                                 lsinitrd                 setleds
+ca-legacy                           lsipc                    setmetamode
+captoinfo                           lslocks                  setpriv
+cat                                 lslogins                 setserial
+catchsegv                           lsmcli                   setsid
+catman                              lsmd                     setterm
+cd                                  lsmem                    setup
+centrino-decode                     lsns                     setup-nsssysinit
+certutil                            lua                      setup-nsssysinit.sh
+c++filt                             luac                     setvtrgb
+chacl                               lz4                      sftp
+chage                               lz4c                     sg
+chardetect                          lz4cat                   sh
+chattr                              machinectl               sha1sum
+chcon                               mailq                    sha224sum
+chgrp                               mailq.postfix            sha256sum
+chmem                               make                     sha384sum
+chmod                               makedb                   sha512sum
+chown                               man                      show-changed-rco
+chronyc                             mandb                    showconsolefont
+chrt                                manpath                  show-installed
+chvt                                mapscrn                  showkey
+cifsiostat                          mcookie                  shred
+cksum                               md5sum                   shuf
+clear                               mesg                     signtool
+cloud-init                          mkdir                    signver
+cloud-init-per                      mkfifo                   simc_lsmplugin
+cmp                                 mkinitrd                 sim_lsmplugin
+cmsutil                             mknod                    size
+col                                 mktemp                   skill
+colcrt                              modutil                  slabtop
+colrm                               more                     sleep
+column                              mount                    slogin
+comm                                mountpoint               snice
+command                             mpstat                   soelim
+consolehelper                       msgattrib                sort
+coredumpctl                         msgcat                   sotruss
+cp                                  msgcmp                   splain
+cpio                                msgcomm                  split
+cpupower                            msgconv                  sprof
+crlutil                             msgen                    sqlite3
+crontab                             msgexec                  ssh
+csh                                 msgfilter                ssh-add
+csplit                              msgfmt                   ssh-agent
+csslint-0.6                         msggrep                  ssh-copy-id
+curl                                msghack                  ssh-keygen
+cut                                 msginit                  ssh-keyscan
+date                                msgmerge                 ssltap
+db_archive                          msgunfmt                 ssm-cli
+db_checkpoint                       msguniq                  ssm-document-worker
+db_deadlock                         mv                       ssm-session-logger
+db_dump                             namei                    ssm-session-worker
+db_dump185                          nano                     stapbpf
+db_hotbackup                        needs-restarting         stapdyn
+db_load                             neqn                     stap-merge
+db_log_verify                       netstat                  stap-report
+db_printlog                         newaliases               staprun
+db_recover                          newaliases.postfix       stapsh
+db_replicate                        newgrp                   stat
+db_stat                             nf-ct-add                stdbuf
+db_tuner                            nf-ct-list               strace
+db_upgrade                          nf-exp-add               strace-log-merge
+dbus-cleanup-sockets                nf-exp-delete            strings
+dbus-daemon                         nf-exp-list              strip
+dbus-monitor                        nf-log                   stty
+dbus-run-session                    nf-monitor               su
+dbus-send                           nf-queue                 sudo
+dbus-test-tool                      nfsiostat-sysstat        sudoedit
+dbus-update-activation-environment  ngettext                 sudoreplay
+dbus-uuidgen                        nice                     sum
+db_verify                           nisdomainname            sync
+dc                                  nl                       systemctl
+dd                                  nl-addr-add              systemd-analyze
+deallocvt                           nl-addr-delete           systemd-ask-password
+debuginfo-install                   nl-addr-list             systemd-cat
+df                                  nl-class-add             systemd-cgls
+dgawk                               nl-class-delete          systemd-cgtop
+diff                                nl-classid-lookup        systemd-coredumpctl
+diff3                               nl-class-list            systemd-delta
+dig                                 nl-cls-add               systemd-detect-virt
+dir                                 nl-cls-delete            systemd-escape
+dircolors                           nl-cls-list              systemd-firstboot
+dirname                             nl-fib-lookup            systemd-hwdb
+dmesg                               nl-link-enslave          systemd-inhibit
+dnsdomainname                       nl-link-ifindex2name     systemd-loginctl
+domainname                          nl-link-list             systemd-machine-id-setup
+dracut                              nl-link-name2ifindex     systemd-notify
+du                                  nl-link-release          systemd-nspawn
+dumpkeys                            nl-link-set              systemd-path
+dwp                                 nl-link-stats            systemd-run
+easy_install                        nl-list-caches           systemd-stdio-bridge
+easy_install-2.7                    nl-list-sockets          systemd-sysv-convert
+ec2-metadata                        nl-monitor               systemd-tmpfiles
+echo                                nl-neigh-add             systemd-tty-ask-password-agent
+ed                                  nl-neigh-delete          tabs
+egrep                               nl-neigh-list            tac
+eject                               nl-neightbl-list         tail
+elfedit                             nl-pktloc-lookup         tapestat
+enable-ec2-spot-hibernation         nl-qdisc-add             tar
+env                                 nl-qdisc-delete          taskset
+envsubst                            nl-qdisc-list            tbl
+eqn                                 nl-route-add             tcptraceroute
+ex                                  nl-route-delete          tcsh
+expand                              nl-route-get             teamd
+expr                                nl-route-list            teamdctl
+factor                              nl-rule-list             teamnl
+fallocate                           nl-tctree-list           tee
+false                               nl-util-addr             test
+fc                                  nm                       tic
+fg                                  nohup                    time
+fgconsole                           nproc                    timedatectl
+fgrep                               nroff                    timeout
+file                                nsenter                  tload
+fincore                             nslookup                 toe
+find                                nsupdate                 top
+find2perl                           numfmt                   touch
+findmnt                             objcopy                  tput
+find-repos-of-install               objdump                  tr
+fipscheck                           od                       tracepath
+fipshmac                            oldfind                  tracepath6
+flock                               on_ac_power              traceroute
+fmt                                 open                     traceroute6
+fold                                openssl                  troff
+free                                openvt                   true
+funzip                              os-prober                truncate
+gapplication                        p11-kit                  trust
+gawk                                package-cleanup          tset
+gdbm_dump                           passwd                   tsort
+gdbm_load                           paste                    tty
+gdbmtool                            pathchk                  turbostat
+gdbus                               peekfd                   tzselect
+gencat                              perl                     udevadm
+genl-ctrl-list                      perl5.16.3               ul
+geoiplookup                         perlbug                  umask
+geoiplookup6                        perldoc                  umount
+geoipupdate                         perlthanks               unalias
+geqn                                pgawk                    uname
+getconf                             pgrep                    uname26
+getent                              pic                      unexpand
+getfacl                             piconv                   unicode_start
+getfattr                            pidstat                  unicode_stop
+getkeycodes                         pinentry                 uniq
+getopt                              pinentry-curses          unlink
+getopts                             ping                     unlz4
+gettext                             ping6                    unshare
+gettext.sh                          pinky                    unxz
+gio                                 pk12util                 unzip
+gio-querymodules-64                 pkg-config               unzipsfx
+glib-compile-schemas                pkill                    update-ca-trust
+gmake                               pl2pm                    updatedb
+gneqn                               pldd                     update-mime-database
+gnroff                              plymouth                 uptime
+gpasswd                             pmap                     urlgrabber
+gpg                                 pm-is-supported          users
+gpg2                                pod2html                 usleep
+gpg-agent                           pod2man                  utmpdump
+gpgconf                             pod2text                 uuidgen
+gpg-connect-agent                   pod2usage                vdir
+gpg-error                           post-grohtml             verify_blkparse
+gpgparsemail                        powernow-k8-decode       verifytree
+gpgsplit                            pr                       vi
+gpgv                                preconv                  view
+gpgv2                               pre-grohtml              vim
+gpg-zip                             printenv                 vimdiff
+gpic                                printf                   vimtutor
+gprof                               prlimit                  vlock
+grep                                prtstat                  vmstat
+groff                               ps                       w
+grops                               psed                     wait
+grotty                              psfaddtable              wall
+groups                              psfgettable              watch
+growpart                            psfstriptable            watchgnupg
+grub2-editenv                       psfxtable                wc
+grub2-file                          pstree                   wdctl
+grub2-fstest                        pstree.x11               wget
+grub2-glue-efi                      pstruct                  whatis
+grub2-kbdcomp                       ptx                      whereis
+grub2-menulst2cfg                   pwd                      which
+grub2-mkfont                        pwdx                     whiptail
+grub2-mkimage                       pwmake                   who
+grub2-mklayout                      pwscore                  whoami
+grub2-mknetdir                      pydoc                    write
+grub2-mkpasswd-pbkdf2               pyrsa-decrypt            x86_64
+grub2-mkrelpath                     pyrsa-decrypt-2          x86_energy_perf_policy
+grub2-mkrescue                      pyrsa-decrypt-bigfile    xargs
+grub2-mkstandalone                  pyrsa-decrypt-bigfile-2  xgettext
+grub2-render-label                  pyrsa-encrypt            xmlcatalog
+grub2-script-check                  pyrsa-encrypt-2          xmllint
+grub2-syslinux2cfg                  pyrsa-encrypt-bigfile    xmlwf
+gsettings                           pyrsa-encrypt-bigfile-2  xxd
+gsoelim                             pyrsa-keygen             xz
+gtar                                pyrsa-keygen-2           xzcat
+gtbl                                pyrsa-priv2pub           xzcmp
+gtroff                              pyrsa-priv2pub-2         xzdec
+gunzip                              pyrsa-sign               xzdiff
+gzexe                               pyrsa-sign-2             xzegrep
+gzip                                pyrsa-verify             xzfgrep
+h2ph                                pyrsa-verify-2           xzgrep
+head                                pystache                 xzless
+hexdump                             pystache-test            xzmore
+hibagent                            python                   yes
+host                                python2                  ypdomainname
+hostid                              python2.7                yum
+hostname                            python2.7-config         yum-builddep
+hostnamectl                         python2-config           yum-config-manager
+hunspell                            python-config            yum-debug-dump
+i386                                quota                    yum-debug-restore
+iconv                               quotasync                yumdownloader
+id                                  ranlib                   yum-groups-manager
+idiag-socket-details                raw                      zcat
+idn                                 rdate                    zcmp
+idn2                                read                     zdiff
+igawk                               readelf                  zegrep
+info                                readlink                 zfgrep
+infocmp                             realpath                 zforce
+infokey                             recode-sr-latin          zgrep
+infotocap                           red                      zip
+install                             rename                   zipcloak
+ionice                              renice                   zipgrep
+iostat                              repoclosure              zipinfo
+ipcalc                              repodiff                 zipnote
+ipcmk                               repo-graph               zipsplit
+ipcrm                               repomanage               zless
+ipcs                                repoquery                zmore
+iptables-xml                        repo-rss                 znew
+isosize                             reposync                 zsoelim
+jobs                                repotrack
+[root@ip-172-31-80-73 bin]# terraform -v
+bash: terraform: command not found
+[root@ip-172-31-80-73 bin]# cd
+[root@ip-172-31-80-73 ~]# cd /opt/
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# unzip terraform_0.11.11_linux_amd64.zip
+Archive:  terraform_0.11.11_linux_amd64.zip
+  inflating: terraform
+[root@ip-172-31-80-73 opt]# ls
+aws  rh  terraform  terraform_0.11.11_linux_amd64.zip
+[root@ip-172-31-80-73 opt]# cd
+[root@ip-172-31-80-73 ~]# vi .bashrc
+[root@ip-172-31-80-73 ~]# source ~/.bashrc
+[root@ip-172-31-80-73 ~]# terraform -v
+bash: terraform: command not found
+[root@ip-172-31-80-73 ~]# cd /etc/profile.d/
+[root@ip-172-31-80-73 profile.d]# rm -f tera.sh
+[root@ip-172-31-80-73 profile.d]# cd
+[root@ip-172-31-80-73 ~]# cd /usr/bin/
+[root@ip-172-31-80-73 bin]# ls
+[                                   join                     reset
+a2p                                 journalctl               resizecons
+ac                                  jp.py                    rev
+addr2line                           jp.py-2                  rm
+alias                               jp.py-2.7                rmail
+amazon-linux-extras                 jsonpointer              rmail.postfix
+amazon-ssm-agent                    json_reformat            rmdir
+apropos                             jsonschema               rnano
+ar                                  json_verify              rngtest
+arch                                kbdinfo                  rpcgen
+as                                  kbd_mode                 rpm
+at                                  kbdrate                  rpm2cpio
+atq                                 kernel-install           rpmdb
+atrm                                keyctl                   rpmkeys
+attr                                kill                     rpmquery
+aulast                              killall                  rpmverify
+aulastlog                           kmod                     rst2html
+ausyscall                           last                     rst2latex
+auvirt                              lastb                    rst2man
+awk                                 lastcomm                 rst2odt
+aws                                 lastlog                  rst2odt_prepstyles
+aws_completer                       lchfn                    rst2pseudoxml
+base64                              lchsh                    rst2s5
+basename                            ld                       rst2xetex
+bash                                ld.bfd                   rst2xml
+bashbug                             ldd                      rstpep2html
+bashbug-64                          ld.gold                  rsync
+batch                               less                     rsyslog-recover-qi.pl
+bc                                  lessecho                 runcon
+bg                                  lesskey                  run-parts
+blkiomon                            lesspipe.sh              rvi
+blkparse                            lexgrog                  rview
+blkrawverify                        link                     rvim
+blktrace                            linux32                  s2p
+bno_plot.py                         linux64                  sadf
+bond2team                           linux-boot-prober        sar
+bootctl                             ln                       scl
+btrace                              loadkeys                 scl_enabled
+btrecord                            loadunimap               scl_source
+btreplay                            locale                   scp
+btt                                 localectl                screen
+bunzip2                             localedef                script
+busctl                              locate                   scriptreplay
+bzcat                               logger                   sdiff
+bzcmp                               login                    secon
+bzdiff                              loginctl                 sed
+bzgrep                              logname                  seq
+bzip2                               look                     setarch
+bzip2recover                        ls                       setfacl
+bzless                              lsattr                   setfattr
+bzmore                              lsblk                    setfont
+c2ph                                lscpu                    setkeycodes
+cal                                 lsinitrd                 setleds
+ca-legacy                           lsipc                    setmetamode
+captoinfo                           lslocks                  setpriv
+cat                                 lslogins                 setserial
+catchsegv                           lsmcli                   setsid
+catman                              lsmd                     setterm
+cd                                  lsmem                    setup
+centrino-decode                     lsns                     setup-nsssysinit
+certutil                            lua                      setup-nsssysinit.sh
+c++filt                             luac                     setvtrgb
+chacl                               lz4                      sftp
+chage                               lz4c                     sg
+chardetect                          lz4cat                   sh
+chattr                              machinectl               sha1sum
+chcon                               mailq                    sha224sum
+chgrp                               mailq.postfix            sha256sum
+chmem                               make                     sha384sum
+chmod                               makedb                   sha512sum
+chown                               man                      show-changed-rco
+chronyc                             mandb                    showconsolefont
+chrt                                manpath                  show-installed
+chvt                                mapscrn                  showkey
+cifsiostat                          mcookie                  shred
+cksum                               md5sum                   shuf
+clear                               mesg                     signtool
+cloud-init                          mkdir                    signver
+cloud-init-per                      mkfifo                   simc_lsmplugin
+cmp                                 mkinitrd                 sim_lsmplugin
+cmsutil                             mknod                    size
+col                                 mktemp                   skill
+colcrt                              modutil                  slabtop
+colrm                               more                     sleep
+column                              mount                    slogin
+comm                                mountpoint               snice
+command                             mpstat                   soelim
+consolehelper                       msgattrib                sort
+coredumpctl                         msgcat                   sotruss
+cp                                  msgcmp                   splain
+cpio                                msgcomm                  split
+cpupower                            msgconv                  sprof
+crlutil                             msgen                    sqlite3
+crontab                             msgexec                  ssh
+csh                                 msgfilter                ssh-add
+csplit                              msgfmt                   ssh-agent
+csslint-0.6                         msggrep                  ssh-copy-id
+curl                                msghack                  ssh-keygen
+cut                                 msginit                  ssh-keyscan
+date                                msgmerge                 ssltap
+db_archive                          msgunfmt                 ssm-cli
+db_checkpoint                       msguniq                  ssm-document-worker
+db_deadlock                         mv                       ssm-session-logger
+db_dump                             namei                    ssm-session-worker
+db_dump185                          nano                     stapbpf
+db_hotbackup                        needs-restarting         stapdyn
+db_load                             neqn                     stap-merge
+db_log_verify                       netstat                  stap-report
+db_printlog                         newaliases               staprun
+db_recover                          newaliases.postfix       stapsh
+db_replicate                        newgrp                   stat
+db_stat                             nf-ct-add                stdbuf
+db_tuner                            nf-ct-list               strace
+db_upgrade                          nf-exp-add               strace-log-merge
+dbus-cleanup-sockets                nf-exp-delete            strings
+dbus-daemon                         nf-exp-list              strip
+dbus-monitor                        nf-log                   stty
+dbus-run-session                    nf-monitor               su
+dbus-send                           nf-queue                 sudo
+dbus-test-tool                      nfsiostat-sysstat        sudoedit
+dbus-update-activation-environment  ngettext                 sudoreplay
+dbus-uuidgen                        nice                     sum
+db_verify                           nisdomainname            sync
+dc                                  nl                       systemctl
+dd                                  nl-addr-add              systemd-analyze
+deallocvt                           nl-addr-delete           systemd-ask-password
+debuginfo-install                   nl-addr-list             systemd-cat
+df                                  nl-class-add             systemd-cgls
+dgawk                               nl-class-delete          systemd-cgtop
+diff                                nl-classid-lookup        systemd-coredumpctl
+diff3                               nl-class-list            systemd-delta
+dig                                 nl-cls-add               systemd-detect-virt
+dir                                 nl-cls-delete            systemd-escape
+dircolors                           nl-cls-list              systemd-firstboot
+dirname                             nl-fib-lookup            systemd-hwdb
+dmesg                               nl-link-enslave          systemd-inhibit
+dnsdomainname                       nl-link-ifindex2name     systemd-loginctl
+domainname                          nl-link-list             systemd-machine-id-setup
+dracut                              nl-link-name2ifindex     systemd-notify
+du                                  nl-link-release          systemd-nspawn
+dumpkeys                            nl-link-set              systemd-path
+dwp                                 nl-link-stats            systemd-run
+easy_install                        nl-list-caches           systemd-stdio-bridge
+easy_install-2.7                    nl-list-sockets          systemd-sysv-convert
+ec2-metadata                        nl-monitor               systemd-tmpfiles
+echo                                nl-neigh-add             systemd-tty-ask-password-agent
+ed                                  nl-neigh-delete          tabs
+egrep                               nl-neigh-list            tac
+eject                               nl-neightbl-list         tail
+elfedit                             nl-pktloc-lookup         tapestat
+enable-ec2-spot-hibernation         nl-qdisc-add             tar
+env                                 nl-qdisc-delete          taskset
+envsubst                            nl-qdisc-list            tbl
+eqn                                 nl-route-add             tcptraceroute
+ex                                  nl-route-delete          tcsh
+expand                              nl-route-get             teamd
+expr                                nl-route-list            teamdctl
+factor                              nl-rule-list             teamnl
+fallocate                           nl-tctree-list           tee
+false                               nl-util-addr             test
+fc                                  nm                       tic
+fg                                  nohup                    time
+fgconsole                           nproc                    timedatectl
+fgrep                               nroff                    timeout
+file                                nsenter                  tload
+fincore                             nslookup                 toe
+find                                nsupdate                 top
+find2perl                           numfmt                   touch
+findmnt                             objcopy                  tput
+find-repos-of-install               objdump                  tr
+fipscheck                           od                       tracepath
+fipshmac                            oldfind                  tracepath6
+flock                               on_ac_power              traceroute
+fmt                                 open                     traceroute6
+fold                                openssl                  troff
+free                                openvt                   true
+funzip                              os-prober                truncate
+gapplication                        p11-kit                  trust
+gawk                                package-cleanup          tset
+gdbm_dump                           passwd                   tsort
+gdbm_load                           paste                    tty
+gdbmtool                            pathchk                  turbostat
+gdbus                               peekfd                   tzselect
+gencat                              perl                     udevadm
+genl-ctrl-list                      perl5.16.3               ul
+geoiplookup                         perlbug                  umask
+geoiplookup6                        perldoc                  umount
+geoipupdate                         perlthanks               unalias
+geqn                                pgawk                    uname
+getconf                             pgrep                    uname26
+getent                              pic                      unexpand
+getfacl                             piconv                   unicode_start
+getfattr                            pidstat                  unicode_stop
+getkeycodes                         pinentry                 uniq
+getopt                              pinentry-curses          unlink
+getopts                             ping                     unlz4
+gettext                             ping6                    unshare
+gettext.sh                          pinky                    unxz
+gio                                 pk12util                 unzip
+gio-querymodules-64                 pkg-config               unzipsfx
+glib-compile-schemas                pkill                    update-ca-trust
+gmake                               pl2pm                    updatedb
+gneqn                               pldd                     update-mime-database
+gnroff                              plymouth                 uptime
+gpasswd                             pmap                     urlgrabber
+gpg                                 pm-is-supported          users
+gpg2                                pod2html                 usleep
+gpg-agent                           pod2man                  utmpdump
+gpgconf                             pod2text                 uuidgen
+gpg-connect-agent                   pod2usage                vdir
+gpg-error                           post-grohtml             verify_blkparse
+gpgparsemail                        powernow-k8-decode       verifytree
+gpgsplit                            pr                       vi
+gpgv                                preconv                  view
+gpgv2                               pre-grohtml              vim
+gpg-zip                             printenv                 vimdiff
+gpic                                printf                   vimtutor
+gprof                               prlimit                  vlock
+grep                                prtstat                  vmstat
+groff                               ps                       w
+grops                               psed                     wait
+grotty                              psfaddtable              wall
+groups                              psfgettable              watch
+growpart                            psfstriptable            watchgnupg
+grub2-editenv                       psfxtable                wc
+grub2-file                          pstree                   wdctl
+grub2-fstest                        pstree.x11               wget
+grub2-glue-efi                      pstruct                  whatis
+grub2-kbdcomp                       ptx                      whereis
+grub2-menulst2cfg                   pwd                      which
+grub2-mkfont                        pwdx                     whiptail
+grub2-mkimage                       pwmake                   who
+grub2-mklayout                      pwscore                  whoami
+grub2-mknetdir                      pydoc                    write
+grub2-mkpasswd-pbkdf2               pyrsa-decrypt            x86_64
+grub2-mkrelpath                     pyrsa-decrypt-2          x86_energy_perf_policy
+grub2-mkrescue                      pyrsa-decrypt-bigfile    xargs
+grub2-mkstandalone                  pyrsa-decrypt-bigfile-2  xgettext
+grub2-render-label                  pyrsa-encrypt            xmlcatalog
+grub2-script-check                  pyrsa-encrypt-2          xmllint
+grub2-syslinux2cfg                  pyrsa-encrypt-bigfile    xmlwf
+gsettings                           pyrsa-encrypt-bigfile-2  xxd
+gsoelim                             pyrsa-keygen             xz
+gtar                                pyrsa-keygen-2           xzcat
+gtbl                                pyrsa-priv2pub           xzcmp
+gtroff                              pyrsa-priv2pub-2         xzdec
+gunzip                              pyrsa-sign               xzdiff
+gzexe                               pyrsa-sign-2             xzegrep
+gzip                                pyrsa-verify             xzfgrep
+h2ph                                pyrsa-verify-2           xzgrep
+head                                pystache                 xzless
+hexdump                             pystache-test            xzmore
+hibagent                            python                   yes
+host                                python2                  ypdomainname
+hostid                              python2.7                yum
+hostname                            python2.7-config         yum-builddep
+hostnamectl                         python2-config           yum-config-manager
+hunspell                            python-config            yum-debug-dump
+i386                                quota                    yum-debug-restore
+iconv                               quotasync                yumdownloader
+id                                  ranlib                   yum-groups-manager
+idiag-socket-details                raw                      zcat
+idn                                 rdate                    zcmp
+idn2                                read                     zdiff
+igawk                               readelf                  zegrep
+info                                readlink                 zfgrep
+infocmp                             realpath                 zforce
+infokey                             recode-sr-latin          zgrep
+infotocap                           red                      zip
+install                             rename                   zipcloak
+ionice                              renice                   zipgrep
+iostat                              repoclosure              zipinfo
+ipcalc                              repodiff                 zipnote
+ipcmk                               repo-graph               zipsplit
+ipcrm                               repomanage               zless
+ipcs                                repoquery                zmore
+iptables-xml                        repo-rss                 znew
+isosize                             reposync                 zsoelim
+jobs                                repotrack
+[root@ip-172-31-80-73 bin]# rm -f terraform
+[root@ip-172-31-80-73 bin]# ln -s /opt/terraform terraform
+[root@ip-172-31-80-73 bin]# source ~/.bashrc
+[root@ip-172-31-80-73 bin]# terraform -v
+Terraform v0.11.11
+
+[root@ip-172-31-80-73 bin]#
