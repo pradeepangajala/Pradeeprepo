@@ -1,0 +1,696 @@
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ssh -T git@bitbucket.org
+authenticated via a deploy key.
+
+
+You can use git or hg to connect to Bitbucket. Shell access is disabled.
+
+This deploy key has read access to the following repositories:
+
+pradeepangajala/demossh: deepuuser -- deepu@DESKTOP-KSE2LV8
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     8568   12328    8568       5688  pty0      197609 22:27:15 /usr/bin/ps
+    12328   12092   12328       7816  pty0      197609 22:25:38 /usr/bin/bash
+    12092       1   12092      12092  ?         197609 22:25:38 /usr/bin/mintty
+     3040       1    3040       3040  ?         197609 16:01:20 /usr/bin/ssh-age                                                      nt
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ssh-add -l
+Could not open a connection to your authentication agent.
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ eval $(ssh-agent)
+Agent pid 12820
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ssh-add -l
+The agent has no identities.
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/deepu/.ssh/id_rsa (/c/Users/deepu/.ssh/id_rsa)
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ssh-add -l
+2048 SHA256:t+Z64OUwMZ6IaapNOerEJEFRd/sjxM8ssjml10vYihY /c/Users/deepu/.ssh/id_rsa (RSA)
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ cd demossh
+bash: cd: demossh: No such file or directory
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ ls
+ AppData/            'Local Settings'@                                                                               Pictures/
+'Application Data'@   Music/                                                                                         PrintHood@
+ Contacts/           'My Documents'@                                                                                 Recent@
+ Cookies@             NetHood@                                                                                      'Saved Games'/
+ deepu/               NTUSER.DAT                                                                                     Searches/
+ deepu1               ntuser.dat.LOG1                                                                                SendTo@
+ Desktop/             ntuser.dat.LOG2                                                                               'Start Menu'@
+ Documents/           NTUSER.DAT{300c9c47-370d-11e5-8d64-c4279e15f110}.TM.blf                                        Templates@
+ Downloads/           NTUSER.DAT{300c9c47-370d-11e5-8d64-c4279e15f110}.TMContainer00000000000000000001.regtrans-ms   Tracing/
+ Favorites/           NTUSER.DAT{300c9c47-370d-11e5-8d64-c4279e15f110}.TMContainer00000000000000000002.regtrans-ms   Videos/
+ krish/               ntuser.ini                                                                                    'VirtualBox VMs'/
+ Links/               OneDrive/                                                                                      wooskart.zip
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ LOCATE demossh
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~
+$ cd Desktop
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop
+$ ls
+'~$_Resume_DevOps.docx'         git-pull-feth.txt                       'OneDrive - Shortcut.lnk'*
+'~$adeep_Devlok Invoice.docx'   gitqstns.txt                             PaymentForm.pdf
+'~$LID RAIN INDIA.docx'        'Handy Recovery 5.5.lnk'*                 powertable.PNG
+'~$vOps Resume_Pradeep.docx'    Hexaware.txt                             Sai_Unix_Shell.pptx
+ µTorrent.lnk*                 'ICICI Bank - Click to pay10052018.pdf'   sampledata.json
+ batch.ppk                     'Infosys Resume.docx'                     saturday/
+ bitbucket/                    'IPv6 Chart_2015.pdf'                     slave/
+ BlueJeans.lnk*                'java jdk 7 - Google Search.url'          sql/
+ class.ppk                      kranthi.doc                              staurday/
+ demo-sample/                   MB_Resume_DevOps.docx                    sunil/
+ demossh/                       mvncls/                                  tera/
+ desktop.ini                   'my axis prodt.txt'                       terademo/
+ dev/                           mygit/                                   terratest/
+'DevOps Deepthi Resume.docx'    mygit1/                                  test/
+ devops.pem                     mymvngrble/                              testterra/
+ Dinu/                          myrpo/                                  'VNC Viewer.lnk'*
+ DSC_0195.JPG                   mysvn/                                   webapp/
+ dumm/                         'New Text Document (2).txt'              'Windows 10 Update Assistant.lnk'*
+ friday/                       'New Text Document (3).txt'               winkey.txt
+'Git hub'/                     'New Text Document.txt'                   zUInQ.png
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop
+$ cd demossh
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh
+$ ls
+demossh/
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh
+$ cd demossh/
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ ls
+file1
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ touch file2
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git add file2
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   file2
+
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git commit -m "committing second file"
+[master 1e3671a] committing second file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 459 bytes | 41.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To bitbucket.org:pradeepangajala/demossh.git
+ * [new branch]      master -> master
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ touch file3
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git commit -am "committing to local"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        file3
+
+nothing added to commit but untracked files present
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file3
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git push origin master
+Everything up-to-date
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ git commit -am . "committing to local"
+fatal: Paths with -a does not make sense.
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$ history
+   24  git push origin master
+   25  git status
+   26  git pull orign master
+   27  git add -A file1.txt
+   28  git add file1.txt
+   29  git status
+   30  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/demobit.git
+   31  git status
+   32  git push origin master
+   33  ls
+   34  rm -rf demobit/
+   35  git pull origin master
+   36  git log
+   37  git status
+   38  git push orign master
+   39  git commit orign master
+   40  git commit file1.txt
+   41  git commit -m "file1.txt"
+   42  git pull orign master
+   43  git commit -m "my third modifctn"
+   44  git push orign master
+   45  git add origin master
+   46  git add file1.txt
+   47  git status
+   48  git push origin master
+   49  git status
+   50  git push origin master
+   51  git push orign master
+   52  git status
+   53  git commit -m "modified 3"
+   54  git push orign master
+   55  git pull orign master
+   56  git status
+   57  git commit orign master
+   58  git commit -m "3rd mdf"
+   59  git push -a file1.txt
+   60  git push -a file1.txt
+   61  git status
+   62  git add -a
+   63  git add -A
+   64  git commit -m "my file"
+   65  git push -u origin master
+   66  git init
+   67  ls
+   68  git push -u origin master
+   69  gid add .
+   70  git add .
+   71  git status
+   72  git commit -m "adding files"
+   73  git push origin master
+   74  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/ci-cd.git
+   75  git push origin master
+   76  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/mydemoci-cd.git
+   77  mvn clean install
+   78  maven clean install
+   79  git clone https://github.com/gabrielf/maven-samples.git
+   80  git add https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   81  git commit -m "demoprjct"
+   82  git commit -m "new repo"
+   83  git add https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   84  git push origin master git https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   85  history
+   86  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   87  git remote add https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   88  git add
+   89  git add maven-samples/
+   90  history
+   91  git add .
+   92  git init
+   93  git add .
+   94  git remote add arigin  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   95  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   96  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   97  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/sampledemo.git
+   98  git push -u
+   99  git commit -m "my sample"
+  100  git push origin master
+  101  git push origin master
+  102  git push -u https://pradeepangajala@bitbucket.org/pradeepangajala/mydemoci-cd.git
+  103  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  104  git clone https://github.com/gabrielf/maven-samples.git
+  105  git add .
+  106  ls
+  107  cd samplebitbucket/
+  108  git add .
+  109  git add .
+  110  git remote origin https://github.com/gabrielf/maven-samples.git
+  111  git remote origin https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  112  git clone https://github.com/gabrielf/maven-samples.git
+  113  ls
+  114  cd maven-samples/
+  115  git remote origin https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  116  git remote origin -a https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  117  git push orign https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  118  git add .
+  119  git commit -m "project"
+  120  git push orign mmaster
+  121  git push orign master
+  122  git status
+  123  git pull orign master
+  124  git push -a https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  125  cd
+  126  git add .
+  127  ls
+  128  git push maven-samples/
+  129  git init
+  130  git add .
+  131  git commit -m "files added"
+  132  git push maven-samples/
+  133  git remote origin https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  134  git add remote origin https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  135  git push -u origin master
+  136  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/samplebitbucket.git
+  137  git add .
+  138  git commit -m "adding sample file"
+  139  git push -u orign master
+  140  git push -u origin master
+  141  git push -u origin master
+  142  git clone https://github.com/pradeepangajala/demo-sample.git
+  143  cd
+  144  ls
+  145  mkdir sat
+  146  cd sat
+  147  git clone
+  148  mkdir dev
+  149  cd dev
+  150  ls
+  151  vi sample
+  152  git status
+  153  git clone https://github.com/pradeepangajala/git-basics.git
+  154  ls
+  155  cd git-basics/
+  156  ls
+  157  vi README.md
+  158  git status
+  159  git add README.md
+  160  git status
+  161  git commit -m "this changed"
+  162  git push README.md
+  163  git status
+  164  git push origin master
+  165  vi README.md
+  166  git add README.md
+  167  git add .
+  168  git status
+  169  git commit -m "my last commit"
+  170  git status
+  171  git log
+  172  git commit --amend -m "this is my last commit"
+  173  git log
+  174  git commit --amend -m "my final commit"
+  175  git log
+  176  git clone git clone https://pradeepangajala@bitbucket.org/pradeepangajala/bitbucketsample.git
+  177                            separate git dir from working tree
+  178      -c, --config <key=value>
+  179                            set config inside the new repository
+  180      -4, --ipv4            use IPv4 addresses only
+  181      -6, --ipv6            use IPv6 addresses only
+  182      --filter <args>       object filtering
+  183                            separate git dir from working tree
+  184      -c, --config <key=value>
+  185                            set config inside the new repository
+  186      -4, --ipv4            use IPv4 addresses only
+  187      -6, --ipv6            use IPv6 addresses only
+  188      --filter <args>       object filtering
+  189  ls -altr
+  190  cd .git/
+  191  ls
+  192  cd hooks/
+  193  ls -ltr
+  194  vim pre-commit.sample
+  195  git branch
+  196  git checkout testbranch
+  197  cd ..
+  198  cd checkout master
+  199  git checkout master
+  200  cd ..
+  201  ls
+  202  git checkout test
+  203  git checkout master
+  204  git branch test
+  205  git checkout test
+  206  git checkout -b
+  207  git checkout -b test est
+  208  git checkout -b test
+  209  git branch
+  210  git branch -a
+  211  vi README.md
+  212  git commit -am "myfirst commit in branch"
+  213  git status
+  214  git push -u origin master
+  215  git remote -v
+  216  git checkout master
+  217  git push -u origin master
+  218  git checkout master
+  219  git remote -v
+  220  git checkout test
+  221  git pull origin master
+  222  git checkout master
+  223  git pull origin master
+  224  git push origin master
+  225  git push origin test
+  226  ls
+  227  git remote -v
+  228  git show
+  229  git log
+  230  git show README.md
+  231  git --log --decorate
+  232  git merge test
+  233  git status
+  234  git commit -m "merged from branch"
+  235  git commit -m "merged from branch"
+  236  git status
+  237  git checkout test
+  238  vi sample
+  239  git stash
+  240  git stash list
+  241  vi sample
+  242  git commit -m "happ new year"
+  243  git add sample
+  244  git commit -m "happ new year"
+  245  git stash list
+  246  git stash
+  247  git stash list
+  248  git commit -am "happ new year"
+  249  git add sample
+  250  git commit -am "happ new year"
+  251  git stash
+  252  git stash list
+  253  git status
+  254  ls -ltr
+  255  vi sample
+  256  git add sample
+  257  git commit -am "happ new year"
+  258  git stash
+  259  git stash list
+  260  cat sample
+  261  git stash
+  262  git stash list
+  263  git add sample
+  264  git commit -am "happ new year"
+  265  vi sample
+  266  git stash
+  267  git stash list
+  268  git status
+  269  git checkout master
+  270  git checkout test
+  271  vi sample ]
+  272  git statsh apply
+  273  git stash apply
+  274  cat sample
+  275  git --help
+  276  git log
+  277  git checkout a5b3
+  278  git checkout 925c
+  279  git checkout 169a
+  280  git checkout master
+  281  git log
+  282  git commit -am "my commit"
+  283  git checkout master
+  284  git log
+  285  git checkout 169a
+  286  git checkout 36783
+  287  git checkout 169a6
+  288  git checkout 169a
+  289  git checkout Head S
+  290  git checkout Head
+  291  git log
+  292  git checkout master
+  293  git checkout HEAD^ 2
+  294  git checkout HEAD 3
+  295  git checkout HEAD '3
+  296  git checkout HEAD `3
+  297  git checkout HEAD`3
+  298  git checkout HEAD ~3
+  299  git checkout HEAD `2
+  300  git checkout HEAD ` 3
+  301  git checkout HEAD~3
+  302  git checkout HEAD `2git checkout kgti ''
+  303  '
+  304  git checkout master
+  305  git rebase --interctive
+  306  git rebase --interactive
+  307  git rebase --interactive
+  308  history
+  309  git remote add origin
+  310                            separate git dir from working tree
+  311      -c, --config <key=value>
+  312                            set config inside the new repository
+  313      -4, --ipv4            use IPv4 addresses only
+  314      -6, --ipv6            use IPv6 addresses only
+  315      --filter <args>       object filtering
+  316  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/bitbucketsample.git
+  317  git init
+  318  git clone git clone https://pradeepangajala@bitbucket.org/pradeepangajala/bitbucketsample.git
+  319  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/bitbucketsample.git
+  320  ls
+  321  cd bitbucketsample/
+  322  ls
+  323  git add sample.xlsx
+  324  git status
+  325  git pull origin master
+  326  git commit -m "adding xl"
+  327  git psuh origin master
+  328  git push origin master
+  329  git checkout test
+  330  git log
+  331  mvn clean install
+  332  mvn clean install-X
+  333  mvn clean install -X
+  334  mvn clean insatll
+  335  mvn clean install
+  336  mvn clean install
+  337  ssh -i devops.pem ec2-user@54.236.53.33
+  338  mvn clean install
+  339  cd target/
+  340  ll
+  341  java -jar helloworld-jms.jar
+  342  java -jar "helloworld-jms.jar"
+  343  jar cmvf META-INF/MANIFEST.MF <new-jar-filename>.jar  <files to include>
+  344  jar cmvf META-INF/MANIFEST.MF helloworld-jms.jar
+  345  mvn clean install
+  346  terraform
+  347  terraform init
+  348  terraform apply
+  349  git clone https://pradeepangajala@bitbucket.org/pradeepangajala/mysql.git
+  350  ls
+  351  cd mysql/
+  352  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/mysql.git
+  353  ls
+  354  git add sample.sql
+  355  git commit -m "adding file"
+  356  git push -u origin master
+  357  git clone https://github.com/kranthikk38/hello-devops.git
+  358  git push -u https://github.com/pradeepangajala/kranthirepo.git
+  359  git add
+  360  git clone https://github.com/pradeepangajala/kranthirepo.git
+  361  git init
+  362  ld
+  363  ls
+  364  git add kranthirepo
+  365  ls
+  366  git commit -m "adding files"
+  367  git push -u origin master
+  368  la
+  369  la
+  370  ls
+  371  cd kranthirepo/
+  372  ls
+  373  cd de
+  374  cd dev
+  375  ls
+  376  ls
+  377  cd hello-devops/
+  378  ls
+  379  git push -u origin master
+  380  git init
+  381  ls
+  382  cd ..
+  383  ls
+  384  cd ..
+  385  ls
+  386  cd kranthirepo/
+  387  ls
+  388  git add -a hello-devops/
+  389  git add hello-devops/
+  390  git status
+  391  git commit -m "adding files"
+  392  git push -u origin master
+  393  git init
+  394  git add hello-devops/
+  395  git commit -m "first commit"
+  396  git remote add origin https://github.com/pradeepangajala/kranthirepo.git
+  397  ls
+  398  git push -u origin master
+  399  ls
+  400  git add kranthirepo/
+  401  git status
+  402  git commit -am kranthirepo/
+  403  git clone https://github.com/kranthikk38/hello-devops.git
+  404  git clone https://github.com/pradeepangajala/kranthirepo.git
+  405  ls
+  406  ls
+  407  git add kranthirepo/
+  408  ls
+  409  cd kranthirepo/
+  410  git add .
+  411  git status
+  412  git commit -m "adding files"
+  413  git push -u origin master
+  414  gzip -c example_events.json | curl --data-binary @- -X POST -H "Content-Type: application/json" -H "X-Insert-Key: 7W3ouvQuXNJWnGniZqXB9635uoKCjELS" -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/2219126/events
+  415  gzip -c sampledata.json | curl --data-binary @- -X POST -H "Content-Type: application/json" -H "X-Insert-Key: 7W3ouvQuXNJWnGniZqXB9635uoKCjELS" -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/2219126/events
+  416  curl -H "Accept: application/json" -H "X-Query-Key: u4B_ujY0lnDu0Lp7EphwewwmGgdda-78" "https://insights-api.newrelic.com/v1/accounts/2219126/query?nrql=SELECT%20average%28duration%29%20FROM%20PageView"
+  417  cat -c example_events.json | curl --data-binary @- -X POST -H "Content-Type: application/json" -H "X-Insert-Key: 7W3ouvQuXNJWnGniZqXB9635uoKCjELS" -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/2219126/events
+  418  gzip -c example_events.json | curl --data-binary @- -X POST -H "Content-Type: application/json" -H "X-Insert-Key: 7W3ouvQuXNJWnGniZqXB9635uoKCjELS" -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/2219126/events
+  419  gzip -c sampledata.json | curl --data-binary @- -X POST -H "Content-Type: application/json" -H "X-Insert-Key: 7W3ouvQuXNJWnGniZqXB9635uoKCjELS" -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/2219126/events
+  420  curl -H "Accept: application/json" -H "X-Query-Key: u4B_ujY0lnDu0Lp7EphwewwmGgdda-78" "https://insights-api.newrelic.com/v1/accounts/2219126/query?nrql=SELECT%20average%28duration%29%20FROM%20PageView"
+  421  git clone https://github.com/DevOpsPlatform/Phase-2.git
+  422  git add
+  423  git status
+  424  git commit -m "files"
+  425  git add Ansible
+  426  git status
+  427  git add *
+  428  git status
+  429  ls
+  430  git commit -m "senfing files"
+  431  git push origin master
+  432  git add docker-nagios-puttyhistory/
+  433  git status
+  434  git commit -m "new docker-putyhist"
+  435  git push -u origin master
+  436  terraform -version
+  437  git add
+  438  ls
+  439  cd docker-nagios-puttyhistory/
+  440  ls
+  441  git add terraform.txt
+  442  git status
+  443  git add docker-database_postgres.txt,terraform-linux.txt
+  444  git add docker-database_postgres.txt
+  445  git status
+  446  git add terraform-linux.txt
+  447  ls
+  448  git add terraform.txt
+  449  git status
+  450  git add terraform.txt
+  451  git status
+  452  git push -u origin master
+  453  git commit -am "adding terformfile docker-postgres"
+  454  git add terraform.txt
+  455  git commit -am "terra"
+  456  cd ..
+  457  cd docker-nagios-puttyhistory/
+  458  ls
+  459  git add terraform-linux.txt
+  460  git commit -m "terrra-linux"
+  461  git push -u origin master
+  462  git clone git@bitbucket.org:pradeepangajala/demossh.git
+  463  ssh-keygen
+  464  ls
+  465  dir /c/Users/deepu/.ssh/id_rsa
+  466  ls
+  467  git clone git@bitbucket.org:pradeepangajala/demossh.git
+  468  ls
+  469  ssh-keygen
+  470  cd demossh/
+  471  ls
+  472  vi file1
+  473  git add file1
+  474  git commit -m "adding file1"
+  475  git status
+  476  git push origin master
+  477  ls
+  478  cd ..
+  479  ls
+  480  cd demossh/
+  481  git init
+  482  ls
+  483  ls
+  484  cd ..
+  485  ls
+  486  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/demossh.git
+  487  cd demossh/
+  488  git remote add origin https://pradeepangajala@bitbucket.org/pradeepangajala/demossh.git
+  489  git push -u origin master
+  490  git push -u origin master
+  491  ssh -T git@bitbucket.org
+  492  eval $(ssh-agent)
+  493  ssh-add ~/.ssh/id_rsa
+  494  git push -u origin master
+  495  ssh -T git@bitbucket.org
+  496  ps
+  497  ssh-add -l
+  498  eval $(ssh-agent)
+  499  ssh-add -l
+  500  ssh-add ~/.ssh/id_rsa
+  501  ssh-add -l
+  502  cd demossh
+  503  ls
+  504  LOCATE demossh
+  505  cd Desktop
+  506  ls
+  507  cd demossh
+  508  ls
+  509  cd demossh/
+  510  ls
+  511  touch file2
+  512  git status
+  513  git add file2
+  514  git status
+  515  git commit -m "committing second file"
+  516  git status
+  517  git push origin master
+  518  touch file3
+  519  git commit -am "committing to local"
+  520  git status
+  521  git push origin master
+  522  git commit -am . "committing to local"
+  523  history
+
+deepu@DESKTOP-KSE2LV8 MINGW64 ~/Desktop/demossh/demossh (master)
+$
